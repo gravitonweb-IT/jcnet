@@ -1,0 +1,55 @@
+
+
+nav.breadcrumb-trail.breadcrumbs ul li {
+    position: relative;
+    padding-right: 0!important;
+    display: inline-block;
+}
+.icons-content1{
+color: white;
+    font-size: 24px;
+}
+nav.breadcrumb-trail.breadcrumbs ul li:not(:last-child)::after {
+    
+    content: none !important
+}
+.about__content ul li::after {
+    position: absolute;
+    content: none !important;
+    font-family: "Font Awesome 6 Free";
+    font-size: 12px;
+    font-weight: 900;
+    background: #4a4f61;
+    color: #ffffff;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    left: 0;
+    top: 5px;
+    line-height: 20px;
+}
+.icon-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .icon-circle {
+    background-color: #000; /* Black circle background color */
+    color: #fff; /* Icon color */
+    border-radius: 50%; /* Makes it a circle */
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Adjust the margin as needed */
+    font-size: 15px; /* Adjust the icon size as needed */
+  }
+  
+  /* Add more CSS styles as needed */
+  
