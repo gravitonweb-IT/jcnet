@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { BiLogoFacebook } from "react-icons/bi";
-import { GrTwitter } from "react-icons/gr";
-import { BsInstagram } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
-import { BsTelephoneFill } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
 import { BsArrowUp } from "react-icons/bs";
 import "./home.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiSolidTimeFive } from "react-icons/bi";
+import { Tabs, Tab } from "react-bootstrap";
+
+
+
 
 const Home = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
   const [activeTab, setActiveTab] = useState("monthly");
-
+  const [key, setKey] = useState("all");
   const handleTabSelect = (tabKey) => {
     setActiveTab(tabKey);
   };
+
   const settings = {
     dots: true,
     speed: 500,
@@ -78,8 +76,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* preloader area start */}
-      {/* preloader area end */}
       <div className="progress-arrow-container">
         <div className="progress-wrap active-progress">
           <svg
@@ -118,340 +114,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* back to top end */}
-      {/* header start */}
-      {/* header start */}
-      {/* <header>
-        <div
-          id="header-sticky"
-          className="header__area header__area-2 header__transparent"
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-xxl-3 col-xl-3 col-lg-5 col-md-6 col-6">
-                <div className="logo">
-                  <a
-                    className="standard-logo"
-                    href="https://thememaster.net/wp/maxdi/"
-                  >
-                    <img
-                      src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/logo/Logo-white.svg"
-                      alt="logo"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="col-xxl-7 col-xl-6 d-none d-xl-block">
-                <div className="main-menu main-menu-2 text-end">
-                  <nav id="mobile-menu">
-                    <ul id="menu-main-menu" className>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-111"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown active menu-item-111 nav-items"
-                      >
-                        <a
-                          title="Home"
-                          href="https://thememaster.net/wp/maxdi/"
-                          className="nav-link"
-                        >
-                          Home
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-92"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-92 nav-items"
-                          >
-                            <a
-                              title="Digital Agency"
-                              href="https://thememaster.net/wp/maxdi/"
-                              className="dropdown-items"
-                            >
-                              Digital Agency
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-96"
-                            className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-74 current_page_item active menu-item-96 nav-items"
-                          >
-                            <a
-                              title="Creative Agency"
-                              href="https://thememaster.net/wp/maxdi/creative-agency/"
-                              className="dropdown-items"
-                            >
-                              Creative Agency
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-94"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-94 nav-items"
-                      >
-                        <a
-                          title="About"
-                          href="https://thememaster.net/wp/maxdi/about/"
-                          className="nav-link"
-                        >
-                          About
-                        </a>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-112"
-                        className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-112 nav-items"
-                      >
-                        <a title="Pages" href="#" className="nav-link">
-                          Pages
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-95"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-95 nav-items"
-                          >
-                            <a
-                              title="Contact"
-                              href="https://thememaster.net/wp/maxdi/contact/"
-                              className="dropdown-items"
-                            >
-                              Contact
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-93"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-93 nav-items"
-                          >
-                            <a
-                              title="Blog"
-                              href="https://thememaster.net/wp/maxdi/blog/"
-                              className="dropdown-items"
-                            >
-                              Blog
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-113"
-                            className="menu-item menu-item-type-post_type menu-item-object-post menu-item-113 nav-items"
-                          >
-                            <a
-                              title="Blog Details"
-                              href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"
-                              className="dropdown-items"
-                            >
-                              Blog Details
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-99"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-99 nav-items"
-                          >
-                            <a
-                              title="Team"
-                              href="https://thememaster.net/wp/maxdi/team/"
-                              className="dropdown-items"
-                            >
-                              Team
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-100"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-100 nav-items"
-                          >
-                            <a
-                              title="Team Details"
-                              href="https://thememaster.net/wp/maxdi/team-details/"
-                              className="dropdown-items"
-                            >
-                              Team Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-98"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-98 nav-items"
-                      >
-                        <a
-                          title="Services"
-                          href="https://thememaster.net/wp/maxdi/services/"
-                          className="nav-link"
-                        >
-                          Services
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-114"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-114 nav-items"
-                          >
-                            <a
-                              title="Services"
-                              href="https://thememaster.net/wp/maxdi/services/"
-                              className="dropdown-items"
-                            >
-                              Services
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-247"
-                            className="menu-item menu-item-type-post_type menu-item-object-alimasha-services menu-item-247 nav-items"
-                          >
-                            <a
-                              title="Services Details"
-                              href="https://thememaster.net/wp/maxdi/ourservices/web-development/"
-                              className="dropdown-items"
-                            >
-                              Services Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-97"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-97 nav-items"
-                      >
-                        <a
-                          title="Portfolio"
-                          href="https://thememaster.net/wp/maxdi/portfolio/"
-                          className="nav-link"
-                        >
-                          Portfolio
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-115"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-115 nav-items"
-                          >
-                            <a
-                              title="Portfolio"
-                              href="https://thememaster.net/wp/maxdi/portfolio/"
-                              className="dropdown-items"
-                            >
-                              Portfolio
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-246"
-                            className="menu-item menu-item-type-post_type menu-item-object-alimasha-portfolio menu-item-246 nav-items"
-                          >
-                            <a
-                              title="Portfolio Details"
-                              href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/"
-                              className="dropdown-items"
-                            >
-                              Portfolio Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>{" "}
-                  </nav>
-                </div>
-              </div>
-              <div className="col-xxl-2 col-xl-3 col-lg-7 col-md-6 col-6">
-                <div className="header__right text-end d-flex align-items-center justify-content-end">
-                  <div className="d-none d-md-block">
-                    <a
-                      className="m-btn"
-                      href="https://thememaster.net/wp/maxdi/contact"
-                    >
-                      Get A Quote
-                    </a>
-                  </div>
-                  <div className="side-menu-icon icon-white d-xl-none">
-                    <button className="side-toggle">
-                      <i className="fa-solid fa-bars" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
-      {/* header end */}
-      {/* side info start */}
-      {/* mobile menu sidebar start */}
-      <div className="fix">
-        <div className="side-info">
-          <button className="side-info-close">
-            <i className="fas fa-times" />
-          </button>
-          <div className="side-info-content">
-            <div className="mobile-menu" />
-            <div className="sidebar__contact mb-30">
-              <div className="contact-list mb-30">
-                <ul>
-                  <li>
-                    <i className="fas fa-map-marker-alt" />
-                    66 Broklyn Street, New York United States of America{" "}
-                  </li>
-                  <li>
-                    <i className="far fa-paper-plane" />
-                    <a href="mailto:http://info@example.com">
-                      info@example.com
-                    </a>
-                  </li>
-                  <li>
-                    <i className="fas fa-phone" />
-                    <a href="tel:http://+00%2066%2044%2022%2011">
-                      +00 66 44 22 11
-                    </a>
-                  </li>
-                </ul>
-                <div className="sidebar__social">
-                  <a href="#">
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-instagram" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-google" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* side info end */}
+
       <div className="offcanvas-overlay" />
-      {/* mobile menu sidebar end */}
-      {/* header end */}
-      {/* wrapper-box start */}
+
       <div
         data-elementor-type="wp-page"
         data-elementor-id={74}
@@ -883,148 +548,353 @@ const Home = () => {
                           <div className="col-xl-12">
                             <div className="portfolio__title-2 text-center">
                               <h4
-                                className="section__sub-title wow fadeInUp"
+                                className="section__sub-title animated animatedFadeInUp fadeInUp"
                                 data-wow-delay=".2s"
                                 style={{
                                   visibility: "visible",
                                   animationDelay: "0.2s",
-                                  animationName: "fadeInUp",
+                                  animationName:
+                                    "animated animatedFadeInUp fadeInUp",
                                 }}
                               >
                                 Portfolio{" "}
                               </h4>
 
                               <h2
-                                className="section__title wow fadeInUp"
+                                className="section__title animated animatedFadeInUp fadeInUp"
                                 data-wow-delay=".3s"
                                 style={{
                                   visibility: "visible",
                                   animationDelay: "0.3s",
-                                  animationName: "fadeInUp",
+                                  animationName:
+                                    "animated animatedFadeInUp fadeInUp",
                                 }}
                               >
                                 <span>Some of our amazing works</span>
                               </h2>
                             </div>
                             <div
-                              className="portfolio__menu portfolio__menu-2 text-center wow fadeInUp"
+                              className="portfolio__menu portfolio__menu-2 text-center animated animatedFadeInUp fadeInUp"
                               data-wow-delay=".5s"
                             >
-                              <button className="active" data-filter="*">
-                                Show All
-                              </button>
-                              <button data-filter=".branding">Branding</button>
-                              <button data-filter=".development">
-                                Development
-                              </button>
-                              <button data-filter=".marketing">
-                                Marketing
-                              </button>
-                              <button data-filter=".ui-ux-design">
-                                UI/UX Design
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row grid mt-70">
-                          <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
-                            <div className="portfolio__item-2 mb-30">
-                              <div className="portfolio__image-2">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
-                                  alt="portfolio"
-                                />
-                              </div>
-                              <div className="portfolio__text-2">
-                                <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                    Digital Agency
-                                  </a>
-                                </h3>
-                                <p />
-                                <p>
-                                  Draw a line in the sand quick win. My capacity
-                                  is full. Keep it lean gain alignment we need
-                                  to future-proof this plan.
-                                </p>
-                                <p />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-xl-6 col-lg-6 grid-item development">
-                            <div className="portfolio__item-2 mb-30">
-                              <div className="portfolio__image-2">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
-                                  alt="portfolio"
-                                />
-                              </div>
-                              <div className="portfolio__text-2">
-                                <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
-                                    Creative Home
-                                  </a>
-                                </h3>
-                                <p />
-                                <p>
-                                  Draw a line in the sand quick win. My capacity
-                                  is full. Keep it lean gain alignment we need
-                                  to future-proof this plan.
-                                </p>
-                                <p />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
-                            <div className="portfolio__item-2 mb-30">
-                              <div className="portfolio__image-2">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
-                                  alt="portfolio"
-                                />
-                              </div>
-                              <div className="portfolio__text-2">
-                                <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                    Marketing
-                                  </a>
-                                </h3>
-                                <p />
-                                <p>
-                                  Draw a line in the sand quick win. My capacity
-                                  is full. Keep it lean gain alignment we need
-                                  to future-proof this plan.
-                                </p>
-                                <p />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-xl-6 col-lg-6 grid-item branding development">
-                            <div className="portfolio__item-2 mb-30">
-                              <div className="portfolio__image-2">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
-                                  alt="portfolio"
-                                />
-                              </div>
-                              <div className="portfolio__text-2">
-                                <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                    Alisha Finance
-                                  </a>
-                                </h3>
-                                <p />
-                                <p>
-                                  Draw a line in the sand quick win. My capacity
-                                  is full. Keep it lean gain alignment we need
-                                  to future-proof this plan.
-                                </p>
-                                <p />
-                              </div>
+                              <Tabs
+                                id="tabbed-content"
+                                activeKey={key}
+                                onSelect={(k) => setKey(k)}
+                              >
+                                <Tab eventKey="all" title="Show All">
+                                  <div className="row grid mt-70">
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
+                                              Digital Agency
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item development">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
+                                              Creative Home
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
+                                              Marketing
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
+                                              Alisha Finance
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Tab>
+                                <Tab eventKey="branding" title="Branding">
+                                  <div className="row grid mt-70">
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
+                                              Alisha Finance
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Tab>
+                                <Tab eventKey="development" title="Development">
+                                  <div className="row grid mt-70">
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
+                                              Alisha Finance
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item development">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
+                                              Creative Home
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Tab>
+
+                                <Tab eventKey="marketing" title="Marketing">
+                                  <div className="row grid mt-70">
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
+                                              Digital Agency
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
+                                              Marketing
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Tab>
+                                <Tab
+                                  eventKey="ui-ux-design"
+                                  title="UI/UX Design"
+                                >
+                                  <div className="row row grid mt-70">
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
+                                              Digital Agency
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
+                                              Marketing
+                                            </a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            Draw a line in the sand quick win.
+                                            My capacity is full. Keep it lean
+                                            gain alignment we need to
+                                            future-proof this plan.
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Tab>
+                              </Tabs>
                             </div>
                           </div>
                         </div>
@@ -1728,37 +1598,36 @@ const Home = () => {
                                 role="tablist"
                               >
                                 <li className="nav-item">
-                                  
-                                 <button
-                                 className={`nav-link ${activeTab === "monthly" ? "active" : ""}`}
-                                 id="home-tab"
-                                 data-bs-toggle="tab"
-                                 data-bs-target="#home1"
-                                 role="tab"
-                                 aria-controls="home1"
-                                 aria-selected="false"
-                                 onClick={() => handleTabSelect("monthly")}
-                               >
-                                 Monthly
-                               </button>
-                               
+                                  <button
+                                    className={`nav-link ${
+                                      activeTab === "monthly" ? "active" : ""
+                                    }`}
+                                    id="home-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#home1"
+                                    role="tab"
+                                    aria-controls="home1"
+                                    aria-selected="false"
+                                    onClick={() => handleTabSelect("monthly")}
+                                  >
+                                    Monthly
+                                  </button>
                                 </li>
                                 <li className="nav-item">
-                                <button
-  className={`nav-link ${
-    activeTab === "yearly" ? "active" : ""
-  }`}
-  id="profile-tab"
-  data-bs-toggle="tab"
-  data-bs-target="#profile"
-  role="tab"
-  aria-controls="profile"
-  aria-selected="true"
-  onClick={() => handleTabSelect("yearly")}
->
-  Yearly
-</button>
-
+                                  <button
+                                    className={`nav-link ${
+                                      activeTab === "yearly" ? "active" : ""
+                                    }`}
+                                    id="profile-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#profile"
+                                    role="tab"
+                                    aria-controls="profile"
+                                    aria-selected="true"
+                                    onClick={() => handleTabSelect("yearly")}
+                                  >
+                                    Yearly
+                                  </button>
                                 </li>
                               </ul>
                             </div>
@@ -2605,6 +2474,7 @@ const Home = () => {
         </div>
       </section>
       {/* cards */}
+
       {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">
@@ -2659,249 +2529,6 @@ const Home = () => {
         </div>
       </section>
       {/* lets-work area end */}
-      {/* footer area start */}
-      <footer>
-        <div
-          className="footer__area fix p-relative "
-          style={{ textAlign: "left" }}
-        >
-          <div className="footer__shape">
-            <img
-              className="footer-shape-1 wow fadeInDown"
-              data-wow-delay="1s"
-              src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/footer/footer-s-1.png"
-              alt="image"
-            />
-            <img
-              className="footer-shape-2 wow fadeInUp"
-              data-wow-delay="1.6s"
-              src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/footer/footer-s-2.png"
-              alt="image"
-            />
-          </div>
-          <div className="footer__top pt-200 pb-40">
-            <div className="container">
-              <div className="row mb-145">
-                <div className="col-xxl-6 col-xl-7 col-lg-8 col-md-10">
-                  <div className="footer__newsletter">
-                    <h4
-                      className="section__sub-title wow fadeInUp"
-                      data-wow-delay=".2s"
-                    >
-                      join our community{" "}
-                    </h4>
-                    <h2
-                      className="section__title wow fadeInUp"
-                      data-wow-delay=".4s"
-                    >
-                      <span>Subscribe for newsletter</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="col-xxl-5 offset-xxl-1 col-xl-5 col-lg-4 col-md-4">
-                  <div className="widget_text footer__widget footer__widget-link">
-                    <div className="textwidget custom-html-widget">
-                      <div className="footer__subscribe">
-                        <form action="#">
-                          <div className="footer__subscribe-input">
-                            <div className="form-group">
-                              <input
-                                type="email"
-                                className="form-control"
-                                placeholder="Email address"
-                              />
-                            </div>
-                            <button type="submit">Subscribe</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>{" "}
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-xl-4 col-lg-4 col-md-10 col-sm-10">
-                  <div
-                    className="footer__widget wow fadeIn"
-                    data-wow-delay=".5s"
-                  >
-                    <div className="footer__widget-logo">
-                      <img
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/Logo-footer.svg"
-                        alt="logo"
-                      />
-                      <p>
-                        Core object made kolor adipisci elit sed diam nonummy
-                        nibh euismod tincidunt laoreet dolore magna grinjon.
-                      </p>
-                    </div>
-                    <div className="footer__widget-social">
-                      <a href="#">
-                        <BiLogoFacebook />
-                      </a>
-                      <a href="#">
-                        <GrTwitter />
-                      </a>
-                      <a href="#">
-                        <BsInstagram />
-                      </a>
-                      <a href="#">
-                        <BsYoutube />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                  <div
-                    className="footer__widget wow fadeIn"
-                    data-wow-delay=".7s"
-                  >
-                    <div className="footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Our Services</h5>
-                      </div>
-                      <div className="menu-footer-menu-1-container">
-                        <ul id="menu-footer-menu-1" className="menu">
-                          <li
-                            id="menu-item-101"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-101"
-                          >
-                            <a href="#">Development</a>
-                          </li>
-                          <li
-                            id="menu-item-102"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"
-                          >
-                            <a href="#">Marketing</a>
-                          </li>
-                          <li
-                            id="menu-item-103"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"
-                          >
-                            <a href="#">UI/UX Design</a>
-                          </li>
-                          <li
-                            id="menu-item-104"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"
-                          >
-                            <a href="#">E-Commerce</a>
-                          </li>
-                          <li
-                            id="menu-item-105"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-105"
-                          >
-                            <a href="#">Content Writing</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-                <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                  <div
-                    className="footer__widget footer__widget-mt-2 wow fadeIn"
-                    data-wow-delay=".9s"
-                  >
-                    <div className="footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Company</h5>
-                      </div>
-                      <div className="menu-footer-menu-2-container">
-                        <ul id="menu-footer-menu-2" className="menu">
-                          <li
-                            id="menu-item-106"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"
-                          >
-                            <a href="#">About us</a>
-                          </li>
-                          <li
-                            id="menu-item-107"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"
-                          >
-                            <a href="#">Portfolio</a>
-                          </li>
-                          <li
-                            id="menu-item-108"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"
-                          >
-                            <a href="#">Our Team</a>
-                          </li>
-                          <li
-                            id="menu-item-109"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-109"
-                          >
-                            <a href="#">Contact</a>
-                          </li>
-                          <li
-                            id="menu-item-110"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"
-                          >
-                            <a href="#">Faqs</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-10">
-                  <div
-                    className="footer__widget footer__widget-mt wow fadeIn"
-                    data-wow-delay="1.2s"
-                  >
-                    <div className="widget_text footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Stay Connected</h5>
-                      </div>
-                      <div className="textwidget custom-html-widget">
-                        <div className="footer__widget-info">
-                          <div className="footer__widget-address">
-                            <p>
-                              66 Broklyn Street, New York United States of
-                              America
-                            </p>
-                          </div>
-                          <div className="footer__widget-phone d-flex align-items-center">
-                            <BsTelephoneFill
-                              style={{ color: "#c5f617", fontSize: "20px" }}
-                            />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <p>
-                              <a href="tel:+1166442200">+11 66 44 22 00</a>
-                            </p>
-                          </div>
-                          <div className="footer__widget-email d-flex align-items-center">
-                            <FaTelegramPlane
-                              style={{ color: "#7432ff", fontSize: "26px" }}
-                            />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <p>
-                              <a href="mailto:info@example.com">
-                                info@example.com
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="footer__bottom">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-12">
-                  <div className="footer__copyright">
-                    <p>Copyright © 2023 ThemeMaster</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      {/* footer area end */}
     </div>
   );
 };

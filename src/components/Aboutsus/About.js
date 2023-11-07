@@ -14,16 +14,14 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsArrowUp } from "react-icons/bs";
 import { MdArrowForward } from "react-icons/md";
-import CountUp from 'react-countup';
-import {AiFillPlayCircle} from "react-icons/ai";
+import CountUp from "react-countup";
+import { AiFillPlayCircle } from "react-icons/ai";
 // For react-fontawesome
 // import { FaTelegramPlane } from 'react-fontawesome/fa';
 
 const About = () => {
   return (
     <div>
-      {/* preloader area end */}
-      {/* back to top start */}
       <div className="progress-arrow-container">
         <div className="progress-wrap active-progress">
           <svg
@@ -62,341 +60,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* back to top end */}
-      {/* header start */}
-      {/* header start */}
-      <header>
-        <div
-          id="header-sticky"
-          className="header__area header__transparent header__white"
-        >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-xxl-3 col-xl-3 col-lg-5 col-md-6 col-6">
-                <div className="logo">
-                  <a
-                    className="standard-logo"
-                    href="https://thememaster.net/wp/maxdi/"
-                  >
-                    <img
-                      src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/logo/logo.svg"
-                      alt="logo"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="col-xxl-7 col-xl-6 d-none d-xl-block">
-                <div className="main-menu main-menu-3 text-end">
-                  <nav id="mobile-menu">
-                    <ul id="menu-main-menu" className>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-111"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children dropdown menu-item-111 nav-items"
-                      >
-                        <a
-                          title="Home"
-                          href="https://thememaster.net/wp/maxdi/"
-                          className="nav-link"
-                        >
-                          Home
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-92"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-92 nav-items"
-                          >
-                            <a
-                              title="Digital Agency"
-                              href="https://thememaster.net/wp/maxdi/"
-                              className="dropdown-items"
-                            >
-                              Digital Agency
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-96"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-96 nav-items"
-                          >
-                            <a
-                              title="Creative Agency"
-                              href="https://thememaster.net/wp/maxdi/creative-agency/"
-                              className="dropdown-items"
-                            >
-                              Creative Agency
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-94"
-                        className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-80 current_page_item active menu-item-94 nav-items"
-                      >
-                        <a
-                          title="About"
-                          href="https://thememaster.net/wp/maxdi/about/"
-                          className="nav-link"
-                        >
-                          About
-                        </a>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-112"
-                        className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-112 nav-items"
-                      >
-                        <a title="Pages" href="#" className="nav-link">
-                          Pages
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-95"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-95 nav-items"
-                          >
-                            <a
-                              title="Contact"
-                              href="https://thememaster.net/wp/maxdi/contact/"
-                              className="dropdown-items"
-                            >
-                              Contact
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-93"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-93 nav-items"
-                          >
-                            <a
-                              title="Blog"
-                              href="https://thememaster.net/wp/maxdi/blog/"
-                              className="dropdown-items"
-                            >
-                              Blog
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-113"
-                            className="menu-item menu-item-type-post_type menu-item-object-post menu-item-113 nav-items"
-                          >
-                            <a
-                              title="Blog Details"
-                              href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"
-                              className="dropdown-items"
-                            >
-                              Blog Details
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-99"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-99 nav-items"
-                          >
-                            <a
-                              title="Team"
-                              href="https://thememaster.net/wp/maxdi/team/"
-                              className="dropdown-items"
-                            >
-                              Team
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-100"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-100 nav-items"
-                          >
-                            <a
-                              title="Team Details"
-                              href="https://thememaster.net/wp/maxdi/team-details/"
-                              className="dropdown-items"
-                            >
-                              Team Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-98"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-98 nav-items"
-                      >
-                        <a
-                          title="Services"
-                          href="https://thememaster.net/wp/maxdi/services/"
-                          className="nav-link"
-                        >
-                          Services
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-114"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-114 nav-items"
-                          >
-                            <a
-                              title="Services"
-                              href="https://thememaster.net/wp/maxdi/services/"
-                              className="dropdown-items"
-                            >
-                              Services
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-247"
-                            className="menu-item menu-item-type-post_type menu-item-object-alimasha-services menu-item-247 nav-items"
-                          >
-                            <a
-                              title="Services Details"
-                              href="https://thememaster.net/wp/maxdi/ourservices/web-development/"
-                              className="dropdown-items"
-                            >
-                              Services Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li
-                        itemScope="itemscope"
-                        itemType="https://www.schema.org/SiteNavigationElement"
-                        id="menu-item-97"
-                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-97 nav-items"
-                      >
-                        <a
-                          title="Portfolio"
-                          href="https://thememaster.net/wp/maxdi/portfolio/"
-                          className="nav-link"
-                        >
-                          Portfolio
-                        </a>
-                        <ul className="submenu" role="menu">
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-115"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-115 nav-items"
-                          >
-                            <a
-                              title="Portfolio"
-                              href="https://thememaster.net/wp/maxdi/portfolio/"
-                              className="dropdown-items"
-                            >
-                              Portfolio
-                            </a>
-                          </li>
-                          <li
-                            itemScope="itemscope"
-                            itemType="https://www.schema.org/SiteNavigationElement"
-                            id="menu-item-246"
-                            className="menu-item menu-item-type-post_type menu-item-object-alimasha-portfolio menu-item-246 nav-items"
-                          >
-                            <a
-                              title="Portfolio Details"
-                              href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/"
-                              className="dropdown-items"
-                            >
-                              Portfolio Details
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>{" "}
-                  </nav>
-                </div>
-              </div>
-              <div className="col-xxl-2 col-xl-3 col-lg-7 col-md-6 col-6">
-                <div className="header__right text-end d-flex align-items-center justify-content-end">
-                  <div className="d-none d-md-block">
-                    <a
-                      className="m-btn"
-                      href="https://thememaster.net/wp/maxdi/contact"
-                    >
-                      Get A Quote
-                    </a>
-                  </div>
-                  <div className="side-menu-icon d-xl-none">
-                    <button className="side-toggle">
-                      <i className="fa-solid fa-bars" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      {/* header end */}
-      {/* side info start */}
-      {/* mobile menu sidebar start */}
-      <div className="fix">
-        <div className="side-info">
-          <button className="side-info-close">
-            <i className="fas fa-times" />
-          </button>
-          <div className="side-info-content">
-            <div className="mobile-menu" />
-            <div className="sidebar__contact mb-30">
-              <div className="contact-list mb-30">
-                <ul>
-                  <li>
-                    <i className="fas fa-map-marker-alt" />
-                    66 Broklyn Street, New York United States of America{" "}
-                  </li>
-                  <li>
-                    <i className="far fa-paper-plane" />
-                    <a href="mailto:http://info@example.com">
-                      info@example.com
-                    </a>
-                  </li>
-                  <li>
-                    <i className="fas fa-phone" />
-                    <a href="tel:http://+00%2066%2044%2022%2011">
-                      +00 66 44 22 11
-                    </a>
-                  </li>
-                </ul>
-                <div className="sidebar__social">
-                  <a href="#">
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-instagram" />
-                  </a>
-                  <a href="#">
-                    <i className="fab fa-google" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* side info end */}
+
       <div className="offcanvas-overlay" />
-      {/* mobile menu sidebar end */}
-      {/* header end */}
-      {/* wrapper-box start */}
-      {/* page-title area start */}
+
       <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
         <div className="page__title-shape">
           <img
@@ -472,7 +138,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* page-title area end */}
+
       <div
         data-elementor-type="wp-page"
         data-elementor-id={80}
@@ -585,27 +251,27 @@ const About = () => {
                               </ul>
                             </div>
                             <div className="about__counter-bg d-none d-sm-block">
-      <div className="about__counter-content d-flex">
-        <div className="about__counter-text text-center">
-          <h2>
-            <CountUp end={280} duration={5} />+
-          </h2>
-          <p>Project Delivered</p>
-        </div>
-        <div className="about__counter-text text-center">
-          <h2>
-            <CountUp end={500} duration={5} />+
-          </h2>
-          <p>Happy Clients</p>
-        </div>
-        <div className="about__counter-text text-center">
-          <h2>
-            <CountUp end={3500} duration={5} />+
-          </h2>
-          <p>Total Coffees</p>
-        </div>
-      </div>
-    </div>
+                              <div className="about__counter-content d-flex">
+                                <div className="about__counter-text text-center">
+                                  <h2>
+                                    <CountUp end={280} duration={5} />+
+                                  </h2>
+                                  <p>Project Delivered</p>
+                                </div>
+                                <div className="about__counter-text text-center">
+                                  <h2>
+                                    <CountUp end={500} duration={5} />+
+                                  </h2>
+                                  <p>Happy Clients</p>
+                                </div>
+                                <div className="about__counter-text text-center">
+                                  <h2>
+                                    <CountUp end={3500} duration={5} />+
+                                  </h2>
+                                  <p>Total Coffees</p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -703,7 +369,7 @@ const About = () => {
                                 href="https://www.youtube.com/watch?v=yJg-Y5byMMw"
                                 className="popup-video"
                               >
-                                <AiFillPlayCircle/>
+                                <AiFillPlayCircle />
                               </a>
                             </div>
                             <div className="experience__thumb text-end">
@@ -1232,6 +898,7 @@ const About = () => {
         </section>
         {/* cards */}
       </div>
+
       {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">
@@ -1286,249 +953,6 @@ const About = () => {
         </div>
       </section>
       {/* lets-work area end */}
-      {/* footer area start */}
-      <footer>
-        <div
-          className="footer__area fix p-relative "
-          style={{ textAlign: "left" }}
-        >
-          <div className="footer__shape">
-            <img
-              className="footer-shape-1 wow fadeInDown"
-              data-wow-delay="1s"
-              src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/footer/footer-s-1.png"
-              alt="image"
-            />
-            <img
-              className="footer-shape-2 wow fadeInUp"
-              data-wow-delay="1.6s"
-              src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/footer/footer-s-2.png"
-              alt="image"
-            />
-          </div>
-          <div className="footer__top pt-200 pb-40">
-            <div className="container">
-              <div className="row mb-145">
-                <div className="col-xxl-6 col-xl-7 col-lg-8 col-md-10">
-                  <div className="footer__newsletter">
-                    <h4
-                      className="section__sub-title wow fadeInUp"
-                      data-wow-delay=".2s"
-                    >
-                      join our community{" "}
-                    </h4>
-                    <h2
-                      className="section__title wow fadeInUp"
-                      data-wow-delay=".4s"
-                    >
-                      <span>Subscribe for newsletter</span>
-                    </h2>
-                  </div>
-                </div>
-                <div className="col-xxl-5 offset-xxl-1 col-xl-5 col-lg-4 col-md-4">
-                  <div className="widget_text footer__widget footer__widget-link">
-                    <div className="textwidget custom-html-widget">
-                      <div className="footer__subscribe">
-                        <form action="#">
-                          <div className="footer__subscribe-input">
-                            <div className="form-group">
-                              <input
-                                type="email"
-                                className="form-control"
-                                placeholder="Email address"
-                              />
-                            </div>
-                            <button type="submit">Subscribe</button>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>{" "}
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-xl-4 col-lg-4 col-md-10 col-sm-10">
-                  <div
-                    className="footer__widget wow fadeIn"
-                    data-wow-delay=".5s"
-                  >
-                    <div className="footer__widget-logo">
-                      <img
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/Logo-footer.svg"
-                        alt="logo"
-                      />
-                      <p>
-                        Core object made kolor adipisci elit sed diam nonummy
-                        nibh euismod tincidunt laoreet dolore magna grinjon.
-                      </p>
-                    </div>
-                    <div className="footer__widget-social">
-                      <a href="#">
-                        <BiLogoFacebook />
-                      </a>
-                      <a href="#">
-                        <GrTwitter />
-                      </a>
-                      <a href="#">
-                        <BsInstagram />
-                      </a>
-                      <a href="#">
-                        <BsYoutube />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                  <div
-                    className="footer__widget wow fadeIn"
-                    data-wow-delay=".7s"
-                  >
-                    <div className="footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Our Services</h5>
-                      </div>
-                      <div className="menu-footer-menu-1-container">
-                        <ul id="menu-footer-menu-1" className="menu">
-                          <li
-                            id="menu-item-101"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-101"
-                          >
-                            <a href="#">Development</a>
-                          </li>
-                          <li
-                            id="menu-item-102"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"
-                          >
-                            <a href="#">Marketing</a>
-                          </li>
-                          <li
-                            id="menu-item-103"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"
-                          >
-                            <a href="#">UI/UX Design</a>
-                          </li>
-                          <li
-                            id="menu-item-104"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"
-                          >
-                            <a href="#">E-Commerce</a>
-                          </li>
-                          <li
-                            id="menu-item-105"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-105"
-                          >
-                            <a href="#">Content Writing</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-                <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                  <div
-                    className="footer__widget footer__widget-mt-2 wow fadeIn"
-                    data-wow-delay=".9s"
-                  >
-                    <div className="footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Company</h5>
-                      </div>
-                      <div className="menu-footer-menu-2-container">
-                        <ul id="menu-footer-menu-2" className="menu">
-                          <li
-                            id="menu-item-106"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"
-                          >
-                            <a href="#">About us</a>
-                          </li>
-                          <li
-                            id="menu-item-107"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"
-                          >
-                            <a href="#">Portfolio</a>
-                          </li>
-                          <li
-                            id="menu-item-108"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"
-                          >
-                            <a href="#">Our Team</a>
-                          </li>
-                          <li
-                            id="menu-item-109"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-109"
-                          >
-                            <a href="#">Contact</a>
-                          </li>
-                          <li
-                            id="menu-item-110"
-                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"
-                          >
-                            <a href="#">Faqs</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-4 col-md-4 col-sm-10">
-                  <div
-                    className="footer__widget footer__widget-mt wow fadeIn"
-                    data-wow-delay="1.2s"
-                  >
-                    <div className="widget_text footer__widget-link">
-                      <div className="footer__widget-title">
-                        <h5>Stay Connected</h5>
-                      </div>
-                      <div className="textwidget custom-html-widget">
-                        <div className="footer__widget-info">
-                          <div className="footer__widget-address">
-                            <p>
-                              66 Broklyn Street, New York United States of
-                              America
-                            </p>
-                          </div>
-                          <div className="footer__widget-phone d-flex align-items-center">
-                            <BsTelephoneFill
-                              style={{ color: "#c5f617", fontSize: "20px" }}
-                            />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <p>
-                              <a href="tel:+1166442200">+11 66 44 22 00</a>
-                            </p>
-                          </div>
-                          <div className="footer__widget-email d-flex align-items-center">
-                            <FaTelegramPlane
-                              style={{ color: "#7432ff", fontSize: "26px" }}
-                            />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <p>
-                              <a href="mailto:info@example.com">
-                                info@example.com
-                              </a>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="footer__bottom">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-12">
-                  <div className="footer__copyright">
-                    <p>Copyright © 2023 ThemeMaster</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      {/* footer area end */}
     </div>
   );
 };
