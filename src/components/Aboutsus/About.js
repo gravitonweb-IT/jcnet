@@ -118,11 +118,7 @@ const About = () => {
                       itemType="http://schema.org/ListItem"
                       className="trail-item trail-begin"
                     >
-                      <a
-                        href="https://thememaster.net/wp/maxdi/"
-                        rel="home"
-                        itemProp="item"
-                      >
+                      <a href="/#" rel="home" itemProp="item">
                         <span itemProp="name">Home</span>
                       </a>
                       {/* <meta itemProp="position" content={1} /> */}
@@ -355,7 +351,7 @@ const About = () => {
                                 give you a heads-up.
                               </p>
                               <a
-                                href="https://thememaster.net/wp/maxdi/contact"
+                                href="/Contact"
                                 className="m-btn mt-35 wow fadeInUp"
                                 data-wow-delay=".6s"
                               >
@@ -469,7 +465,7 @@ const About = () => {
                               />
                             </div>
                             <div className="team__content text-center">
-                              <a href="https://thememaster.net/wp/maxdi/team-details">
+                              <a href="#">
                                 <h3 className="team__title">John Smith</h3>
                               </a>
                               <span className="team__position">
@@ -486,7 +482,7 @@ const About = () => {
                               />
                             </div>
                             <div className="team__content text-center">
-                              <a href="https://thememaster.net/wp/maxdi/team-details">
+                              <a href="#">
                                 <h3 className="team__title">Alisha Alima</h3>
                               </a>
                               <span className="team__position">
@@ -503,7 +499,7 @@ const About = () => {
                               />
                             </div>
                             <div className="team__content text-center">
-                              <a href="https://thememaster.net/wp/maxdi/team-details">
+                              <a href="#">
                                 <h3 className="team__title">David Park</h3>
                               </a>
                               <span className="team__position">
@@ -520,7 +516,7 @@ const About = () => {
                               />
                             </div>
                             <div className="team__content text-center">
-                              <a href="https://thememaster.net/wp/maxdi/team-details">
+                              <a href="#">
                                 <h3 className="team__title">Tailor Milan</h3>
                               </a>
                               <span className="team__position">
@@ -636,10 +632,7 @@ const About = () => {
                                     latest prospects is like putting socks on an
                                     octopus to give you a heads-up.
                                   </p>
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/contact"
-                                    className="m-btn mt-35"
-                                  >
+                                  <a href="/Contact" className="m-btn mt-35">
                                     Start a Project
                                   </a>
                                 </div>
@@ -761,37 +754,31 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                {/* <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"> */}
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
+                                  alt="blog"
+                                />
+                                {/* </a> */}
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />
                                   &nbsp;&nbsp;&nbsp;
                                   <p>19 Jul, 2022</p>
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/category/development/"
-                                    className="m-btn blog-btn"
-                                  >
+                                  <a href="#" className="m-btn blog-btn">
                                     Development{" "}
                                   </a>
                                 </div>
                                 <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/">
+                                  <a href="#">
                                     Everything you need to know and branding web
                                     design{" "}
                                   </a>
                                 </h3>
                                 <div className="blog__link">
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"
-                                    className="arrow-btn"
-                                  >
+                                  <a href="#" className="arrow-btn">
                                     Continue Reading&nbsp;&nbsp;&nbsp;
                                     <AiOutlineArrowRight
                                       style={{ color: "black" }}
@@ -804,37 +791,31 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                {/* <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"> */}
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
+                                  alt="blog"
+                                />
+                                {/* </a> */}
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />{" "}
                                   &nbsp;&nbsp;
                                   <p>01 Jul, 2022</p>
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/category/development/"
-                                    className="m-btn blog-btn"
-                                  >
+                                  <a href="#" className="m-btn blog-btn">
                                     Development{" "}
                                   </a>
                                 </div>
                                 <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/">
+                                  <a href="#">
                                     Delivering the best digital marketing
                                     solution creative team{" "}
                                   </a>
                                 </h3>
                                 <div className="blog__link">
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"
-                                    className="arrow-btn"
-                                  >
+                                  <a href="#" className="arrow-btn">
                                     Continue Reading&nbsp;&nbsp;
                                     <AiOutlineArrowRight
                                       style={{ color: "black" }}
@@ -847,37 +828,31 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                {/* <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"> */}
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
+                                  alt="blog"
+                                />
+                                {/* </a> */}
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />
                                   &nbsp;&nbsp;
                                   <p>01 Jul, 2022</p>
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/category/branding/"
-                                    className="m-btn blog-btn"
-                                  >
+                                  <a href="#" className="m-btn blog-btn">
                                     Branding{" "}
                                   </a>
                                 </div>
                                 <h3>
-                                  <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/">
+                                  <a href="#">
                                     Post launch creative shower initiative take
                                     root over mart{" "}
                                   </a>
                                 </h3>
                                 <div className="blog__link">
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"
-                                    className="arrow-btn"
-                                  >
+                                  <a href="#" className="arrow-btn">
                                     Continue Reading&nbsp;&nbsp;
                                     <AiOutlineArrowRight
                                       style={{ color: "black" }}
@@ -943,7 +918,7 @@ const About = () => {
                 <a
                   className="m-btn mt-35 wow fadeInUp"
                   data-wow-delay=".6s"
-                  href="https://thememaster.net/wp/maxdi/contact"
+                  href="/Contact"
                 >
                   Estimate Project
                 </a>

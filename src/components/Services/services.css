@@ -1,0 +1,4 @@
+.faq__wrapper .accordion-content .accordion-header .accordion-button.collapsed::after {
+    content: none!important;
+    
+}

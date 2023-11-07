@@ -11,9 +11,6 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiSolidTimeFive } from "react-icons/bi";
 import { Tabs, Tab } from "react-bootstrap";
 
-
-
-
 const Home = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
@@ -32,7 +29,22 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 1000,
   };
+  //
 
+  const settings1 = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+  const settings2 = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   useEffect(() => {
     // Get the last counted value from localStorage
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
@@ -73,7 +85,14 @@ const Home = () => {
       setCount(280);
     }
   }, [count]);
-
+  // image
+  const images = [
+    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-1.png",
+    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png",
+    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png",
+    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png",
+    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png",
+  ];
   return (
     <div>
       <div className="progress-arrow-container">
@@ -216,7 +235,7 @@ const Home = () => {
                                   the stars energy.
                                 </p>
                                 <a
-                                  href="https://thememaster.net/wp/maxdi/contact"
+                                  href="/Contact"
                                   className="m-btn mt-35 wow fadeInUp "
                                   style={{ textAlign: "left", float: "left" }}
                                   data-wow-delay=".6s"
@@ -1006,10 +1025,7 @@ const Home = () => {
                                     latest prospects is like putting socks on an
                                     octopus to give you a heads-up.
                                   </p>
-                                  <a
-                                    href="https://thememaster.net/wp/maxdi/contact"
-                                    className="m-btn mt-35"
-                                  >
+                                  <a href="/Contact" className="m-btn mt-35">
                                     Start a Project
                                   </a>
                                 </div>
@@ -1107,402 +1123,251 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="swiper testimonials__slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
-                  <div
-                    className="swiper-wrapper"
-                    id="swiper-wrapper-b145fada383110790"
-                    aria-live="polite"
-                    style={{
-                      "-webkit-transform": "translate3d(-1520px, 0px, 0px)",
-                      "-ms-transform": "translate3d(-1520px, 0px, 0px)",
-                      transform: "translate3d(-1520px, 0px, 0px)",
-                      "-webkit-transition-duration": "0ms",
-                      "transition-duration": "0ms",
-                    }}
-                  >
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                      data-swiper-slide-index={0}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="1 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Alima Alisha</h4>
-                            <span>CEO</span>
-                          </div>
-                        </div>
-                      </div>
+
+            {/*  */}
+            <Slider {...settings1}>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                  data-swiper-slide-index={0}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="1 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
+                        alt="image"
+                      />
                     </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                      data-swiper-slide-index={1}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="2 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>David Clark</h4>
-                            <span>Marketing Manager</span>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
                     </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-                      data-swiper-slide-index={2}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="3 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Moran Sham</h4>
-                            <span>Team Leader</span>
-                          </div>
-                        </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
+                          alt="image"
+                        />
                       </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-prev"
-                      data-swiper-slide-index={0}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="1 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Alima Alisha</h4>
-                            <span>CEO</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-active"
-                      data-swiper-slide-index={1}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="2 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>David Clark</h4>
-                            <span>Marketing Manager</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-next"
-                      data-swiper-slide-index={2}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="3 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Moran Sham</h4>
-                            <span>Team Leader</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                      data-swiper-slide-index={0}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="1 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Alima Alisha</h4>
-                            <span>CEO</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                      data-swiper-slide-index={1}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="2 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>David Clark</h4>
-                            <span>Marketing Manager</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-                      data-swiper-slide-index={2}
-                      style={{ width: "350px", "margin-right": "30px" }}
-                      role="group"
-                      aria-label="3 / 3"
-                    >
-                      <div className="testimonials__item-content">
-                        <div className="testimonials__logo">
-                          <img
-                            decoding="async"
-                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
-                            alt="image"
-                          />
-                        </div>
-                        <div className="testimonials__text">
-                          <p>
-                            Big data run it up the flag pole core competencies
-                            bench mark. Three martini lunch we need to dialog
-                            around your choice of work attire data-point. Show
-                            pony after I ran into realized two projects crank
-                            this out.
-                          </p>
-                        </div>
-                        <div className="testimonials__client d-flex align-items-center">
-                          <div className="testimonials__client-thumb">
-                            <img
-                              decoding="async"
-                              src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
-                              alt="image"
-                            />
-                          </div>
-                          <div className="testimonials__client-text">
-                            <h4>Moran Sham</h4>
-                            <span>Team Leader</span>
-                          </div>
-                        </div>
+                      <div className="testimonials__client-text">
+                        <h4>Alima Alisha</h4>
+                        <span>CEO</span>
                       </div>
                     </div>
                   </div>
-                  <span
-                    className="swiper-notification"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                  />
-                </div>
-                <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                  <span
-                    className="swiper-pagination-bullet"
-                    tabIndex={0}
-                    role="button"
-                    aria-label="Go to slide 1"
-                  />
-                  <span
-                    className="swiper-pagination-bullet swiper-pagination-bullet-active"
-                    tabIndex={0}
-                    role="button"
-                    aria-label="Go to slide 2"
-                    aria-current="true"
-                  />
-                  <span
-                    className="swiper-pagination-bullet"
-                    tabIndex={0}
-                    role="button"
-                    aria-label="Go to slide 3"
-                  />
                 </div>
               </div>
-            </div>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                  data-swiper-slide-index={1}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="2 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
+                    </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonials__client-text">
+                        <h4>David Clark</h4>
+                        <span>Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                  data-swiper-slide-index={2}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="3 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
+                    </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonials__client-text">
+                        <h4>Moran Sham</h4>
+                        <span>Team Leader</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-prev"
+                  data-swiper-slide-index={0}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="1 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
+                    </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonials__client-text">
+                        <h4>Alima Alisha</h4>
+                        <span>CEO</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-active"
+                  data-swiper-slide-index={1}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="2 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
+                    </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonials__client-text">
+                        <h4>David Clark</h4>
+                        <span>Marketing Manager</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="testimonials__item swiper-slide swiper-slide-next"
+                  data-swiper-slide-index={2}
+                  style={{ width: "350px", "margin-right": "30px" }}
+                  role="group"
+                  aria-label="3 / 3"
+                >
+                  <div className="testimonials__item-content">
+                    <div className="testimonials__logo">
+                      <img
+                        decoding="async"
+                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div className="testimonials__text">
+                      <p>
+                        Big data run it up the flag pole core competencies bench
+                        mark. Three martini lunch we need to dialog around your
+                        choice of work attire data-point. Show pony after I ran
+                        into realized two projects crank this out.
+                      </p>
+                    </div>
+                    <div className="testimonials__client d-flex align-items-center">
+                      <div className="testimonials__client-thumb">
+                        <img
+                          decoding="async"
+                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonials__client-text">
+                        <h4>Moran Sham</h4>
+                        <span>Team Leader</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Slider>
+            {/*  */}
           </div>
         </section>
         {/* testmoinal */}
@@ -1945,11 +1810,11 @@ const Home = () => {
                     <section className="customers__area fix p-relative pt-120 pb-60">
                       <div className="customers__shape">
                         <img
-                          decoding="async"
                           className="c-s-1"
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/customers/c-s-1.png"
                           alt="image"
                         />
+
                         <img
                           decoding="async"
                           className="c-s-2"
@@ -1988,238 +1853,24 @@ const Home = () => {
                                 <span>Our beloved partners</span>
                               </h2>
                             </div>
+
                             <div className="customers__container">
-                              <div className="swiper brand__slider swiper-initialized swiper-horizontal swiper-pointer-events">
-                                <div
-                                  className="swiper-wrapper"
-                                  id="swiper-wrapper-84b9c6f35113c86e"
-                                  aria-live="polite"
-                                  style={{
-                                    "-webkit-transform":
-                                      "translate3d(-2137.5px, 0px, 0px)",
-                                    "-ms-transform":
-                                      "translate3d(-2137.5px, 0px, 0px)",
-                                    transform:
-                                      "translate3d(-2137.5px, 0px, 0px)",
-                                    "-webkit-transition-duration": "0ms",
-                                    "transition-duration": "0ms",
-                                  }}
-                                >
+                              <Slider {...settings2}>
+                                {images.map((image, index) => (
                                   <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate"
-                                    data-swiper-slide-index={1}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="2 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate"
-                                    data-swiper-slide-index={2}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="3 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate"
-                                    data-swiper-slide-index={3}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="4 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-prev"
-                                    data-swiper-slide-index={4}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="5 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate-active"
-                                    data-swiper-slide-index={0}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="1 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-1.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate-next"
-                                    data-swiper-slide-index={1}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="2 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
+                                    key={index}
                                     className="brand__item swiper-slide text-center"
-                                    data-swiper-slide-index={2}
                                     style={{
                                       width: "207.5px",
-                                      "margin-right": "30px",
                                     }}
-                                    role="group"
-                                    aria-label="3 / 5"
                                   >
                                     <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png"
-                                      alt="image"
+                                      src={image}
+                                      alt={`Image ${index + 1}`}
                                     />
                                   </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center"
-                                    data-swiper-slide-index={3}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="4 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-prev"
-                                    data-swiper-slide-index={4}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="5 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate swiper-slide-active"
-                                    data-swiper-slide-index={0}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="1 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-1.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate swiper-slide-next"
-                                    data-swiper-slide-index={1}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="2 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate"
-                                    data-swiper-slide-index={2}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="3 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                  <div
-                                    className="brand__item swiper-slide text-center swiper-slide-duplicate"
-                                    data-swiper-slide-index={3}
-                                    style={{
-                                      width: "207.5px",
-                                      "margin-right": "30px",
-                                    }}
-                                    role="group"
-                                    aria-label="4 / 5"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png"
-                                      alt="image"
-                                    />
-                                  </div>
-                                </div>
-                                <span
-                                  className="swiper-notification"
-                                  aria-live="assertive"
-                                  aria-atomic="true"
-                                />
-                              </div>
+                                ))}
+                              </Slider>
                             </div>
                           </div>
                         </div>
@@ -2234,6 +1885,7 @@ const Home = () => {
       </div>
 
       {/* cards */}
+
       <section
         className="elementor-section elementor-top-section elementor-element elementor-element-463d3b5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
         data-id="463d3b5"
@@ -2338,37 +1990,31 @@ const Home = () => {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
-                                  alt="blog"
-                                />
-                              </a>
+                              {/* <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"> */}
+                              <img
+                                decoding="async"
+                                src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
+                                alt="blog"
+                              />
+                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />
                                 &nbsp;&nbsp;&nbsp;
                                 <p>19 Jul, 2022</p>
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/category/development/"
-                                  className="m-btn blog-btn"
-                                >
+                                <a href="#" className="m-btn blog-btn">
                                   Development{" "}
                                 </a>
                               </div>
                               <h3>
-                                <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/">
+                                <a href="#">
                                   Everything you need to know and branding web
                                   design{" "}
                                 </a>
                               </h3>
                               <div className="blog__link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"
-                                  className="arrow-btn"
-                                >
+                                <a href="#" className="arrow-btn">
                                   Continue Reading&nbsp;&nbsp;&nbsp;
                                   <AiOutlineArrowRight
                                     style={{ color: "black" }}
@@ -2381,37 +2027,31 @@ const Home = () => {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
-                                  alt="blog"
-                                />
-                              </a>
+                              {/* <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"> */}
+                              <img
+                                decoding="async"
+                                src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
+                                alt="blog"
+                              />
+                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />{" "}
                                 &nbsp;&nbsp;
                                 <p>01 Jul, 2022</p>
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/category/development/"
-                                  className="m-btn blog-btn"
-                                >
+                                <a href="#" className="m-btn blog-btn">
                                   Development{" "}
                                 </a>
                               </div>
                               <h3>
-                                <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/">
+                                <a href="#">
                                   Delivering the best digital marketing solution
                                   creative team{" "}
                                 </a>
                               </h3>
                               <div className="blog__link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"
-                                  className="arrow-btn"
-                                >
+                                <a href="#" className="arrow-btn">
                                   Continue Reading&nbsp;&nbsp;
                                   <AiOutlineArrowRight
                                     style={{ color: "black" }}
@@ -2424,37 +2064,31 @@ const Home = () => {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
-                                  alt="blog"
-                                />
-                              </a>
+                              {/* <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"> */}
+                              <img
+                                decoding="async"
+                                src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
+                                alt="blog"
+                              />
+                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />
                                 &nbsp;&nbsp;
                                 <p>01 Jul, 2022</p>
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/category/branding/"
-                                  className="m-btn blog-btn"
-                                >
+                                <a href="#" className="m-btn blog-btn">
                                   Branding{" "}
                                 </a>
                               </div>
                               <h3>
-                                <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/">
+                                <a href="#">
                                   Post launch creative shower initiative take
                                   root over mart{" "}
                                 </a>
                               </h3>
                               <div className="blog__link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"
-                                  className="arrow-btn"
-                                >
+                                <a href="#" className="arrow-btn">
                                   Continue Reading&nbsp;&nbsp;
                                   <AiOutlineArrowRight
                                     style={{ color: "black" }}

@@ -1,6 +1,13 @@
 import React from 'react'
 import {MdKeyboardDoubleArrowRight} from "react-icons/md";
 import {IoIosArrowForward} from "react-icons/io";
+import {MdArrowForward} from "react-icons/md";
+import "./Ourservices.css";
+import {FaBriefcase} from "react-icons/fa";
+import {HiLockOpen} from "react-icons/hi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { LuBarChartHorizontal } from "react-icons/lu";
+import {HiDocumentReport } from "react-icons/hi"
 const OurServices = () => {
   return (
    <>
@@ -58,28 +65,28 @@ const OurServices = () => {
             <div className="sidebar__widget-link">
               <ul>
                 <li>
-                  <a href="">
-                   <span>Digital Marketing </span>  <IoIosArrowForward/>  </a>
+                  <a href="#">
+                   <span>Digital Marketing </span>  <IoIosArrowForward style={{marginLeft: "52px"}}/>  </a>
                 </li>
                 <li>
-                  <a href="">
-                    <span>Content Strategy   </span><IoIosArrowForward/>                        </a>
+                  <a href="#">
+                    <span>Content Strategy   </span><IoIosArrowForward style={{marginLeft: "52px"}}/>                        </a>
                 </li>
                 <li>
-                  <a href="https://thememaster.net/wp/maxdi/ourservices/e-commerce/">
-                    E-commerce                          </a>
+                  <a href="#">
+                    <span>E-commerce </span>  <IoIosArrowForward style={{marginLeft: "80px"}}/>  </a>
                 </li>
                 <li>
-                  <a href="https://thememaster.net/wp/maxdi/ourservices/ui-ux-design/">
-                    UI/UX Design                          </a>
+                  <a href="#">
+                  <span> UI/UX Design</span>   <IoIosArrowForward style={{marginLeft: "80px"}}/>  </a>
                 </li>
                 <li>
-                  <a href="https://thememaster.net/wp/maxdi/ourservices/app-development/">
-                    App Development                          </a>
+                  <a href="#">
+                  <span>  App Development </span> <IoIosArrowForward style={{marginLeft: "52px"}}/>  </a>
                 </li>
                 <li>
-                  <a href="https://thememaster.net/wp/maxdi/ourservices/web-development/">
-                    Web Development                          </a>
+                  <a href="#">
+                  <span> Web Development </span> <IoIosArrowForward style={{marginLeft: "52px"}}/>    </a>
                 </li>
               </ul>
             </div>
@@ -98,14 +105,16 @@ const OurServices = () => {
               </div>
               <div className="key__factors-wrapper d-flex">
                 <div className="key__factors-content mb-40 d-sm-flex">
-                  <div className="key__factors-icon" />
+                <div className="key__factors-icon key__factors-icon-1" style={{ marginRight: "13px"}}/>
+                  <FaBriefcase style={{width:"50px", height:"50px",color:"#7432ff" }}/>
                   <div className="key__factors-text">
                     <h5>Business Automation</h5>
                     <p>Energy only home we’ve ever known deciphe scended from rogue.</p>
                   </div>
                 </div>
                 <div className="key__factors-content mb-40 d-sm-flex">
-                  <div className="key__factors-icon key__factors-icon-2" />
+                  <div className="key__factors-icon key__factors-icon-2" style={{ marginRight: "13px"}} />
+                  <LuBarChartHorizontal style={{width:"50px", height:"50px", color:"#7432ff" }}/>
                   <div className="key__factors-text">
                     <h5>Critical Analysis</h5>
                     <p>Energy only home we’ve ever known deciphe scended from rogue.</p>
@@ -114,14 +123,16 @@ const OurServices = () => {
               </div>
               <div className="key__factors-wrapper d-flex">
                 <div className="key__factors-content mb-40 d-sm-flex">
-                  <div className="key__factors-icon key__factors-icon-3" />
+                  <div className="key__factors-icon key__factors-icon-3" style={{ marginRight: "13px"}}/>
+                  <HiLockOpen style={{width:"50px", height:"50px", color:"#7432ff"}}/>
                   <div className="key__factors-text">
                     <h5>Risk Protection</h5>
                     <p>Energy only home we’ve ever known deciphe scended from rogue.</p>
                   </div>
                 </div>
                 <div className="key__factors-content mb-40 d-sm-flex">
-                  <div className="key__factors-icon key__factors-icon-4" />
+                  <div className="key__factors-icon key__factors-icon-4" style={{ marginRight: "13px"}}/>
+                  <HiDocumentReport style={{width:"50px", height:"50px", color:"#7432ff"}}/>
                   <div className="key__factors-text">
                     <h5>Annual Report</h5>
                     <p>Energy only home we’ve ever known deciphe scended from rogue.</p>
@@ -134,11 +145,29 @@ const OurServices = () => {
                 <h3>Key Benefits</h3>
               </div>
               <div className="key__benefits-content">
-                <ul>
-                  <li>Sea of Tranquility dispassionate observer dream.</li>
-                  <li>Muse about as a patch of light brain is the seed of intelligence.</li>
-                  <li>The only home we’ve ever known dream of the mind’s eye.</li>
-                </ul>
+              <ul className="icon-list">
+                                <li>
+                                  <div className="icon-circle">
+                                    <MdArrowForward />
+                                  </div>
+                                  Sea of Tranquility dispassionate observer
+                                  dream.
+                                </li>
+                                <li>
+                                  <div className="icon-circle">
+                                    <MdArrowForward />
+                                  </div>
+                                  Muse about as a patch of light brain is the
+                                  seed of intelligence.
+                                </li>
+                                <li>
+                                  <div className="icon-circle">
+                                    <MdArrowForward />
+                                  </div>
+                                  The only home we've ever known dream of the
+                                  mind's eye.
+                                </li>
+                              </ul>
               </div>
             </div>
             <p>Kindling the energy hidden in matter the only home we’ve ever known radio telescope decipherment descended from astronomers rogue. Prime number network of wormholes take root. Kindling the energy hidden in matter the only home we’ve ever known radio telescope decipherment descended.</p>

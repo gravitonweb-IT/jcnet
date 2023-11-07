@@ -1,0 +1,14 @@
+.key__benefits-content ul li::after {
+    content: none!important;
+
+}
+.key__factors-icon::before {
+    content: none!important;
+}
+
+.sidebar__widget ul li a::before {
+    content: none!important;
+}
+.sidebar__widget ul li a::after {
+    content: none!important;
+}

@@ -1,9 +1,14 @@
-import React,{useState,useEffect} from 'react'
-import {MdKeyboardDoubleArrowRight} from "react-icons/md";
+import React, { useState, useEffect } from "react";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { BsArrowUp } from "react-icons/bs";
 import CountUp from "react-countup";
+import "./services.css";
+
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
 const Services = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
@@ -12,7 +17,6 @@ const Services = () => {
   const handleTabSelect = (tabKey) => {
     setActiveTab(tabKey);
   };
-
 
   useEffect(() => {
     // Get the last counted value from localStorage
@@ -54,351 +58,384 @@ const Services = () => {
       setCount(280);
     }
   }, [count]);
+  const [activeIndex, setActiveIndex] = useState(null);
 
+  const faqData = [
+    {
+      question: "How To Gain Knowledge About SEO?",
+      answer:
+        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+    },
+    {
+      question: "Benefit Of Digital Marketing?",
+      answer:
+        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+    },
+    {
+      question: "Business Development Most Reasons?",
+      answer:
+        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+    },
+    {
+      question: "Improve Performance and Efficiency?",
+      answer:
+        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+    },
+  ];
+
+  const toggleAccordion = (index) => {
+    if (index === activeIndex) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
   return (
     <>
-   
-   
-    <div className="progress-wrap">
-      <svg
-        className="progress-circle svg-content"
-        width="100%"
-        height="100%"
-        viewBox="-1 -1 102 102"
-      >
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-    </div>
-  
-   
-    <div className="offcanvas-overlay" />
-    
-    <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
-      <div className="page__title-shape">
-        <img
-          className="page-title-s-1 d-none d-md-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-1.png"
-          alt="image"
-        />
-        <img
-          className="page-title-s-3"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-3.png"
-          alt="image"
-        />
-        <img
-          className="page-title-s-4"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-4.png"
-          alt="image"
-        />
-        <img
-          className="page-title-s-5 wow fadeInDown"
-          data-wow-delay="1s"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-5.png"
-          alt="image"
-        />
-        <img
-          className="page-title-s-6 wow fadeInUp"
-          data-wow-delay=".6s"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-6.png"
-          alt="image"
-        />
-        <img
-          className="page-title-s-7 d-none d-md-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-7.png"
-          alt="image"
-        />
+      <div className="progress-wrap">
+        <svg
+          className="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
       </div>
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-xxl-12">
-            <div className="page__title-wrapper">
-              <h2 className="page__title-heading">Services </h2>
-              <nav
-                aria-label="Breadcrumbs"
-                className="breadcrumb-trail breadcrumbs"
-              >
-                <ul
-                  className="trail-items"
-                  itemScope=""
-                  itemType="http://schema.org/BreadcrumbList"
-                >
-                  <li
-                    itemProp="itemListElement"
-                    itemScope=""
-                    itemType="http://schema.org/ListItem"
-                    className="trail-item trail-begin"
-                  >
-                    <a
-                      href="https://thememaster.net/wp/maxdi/"
-                      rel="home"
-                      itemProp="item"
-                    >
-                      <span itemProp="name">Home</span>
-                    </a>
-                    <MdKeyboardDoubleArrowRight className="icons-content1" />
-                  </li>
-                  <li className="trail-item trail-end">
-                    <span>Services</span>
-                  </li>
-                </ul>
-              </nav>{" "}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
 
-    <div
-      data-elementor-type="wp-page"
-      data-elementor-id={86}
-      className="elementor elementor-86"
-    >
-      <section
-        className="elementor-section elementor-top-section elementor-element elementor-element-88cab54 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-        data-id="88cab54"
-        data-element_type="section"
-      >
-        <div className="elementor-container elementor-column-gap-no">
-          <div
-            className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ba26466"
-            data-id="ba26466"
-            data-element_type="column"
-          >
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div
-                className="elementor-element elementor-element-f5de2e6 elementor-widget elementor-widget-services"
-                data-id="f5de2e6"
-                data-element_type="widget"
-                data-widget_type="services.default"
-              >
-                <div className="elementor-widget-container">
-                  <section className="services__area p-relative fix  pt-120 pb-90">
-                    <div className="services__shape">
-                      <img
-                        decoding="async"
-                        className="services-s-1 wow fadeInDown"
-                        data-wow-delay="1.2s"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-1.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="services-s-2"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-2.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="services-s-3"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-3.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="container">
-                      <div className="row mb-55">
-                        <div className="col-xl-6">
-                          <div className="services__title">
-                            <h4
-                              className="section__sub-title wow fadeInUp"
-                              data-wow-delay=".2s"
-                            >
-                              Services{" "}
-                            </h4>
-                            <h2
-                              className="section__title wow fadeInUp"
-                              data-wow-delay=".3s"
-                            >
-                              <span>What we do</span>
-                            </h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-1.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>UI/UX Design</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-2.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>Web Development</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-3.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>App Development</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-4.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-5.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>Content Writing</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6">
-                          <div className="single__bg">
-                            <div className="single__service">
-                              <div className="single__service-icon">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-6.png"
-                                  alt="icon"
-                                />
-                              </div>
-                              <div className="single__service-content">
-                                <h3>E-commerce</h3>
-                                <p>
-                                  Beautiful and Influential websites &amp; apps
-                                  that are mobile friendly quick to load and help
-                                  drive sales giving you a solid presence online.
-                                </p>
-                              </div>
-                              <div className="single__service-link">
-                                <a
-                                  href="https://thememaster.net/wp/maxdi/ourservices/web-development"
-                                  className="s-btn"
-                                >
-                                  Find Out More
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                </div>
+      <div className="offcanvas-overlay" />
+
+      <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
+        <div className="page__title-shape">
+          <img
+            className="page-title-s-1 d-none d-md-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-1.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-3"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-3.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-4"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-4.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-5 wow fadeInDown"
+            data-wow-delay="1s"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-5.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-6 wow fadeInUp"
+            data-wow-delay=".6s"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-6.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-7 d-none d-md-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-7.png"
+            alt="image"
+          />
+        </div>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xxl-12">
+              <div className="page__title-wrapper">
+                <h2 className="page__title-heading">Services </h2>
+                <nav
+                  aria-label="Breadcrumbs"
+                  className="breadcrumb-trail breadcrumbs"
+                >
+                  <ul
+                    className="trail-items"
+                    itemScope=""
+                    itemType="http://schema.org/BreadcrumbList"
+                  >
+                    <li
+                      itemProp="itemListElement"
+                      itemScope=""
+                      itemType="http://schema.org/ListItem"
+                      className="trail-item trail-begin"
+                    >
+                      <a
+                        href="/#"
+                        rel="home"
+                        itemProp="item"
+                      >
+                        <span itemProp="name">Home</span>
+                      </a>
+                      <MdKeyboardDoubleArrowRight className="icons-content1" />
+                    </li>
+                    <li className="trail-item trail-end">
+                      <span>Services</span>
+                    </li>
+                  </ul>
+                </nav>{" "}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section
+
+      <div
+        data-elementor-type="wp-page"
+        data-elementor-id={86}
+        className="elementor elementor-86"
+      >
+        <section
+          className="elementor-section elementor-top-section elementor-element elementor-element-88cab54 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+          data-id="88cab54"
+          data-element_type="section"
+        >
+          <div className="elementor-container elementor-column-gap-no">
+            <div
+              className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ba26466"
+              data-id="ba26466"
+              data-element_type="column"
+            >
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div
+                  className="elementor-element elementor-element-f5de2e6 elementor-widget elementor-widget-services"
+                  data-id="f5de2e6"
+                  data-element_type="widget"
+                  data-widget_type="services.default"
+                >
+                  <div className="elementor-widget-container">
+                    <section className="services__area p-relative fix  pt-120 pb-90">
+                      <div className="services__shape">
+                        <img
+                          decoding="async"
+                          className="services-s-1 wow fadeInDown"
+                          data-wow-delay="1.2s"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-1.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="services-s-2"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-2.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="services-s-3"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/services/services-s-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="container">
+                        <div className="row mb-55">
+                          <div className="col-xl-6">
+                            <div className="services__title">
+                              <h4
+                                className="section__sub-title wow fadeInUp"
+                                data-wow-delay=".2s"
+                              >
+                                Services{" "}
+                              </h4>
+                              <h2
+                                className="section__title wow fadeInUp"
+                                data-wow-delay=".3s"
+                              >
+                                <span>What we do</span>
+                              </h2>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-1.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>UI/UX Design</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                    href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-2.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>Web Development</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-3.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>App Development</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                  href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-4.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>Digital Marketing</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                  href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-5.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>Content Writing</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                 href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-6.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>E-commerce</h3>
+                                  <p>
+                                    Beautiful and Influential websites &amp;
+                                    apps that are mobile friendly quick to load
+                                    and help drive sales giving you a solid
+                                    presence online.
+                                  </p>
+                                </div>
+                                <div className="single__service-link">
+                                  <a
+                                     href="#"
+                                    className="s-btn"
+                                  >
+                                    Find Out More
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
           className="elementor-section elementor-top-section elementor-element elementor-element-3719bdf elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="3719bdf"
           data-element_type="section"
@@ -524,202 +561,530 @@ const Services = () => {
             </div>
           </div>
         </section>
-      <section
-        className="elementor-section elementor-top-section elementor-element elementor-element-aae6078 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-        data-id="aae6078"
-        data-element_type="section"
-      >
-        <div className="elementor-container elementor-column-gap-no">
-          <div
-            className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-82a5673"
-            data-id="82a5673"
-            data-element_type="column"
-          >
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div
-                className="elementor-element elementor-element-0f027de elementor-widget elementor-widget-faq"
-                data-id="0f027de"
-                data-element_type="widget"
-                data-widget_type="faq.default"
-              >
-                <div className="elementor-widget-container">
-                  <section className="faq__area fix p-relative pt-105 pb-60 faq__rs">
-                    <div className="faq__shape">
-                      <img
-                        decoding="async"
-                        className="faq-shape-1 d-none d-lg-block"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-1.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="faq-shape-2"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-2.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="faq-shape-3 d-none d-lg-block"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-3.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="faq-shape-4 d-none d-lg-block"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-4.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="container">
-                      <div className="faq__bg">
-                        <div className="row align-items-center">
-                          <div className="col-xl-6 col-lg-5">
-                            <div className="faq__thumb">
-                              <div className="faq__thumb-image">
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/faq-img.jpg"
-                                  alt="image"
-                                />
+        <section
+          className="elementor-section elementor-top-section elementor-element elementor-element-aae6078 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+          data-id="aae6078"
+          data-element_type="section"
+        >
+          <div className="elementor-container elementor-column-gap-no">
+            <div
+              className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-82a5673"
+              data-id="82a5673"
+              data-element_type="column"
+            >
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div
+                  className="elementor-element elementor-element-0f027de elementor-widget elementor-widget-faq"
+                  data-id="0f027de"
+                  data-element_type="widget"
+                  data-widget_type="faq.default"
+                >
+                  <div className="elementor-widget-container">
+                    <section className="faq__area fix p-relative pt-105 pb-60 faq__rs">
+                      <div className="faq__shape">
+                        <img
+                          decoding="async"
+                          className="faq-shape-1 d-none d-lg-block"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-1.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="faq-shape-2"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-2.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="faq-shape-3 d-none d-lg-block"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-3.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="faq-shape-4 d-none d-lg-block"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/faq/faq-s-4.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="container">
+                        <div className="faq__bg">
+                          <div className="row align-items-center">
+                            <div className="col-xl-6 col-lg-5">
+                              <div className="faq__thumb">
+                                <div className="faq__thumb-image">
+                                  <img
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/faq-img.jpg"
+                                    alt="image"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-xl-6 col-lg-7 col-md-10">
+                              <div className="faq__content">
+                                <h4 className="section__sub-title">Faq</h4>
+                                <h2 className="section__title">
+                                  <span className="first_title">
+                                    Frequently asked
+                                  </span>
+                                  <span className="second_title">
+                                    questions
+                                  </span>
+                                </h2>
+                                <div className="faq__wrapper">
+                                  <div
+                                    className="accordion"
+                                    id="accordionExample"
+                                  >
+                                    {faqData.map((faq, index) => (
+                                      <div
+                                        className="accordion-content"
+                                        key={index}
+                                      >
+                                        <h2
+                                          className="accordion-header"
+                                          id={`heading${index}`}
+                                        >
+                                          <button
+                                            className={`accordion-button ${
+                                              index === activeIndex
+                                                ? ""
+                                                : "collapsed"
+                                            }`}
+                                            type="button"
+                                            onClick={() =>
+                                              toggleAccordion(index)
+                                            }
+                                          >
+                                            {faq.question}{" "}
+                                            <FontAwesomeIcon
+                                              icon={faPlus}
+                                              className="plus-icon "
+                                              style={{
+                                                marginLeft: "99px",
+                                                verticalAlign: "left",
+                                              }}
+                                            />
+                                          </button>
+                                        </h2>
+                                        <div
+                                          className={`accordion-collapse collapse ${
+                                            index === activeIndex ? "show" : ""
+                                          }`}
+                                          aria-labelledby={`heading${index}`}
+                                          data-bs-parent="#accordionExample"
+                                        >
+                                          <div className="accordion-body">
+                                            <p>{faq.answer}</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div className="col-xl-6 col-lg-7 col-md-10">
-                            <div className="faq__content">
-                              <h4 className="section__sub-title">Faq </h4>
-                              <h2 className="section__title">
-                                <span className="first_title">
-                                  Freequently asked
-                                </span>
-                                <span className="second_title">questions</span>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          className="elementor-section elementor-top-section elementor-element elementor-element-d1bad7a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+          data-id="d1bad7a"
+          data-element_type="section"
+        >
+          <div className="elementor-container elementor-column-gap-no">
+            <div
+              className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-db6d7c9"
+              data-id="db6d7c9"
+              data-element_type="column"
+            >
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div
+                  className="elementor-element elementor-element-a10207a elementor-widget elementor-widget-pricing"
+                  data-id="a10207a"
+                  data-element_type="widget"
+                  data-widget_type="pricing.default"
+                >
+                  <div className="elementor-widget-container">
+                    <section className="pricing__area fix p-relative mt-105 pt-120 pb-90">
+                      <div className="pricing__shape">
+                        <img
+                          decoding="async"
+                          className="p-shape-1"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-1.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="p-shape-2 d-none d-sm-block"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-2.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="p-shape-3 wow zoomIn"
+                          data-wow-delay=".8s"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-3.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="p-shape-4 d-none d-sm-block"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-4.png"
+                          alt="image"
+                        />
+                        <img
+                          decoding="async"
+                          className="p-shape-5"
+                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-5.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="container" style={{ textAlign: "left" }}>
+                        <div className="row">
+                          <div className="col-xl-6 offset-xl-3 col-md-8 offset-md-2 col-sm-12">
+                            <div className="pricing__title text-center">
+                              <h4
+                                className="section__sub-title wow fadeInUp"
+                                data-wow-delay=".2s"
+                              >
+                                Pricing Plan{" "}
+                              </h4>
+                              <h2
+                                className="section__title wow fadeInUp"
+                                data-wow-delay=".3s"
+                              >
+                                <span>Find the Right Plan</span>
                               </h2>
-                              <div className="faq__wrapper">
-                                <div className="accordion" id="accordionExample">
-                                  <div className="accordion-content">
-                                    <h2
-                                      className="accordion-header"
-                                      id="heading0"
-                                    >
-                                      <button
-                                        className="accordion-button "
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#collapse0"
-                                        aria-expanded="true"
-                                        aria-controls="collapse0"
-                                      >
-                                        How To Gain Knowledge About SEO?{" "}
-                                      </button>
-                                    </h2>
-                                    <div
-                                      id="collapse0"
-                                      className="accordion-collapse collapse show"
-                                      aria-labelledby="heading0"
-                                      data-bs-parent="#accordionExample"
-                                    >
-                                      <div className="accordion-body">
-                                        <p>
-                                          Code market-facing out of scope, yet
-                                          power but inside yet performance review
-                                          up the flagpole bazooka that run it past
-                                          thright in and they its all greek.
-                                        </p>
+                              <p className="wow fadeInUp" data-wow-delay=".5s">
+                                Draw a line in the sand quick win. My capacity
+                                is full. Keep it lean gain alignment we need to
+                                future-proof this plan.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="pricing__tab">
+                          <div className="pricing__button text-center">
+                            <ul
+                              className="nav nav-tabs pricing__nav mb-40"
+                              id="myTab"
+                              role="tablist"
+                            >
+                              <li className="nav-item">
+                                <button
+                                  className={`nav-link ${
+                                    activeTab === "monthly" ? "active" : ""
+                                  }`}
+                                  id="home-tab"
+                                  data-bs-toggle="tab"
+                                  data-bs-target="#home1"
+                                  role="tab"
+                                  aria-controls="home1"
+                                  aria-selected="false"
+                                  onClick={() => handleTabSelect("monthly")}
+                                >
+                                  Monthly
+                                </button>
+                              </li>
+                              <li className="nav-item">
+                                <button
+                                  className={`nav-link ${
+                                    activeTab === "yearly" ? "active" : ""
+                                  }`}
+                                  id="profile-tab"
+                                  data-bs-toggle="tab"
+                                  data-bs-target="#profile"
+                                  role="tab"
+                                  aria-controls="profile"
+                                  aria-selected="true"
+                                  onClick={() => handleTabSelect("yearly")}
+                                >
+                                  Yearly
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="tab-content" id="myTabContent">
+                            <div
+                              className={`tab-pane ${
+                                activeTab === "monthly" ? "active" : ""
+                              }`}
+                              id="monthly"
+                            >
+                              <div className="row">
+                                <div className="col-xl-4 col-lg-4 col-md-6">
+                                  <div className="pricing__box mb-30">
+                                    <div className="pricing__header">
+                                      <h3>Professional</h3>
+                                      <p>A beautiful, simple website</p>
+                                    </div>
+                                    <div className="pricing__amount">
+                                      <h2>
+                                        $25.00<span>/monthly</span>
+                                      </h2>
+                                    </div>
+                                    <div className="pricing__item">
+                                      <ul>
+                                        <li>
+                                          10 Pages Responsive Website
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          5 PPC Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          10 SEO Keywords
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          5 Facebook Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          2 Video Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div className="pricing__link">
+                                      <a className="m-btn" href="">
+                                        Purchase Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="col-xl-4 col-lg-4 col-md-6">
+                                  <div className="pricing__box active mb-30">
+                                    <div className="pricing__header">
+                                      <h3>Standard</h3>
+                                      <p>Creative design, premium website</p>
+                                    </div>
+                                    <div className="pricing__amount">
+                                      <h2>
+                                        $35.00<span>/monthly</span>
+                                      </h2>
+                                    </div>
+                                    <div className="pricing__item">
+                                      <ul>
+                                        <li>
+                                          20 Pages Responsive Website
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon1"
+                                          />
+                                        </li>
+                                        <li>
+                                          10 PPC Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon1"
+                                          />
+                                        </li>
+                                        <li>
+                                          20 SEO Keywords
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon1"
+                                          />
+                                        </li>
+                                        <li>
+                                          10 Facebook Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon1"
+                                          />
+                                        </li>
+                                        <li>
+                                          5 Video Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon1"
+                                          />
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div className="pricing__link">
+                                      <a className="m-btn" href="">
+                                        Purchase Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-xl-4 col-lg-4 col-md-6">
+                                  <div className="pricing__box mb-30">
+                                    <div className="pricing__header">
+                                      <h3>Ultimate</h3>
+                                      <p>Dynamic website exclusive design</p>
+                                    </div>
+                                    <div className="pricing__amount">
+                                      <h2>
+                                        $60.00<span>/monthly</span>
+                                      </h2>
+                                    </div>
+                                    <div className="pricing__item">
+                                      <ul>
+                                        <li>
+                                          50 Pages Responsive Website
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          Unlimited Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          50 SEO Keywords
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          100 Facebook Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                        <li>
+                                          20 Video Campaigns
+                                          <FontAwesomeIcon
+                                            icon={faCheck}
+                                            className="custom-icon"
+                                          />
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div className="pricing__link">
+                                      <a className="m-btn" href="">
+                                        Purchase Now
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className={`tab-pane ${
+                                activeTab === "yearly" ? "active" : ""
+                              }`}
+                              id="yearly"
+                            >
+                              <div
+                                className="tab-pane"
+                                id="profile"
+                                role="tabpanel"
+                                aria-labelledby="profile-tab"
+                              >
+                                <div className="row">
+                                  <div className="col-xl-4 col-lg-4 col-md-6">
+                                    <div className="pricing__box  mb-30">
+                                      <div className="pricing__header">
+                                        <h3>Professional</h3>
+                                        <p>A beautiful, simple website</p>
+                                      </div>
+                                      <div className="pricing__amount">
+                                        <h2>
+                                          $125.00<span>/yearly</span>
+                                        </h2>
+                                      </div>
+                                      <div className="pricing__item">
+                                        <ul>
+                                          <li>10 Pages Responsive Website</li>
+                                          <li>5 PPC Campaigns</li>
+                                          <li>10 SEO Keywords</li>
+                                          <li>5 Facebook Campaigns</li>
+                                          <li>2 Video Campaigns</li>
+                                        </ul>
+                                      </div>
+                                      <div className="pricing__link">
+                                        <a className="m-btn" href>
+                                          Purchase Now
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="accordion-content">
-                                    <h2
-                                      className="accordion-header"
-                                      id="heading1"
-                                    >
-                                      <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#collapse1"
-                                        aria-expanded="false"
-                                        aria-controls="collapse1"
-                                      >
-                                        Benefit Of Digital Marketing?{" "}
-                                      </button>
-                                    </h2>
-                                    <div
-                                      id="collapse1"
-                                      className="accordion-collapse collapse "
-                                      aria-labelledby="heading1"
-                                      data-bs-parent="#accordionExample"
-                                    >
-                                      <div className="accordion-body">
-                                        <p>
-                                          Code market-facing out of scope, yet
-                                          power but inside yet performance review
-                                          up the flagpole bazooka that run it past
-                                          thright in and they its all greek.
-                                        </p>
+                                  <div className="col-xl-4 col-lg-4 col-md-6">
+                                    <div className="pricing__box active mb-30">
+                                      <div className="pricing__header">
+                                        <h3>Professional</h3>
+                                        <p>A beautiful, simple website</p>
+                                      </div>
+                                      <div className="pricing__amount">
+                                        <h2>
+                                          $135.00<span>/yearly</span>
+                                        </h2>
+                                      </div>
+                                      <div className="pricing__item">
+                                        <ul>
+                                          <li>20 Pages Responsive Website</li>
+                                          <li>10 PPC Campaigns</li>
+                                          <li>20 SEO Keywords</li>
+                                          <li>10 Facebook Campaigns</li>
+                                          <li>5 Video Campaigns</li>
+                                        </ul>
+                                      </div>
+                                      <div className="pricing__link">
+                                        <a className="m-btn" href>
+                                          Purchase Now
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="accordion-content">
-                                    <h2
-                                      className="accordion-header"
-                                      id="heading2"
-                                    >
-                                      <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#collapse2"
-                                        aria-expanded="false"
-                                        aria-controls="collapse2"
-                                      >
-                                        Business Development Most Reasons?{" "}
-                                      </button>
-                                    </h2>
-                                    <div
-                                      id="collapse2"
-                                      className="accordion-collapse collapse "
-                                      aria-labelledby="heading2"
-                                      data-bs-parent="#accordionExample"
-                                    >
-                                      <div className="accordion-body">
-                                        <p>
-                                          Code market-facing out of scope, yet
-                                          power but inside yet performance review
-                                          up the flagpole bazooka that run it past
-                                          thright in and they its all greek.
-                                        </p>
+                                  <div className="col-xl-4 col-lg-4 col-md-6">
+                                    <div className="pricing__box  mb-30">
+                                      <div className="pricing__header">
+                                        <h3>Professional</h3>
+                                        <p>A beautiful, simple website</p>
                                       </div>
-                                    </div>
-                                  </div>
-                                  <div className="accordion-content">
-                                    <h2
-                                      className="accordion-header"
-                                      id="heading3"
-                                    >
-                                      <button
-                                        className="accordion-button collapsed"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#collapse3"
-                                        aria-expanded="false"
-                                        aria-controls="collapse3"
-                                      >
-                                        Improve Performance and Efficiency?{" "}
-                                      </button>
-                                    </h2>
-                                    <div
-                                      id="collapse3"
-                                      className="accordion-collapse collapse "
-                                      aria-labelledby="heading3"
-                                      data-bs-parent="#accordionExample"
-                                    >
-                                      <div className="accordion-body">
-                                        <p>
-                                          Code market-facing out of scope, yet
-                                          power but inside yet performance review
-                                          up the flagpole bazooka that run it past
-                                          thright in and they its all greek.
-                                        </p>
+                                      <div className="pricing__amount">
+                                        <h2>
+                                          $499.00<span>/yearly</span>
+                                        </h2>
+                                      </div>
+                                      <div className="pricing__item">
+                                        <ul>
+                                          <li>50 Pages Responsive Website</li>
+                                          <li>Unlimited Campaigns</li>
+                                          <li>50 SEO Keywords</li>
+                                          <li>100 Facebook Campaigns</li>
+                                          <li>20 Video Campaigns</li>
+                                        </ul>
+                                      </div>
+                                      <div className="pricing__link">
+                                        <a className="m-btn" href>
+                                          Purchase Now
+                                        </a>
                                       </div>
                                     </div>
                                   </div>
@@ -729,485 +1094,71 @@ const Services = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </section>
+                    </section>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* lets-work area start */}
+      <section className="lets-work__area p-relative pt-165 pb-160">
+        <div className="lets-work__shape">
+          <img
+            className="lets-work-shape-1 d-none d-lg-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-1.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-2 d-none d-lg-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-2.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-3 d-none d-sm-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-3.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-4 d-none d-sm-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-4.png"
+            alt="image"
+          />
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="lets-work__title text-center">
+                <h4
+                  className="section__sub-title wow fadeInUp"
+                  data-wow-delay=".2s"
+                >
+                  Let’s Work Together{" "}
+                </h4>
+                <h2
+                  className="section__title wow fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <span>Need a successful</span>
+                  project?{" "}
+                </h2>
+                <a
+                  className="m-btn mt-35 wow fadeInUp"
+                  data-wow-delay=".6s"
+                  href="/Contact"
+                >
+                  Estimate Project
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        className="elementor-section elementor-top-section elementor-element elementor-element-d1bad7a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-        data-id="d1bad7a"
-        data-element_type="section"
-      >
-        <div className="elementor-container elementor-column-gap-no">
-          <div
-            className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-db6d7c9"
-            data-id="db6d7c9"
-            data-element_type="column"
-          >
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div
-                className="elementor-element elementor-element-a10207a elementor-widget elementor-widget-pricing"
-                data-id="a10207a"
-                data-element_type="widget"
-                data-widget_type="pricing.default"
-              >
-                <div className="elementor-widget-container">
-                  <section className="pricing__area fix p-relative mt-105 pt-120 pb-90">
-                    <div className="pricing__shape">
-                      <img
-                        decoding="async"
-                        className="p-shape-1"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-1.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="p-shape-2 d-none d-sm-block"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-2.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="p-shape-3 wow zoomIn"
-                        data-wow-delay=".8s"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-3.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="p-shape-4 d-none d-sm-block"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-4.png"
-                        alt="image"
-                      />
-                      <img
-                        decoding="async"
-                        className="p-shape-5"
-                        src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/pricing/p-s-5.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div
-                          className="container"
-                          style={{ textAlign: "left" }}
-                        >
-                          <div className="row">
-                            <div className="col-xl-6 offset-xl-3 col-md-8 offset-md-2 col-sm-12">
-                              <div className="pricing__title text-center">
-                                <h4
-                                  className="section__sub-title wow fadeInUp"
-                                  data-wow-delay=".2s"
-                                >
-                                  Pricing Plan{" "}
-                                </h4>
-                                <h2
-                                  className="section__title wow fadeInUp"
-                                  data-wow-delay=".3s"
-                                >
-                                  <span>Find the Right Plan</span>
-                                </h2>
-                                <p
-                                  className="wow fadeInUp"
-                                  data-wow-delay=".5s"
-                                >
-                                  Draw a line in the sand quick win. My capacity
-                                  is full. Keep it lean gain alignment we need
-                                  to future-proof this plan.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="pricing__tab">
-                            <div className="pricing__button text-center">
-                              <ul
-                                className="nav nav-tabs pricing__nav mb-40"
-                                id="myTab"
-                                role="tablist"
-                              >
-                                <li className="nav-item">
-                                  <button
-                                    className={`nav-link ${
-                                      activeTab === "monthly" ? "active" : ""
-                                    }`}
-                                    id="home-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#home1"
-                                    role="tab"
-                                    aria-controls="home1"
-                                    aria-selected="false"
-                                    onClick={() => handleTabSelect("monthly")}
-                                  >
-                                    Monthly
-                                  </button>
-                                </li>
-                                <li className="nav-item">
-                                  <button
-                                    className={`nav-link ${
-                                      activeTab === "yearly" ? "active" : ""
-                                    }`}
-                                    id="profile-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#profile"
-                                    role="tab"
-                                    aria-controls="profile"
-                                    aria-selected="true"
-                                    onClick={() => handleTabSelect("yearly")}
-                                  >
-                                    Yearly
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                            <div className="tab-content" id="myTabContent">
-                              <div
-                                className={`tab-pane ${
-                                  activeTab === "monthly" ? "active" : ""
-                                }`}
-                                id="monthly"
-                              >
-                                <div className="row">
-                                  <div className="col-xl-4 col-lg-4 col-md-6">
-                                    <div className="pricing__box mb-30">
-                                      <div className="pricing__header">
-                                        <h3>Professional</h3>
-                                        <p>A beautiful, simple website</p>
-                                      </div>
-                                      <div className="pricing__amount">
-                                        <h2>
-                                          $25.00<span>/monthly</span>
-                                        </h2>
-                                      </div>
-                                      <div className="pricing__item">
-                                        <ul>
-                                          <li>
-                                            10 Pages Responsive Website
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            5 PPC Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            10 SEO Keywords
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            5 Facebook Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            2 Video Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div className="pricing__link">
-                                        <a className="m-btn" href="">
-                                          Purchase Now
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
+      {/* lets-work area end */}
+    </>
+  );
+};
 
-                                  <div className="col-xl-4 col-lg-4 col-md-6">
-                                    <div className="pricing__box active mb-30">
-                                      <div className="pricing__header">
-                                        <h3>Standard</h3>
-                                        <p>Creative design, premium website</p>
-                                      </div>
-                                      <div className="pricing__amount">
-                                        <h2>
-                                          $35.00<span>/monthly</span>
-                                        </h2>
-                                      </div>
-                                      <div className="pricing__item">
-                                        <ul>
-                                          <li>
-                                            20 Pages Responsive Website
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon1"
-                                            />
-                                          </li>
-                                          <li>
-                                            10 PPC Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon1"
-                                            />
-                                          </li>
-                                          <li>
-                                            20 SEO Keywords
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon1"
-                                            />
-                                          </li>
-                                          <li>
-                                            10 Facebook Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon1"
-                                            />
-                                          </li>
-                                          <li>
-                                            5 Video Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon1"
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div className="pricing__link">
-                                        <a className="m-btn" href="">
-                                          Purchase Now
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="col-xl-4 col-lg-4 col-md-6">
-                                    <div className="pricing__box mb-30">
-                                      <div className="pricing__header">
-                                        <h3>Ultimate</h3>
-                                        <p>Dynamic website exclusive design</p>
-                                      </div>
-                                      <div className="pricing__amount">
-                                        <h2>
-                                          $60.00<span>/monthly</span>
-                                        </h2>
-                                      </div>
-                                      <div className="pricing__item">
-                                        <ul>
-                                          <li>
-                                            50 Pages Responsive Website
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            Unlimited Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            50 SEO Keywords
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            100 Facebook Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                          <li>
-                                            20 Video Campaigns
-                                            <FontAwesomeIcon
-                                              icon={faCheck}
-                                              className="custom-icon"
-                                            />
-                                          </li>
-                                        </ul>
-                                      </div>
-                                      <div className="pricing__link">
-                                        <a className="m-btn" href="">
-                                          Purchase Now
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className={`tab-pane ${
-                                  activeTab === "yearly" ? "active" : ""
-                                }`}
-                                id="yearly"
-                              >
-                                <div
-                                  className="tab-pane"
-                                  id="profile"
-                                  role="tabpanel"
-                                  aria-labelledby="profile-tab"
-                                >
-                                  <div className="row">
-                                    <div className="col-xl-4 col-lg-4 col-md-6">
-                                      <div className="pricing__box  mb-30">
-                                        <div className="pricing__header">
-                                          <h3>Professional</h3>
-                                          <p>A beautiful, simple website</p>
-                                        </div>
-                                        <div className="pricing__amount">
-                                          <h2>
-                                            $125.00<span>/yearly</span>
-                                          </h2>
-                                        </div>
-                                        <div className="pricing__item">
-                                          <ul>
-                                            <li>10 Pages Responsive Website</li>
-                                            <li>5 PPC Campaigns</li>
-                                            <li>10 SEO Keywords</li>
-                                            <li>5 Facebook Campaigns</li>
-                                            <li>2 Video Campaigns</li>
-                                          </ul>
-                                        </div>
-                                        <div className="pricing__link">
-                                          <a className="m-btn" href>
-                                            Purchase Now
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6">
-                                      <div className="pricing__box active mb-30">
-                                        <div className="pricing__header">
-                                          <h3>Professional</h3>
-                                          <p>A beautiful, simple website</p>
-                                        </div>
-                                        <div className="pricing__amount">
-                                          <h2>
-                                            $135.00<span>/yearly</span>
-                                          </h2>
-                                        </div>
-                                        <div className="pricing__item">
-                                          <ul>
-                                            <li>20 Pages Responsive Website</li>
-                                            <li>10 PPC Campaigns</li>
-                                            <li>20 SEO Keywords</li>
-                                            <li>10 Facebook Campaigns</li>
-                                            <li>5 Video Campaigns</li>
-                                          </ul>
-                                        </div>
-                                        <div className="pricing__link">
-                                          <a className="m-btn" href>
-                                            Purchase Now
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6">
-                                      <div className="pricing__box  mb-30">
-                                        <div className="pricing__header">
-                                          <h3>Professional</h3>
-                                          <p>A beautiful, simple website</p>
-                                        </div>
-                                        <div className="pricing__amount">
-                                          <h2>
-                                            $499.00<span>/yearly</span>
-                                          </h2>
-                                        </div>
-                                        <div className="pricing__item">
-                                          <ul>
-                                            <li>50 Pages Responsive Website</li>
-                                            <li>Unlimited Campaigns</li>
-                                            <li>50 SEO Keywords</li>
-                                            <li>100 Facebook Campaigns</li>
-                                            <li>20 Video Campaigns</li>
-                                          </ul>
-                                        </div>
-                                        <div className="pricing__link">
-                                          <a className="m-btn" href>
-                                            Purchase Now
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                  </section>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    {/* lets-work area start */}
-    <section className="lets-work__area p-relative pt-165 pb-160">
-      <div className="lets-work__shape">
-        <img
-          className="lets-work-shape-1 d-none d-lg-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-1.png"
-          alt="image"
-        />
-        <img
-          className="lets-work-shape-2 d-none d-lg-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-2.png"
-          alt="image"
-        />
-        <img
-          className="lets-work-shape-3 d-none d-sm-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-3.png"
-          alt="image"
-        />
-        <img
-          className="lets-work-shape-4 d-none d-sm-block"
-          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-4.png"
-          alt="image"
-        />
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="lets-work__title text-center">
-              <h4
-                className="section__sub-title wow fadeInUp"
-                data-wow-delay=".2s"
-              >
-                Let’s Work Together{" "}
-              </h4>
-              <h2 className="section__title wow fadeInUp" data-wow-delay=".3s">
-                <span>Need a successful</span>
-                project?{" "}
-              </h2>
-              <a
-                className="m-btn mt-35 wow fadeInUp"
-                data-wow-delay=".6s"
-                href="https://thememaster.net/wp/maxdi/contact"
-              >
-                Estimate Project
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    {/* lets-work area end */}
-
- 
-  </>
-  
-  )
-}
-
-export default Services
+export default Services;
