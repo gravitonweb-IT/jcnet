@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React , {useEffect , useState}from 'react';
 import {MdKeyboardDoubleArrowRight} from "react-icons/md";
 import { Tabs, Tab } from "react-bootstrap";
 const portfolio = () => {
@@ -6,14 +6,75 @@ const portfolio = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [key, setKey] = useState("all");
 
+// scroll
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show the arrow when the user scrolls down
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll to the top of the page when the arrow is clicked
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Inline styles for the progress circle
+  const progressCircleStyle = {
+    WebkitTransition: "stroke-dashoffset 10ms linear 0s",
+    transition: "stroke-dashoffset 10ms linear 0s",
+    strokeDasharray: "307.919, 307.919",
+    strokeDashoffset: "252.45",
+  };
+
   return (
     <div>
   {/* back to top start */}
-  <div className="progress-wrap">
-    <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
+  <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
+      <div className="progress-wrap active-progress" onClick={scrollToTop}>
+        <svg
+          className="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            style={progressCircleStyle}
+          />
+        </svg>
+        <div className="custom-icon5 animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="iconsuparrow"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
+          </svg>
+        </div>
+      </div>
+    </div>
   {/* back to top end */}
  
   {/* side info end */}
@@ -49,8 +110,8 @@ const portfolio = () => {
   {/* page-title area end */}
 
   <div data-elementor-type="wp-page" data-elementor-id={84} className="elementor elementor-84">
-   {/* tabs */}
-   <section
+ {/* tabs */}
+ <section
           className="elementor-section elementor-top-section elementor-element elementor-element-8f5e084 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="8f5e084"
           data-element_type="section"
@@ -141,8 +202,23 @@ const portfolio = () => {
                                 id="tabbed-content"
                                 activeKey={key}
                                 onSelect={(k) => setKey(k)}
+                                style={{
+                                  border: "none",
+                                  backgroundColor: "transparent",
+                                  color: "#000",
+                                  textAlign:"center",
+                                  justifyContent: "center",
+                                }}
                               >
-                                <Tab eventKey="all" title="Show All">
+                                <Tab
+                                  eventKey="all"
+                                  title="Show All"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -250,7 +326,15 @@ const portfolio = () => {
                                     </div>
                                   </div>
                                 </Tab>
-                                <Tab eventKey="branding" title="Branding">
+                                <Tab
+                                  eventKey="branding"
+                                  title="Branding"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -280,7 +364,15 @@ const portfolio = () => {
                                     </div>
                                   </div>
                                 </Tab>
-                                <Tab eventKey="development" title="Development">
+                                <Tab
+                                  eventKey="development"
+                                  title="Development"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -337,7 +429,15 @@ const portfolio = () => {
                                   </div>
                                 </Tab>
 
-                                <Tab eventKey="marketing" title="Marketing">
+                                <Tab
+                                  eventKey="marketing"
+                                  title="Marketing"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -397,6 +497,11 @@ const portfolio = () => {
                                 <Tab
                                   eventKey="ui-ux-design"
                                   title="UI/UX Design"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
                                 >
                                   <div className="row row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">

@@ -30,14 +30,37 @@ const Home = () => {
     autoplaySpeed: 1000,
   };
   //
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
+  useEffect(() => {
+   
+    function handleResize() {
+      if (window.innerWidth <= 768) {
+        setSlidesToShow(1);
+      } else {
+        setSlidesToShow(3);
+      }
+    }
+
+ 
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+   
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const settings1 = {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow, 
     slidesToScroll: 1,
   };
+
+  // SLICK SLIDER END
   const settings2 = {
     dots: true,
     infinite: true,
@@ -46,11 +69,11 @@ const Home = () => {
     slidesToScroll: 1,
   };
   useEffect(() => {
-    // Get the last counted value from localStorage
+   
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
 
     if (lastCount < 500) {
-      // Increment the count and store it in localStorage
+    
       const interval = setInterval(() => {
         const newCount = end + 1;
         setEnd(newCount);
@@ -93,10 +116,42 @@ const Home = () => {
     "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png",
     "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png",
   ];
+
+  // scroll
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show the arrow when the user scrolls down
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll to the top of the page when the arrow is clicked
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Inline styles for the progress circle
+  const progressCircleStyle = {
+    WebkitTransition: "stroke-dashoffset 10ms linear 0s",
+    transition: "stroke-dashoffset 10ms linear 0s",
+    strokeDasharray: "307.919, 307.919",
+    strokeDashoffset: "252.45",
+  };
   return (
     <div>
-      <div className="progress-arrow-container">
-        <div className="progress-wrap active-progress">
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+        <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
             className="progress-circle svg-content"
             width="100%"
@@ -105,16 +160,10 @@ const Home = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={{
-                "-webkit-transition": "stroke-dashoffset 10ms linear 0s",
-                transition: "stroke-dashoffset 10ms linear 0s",
-                "stroke-dasharray": "307.919, 307.919",
-                "stroke-dashoffset": "252.45",
-              }}
+              style={progressCircleStyle}
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
-            {/* Your custom icon SVG code goes here */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -303,7 +352,7 @@ const Home = () => {
                                   </div>
                                   <div className="single__service-link">
                                     <a
-                                      href="https://thememaster.net/wp/maxdi/ourservices/web-development"
+                                      href="#"
                                       className="s-btn s-btn-pink"
                                     >
                                       Find Out More
@@ -600,8 +649,23 @@ const Home = () => {
                                 id="tabbed-content"
                                 activeKey={key}
                                 onSelect={(k) => setKey(k)}
+                                style={{
+                                  border: "none",
+                                  backgroundColor: "transparent",
+                                  color: "#000",
+                                  textAlign: "center",
+                                  justifyContent: "center",
+                                }}
                               >
-                                <Tab eventKey="all" title="Show All">
+                                <Tab
+                                  eventKey="all"
+                                  title="Show All"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -709,7 +773,15 @@ const Home = () => {
                                     </div>
                                   </div>
                                 </Tab>
-                                <Tab eventKey="branding" title="Branding">
+                                <Tab
+                                  eventKey="branding"
+                                  title="Branding"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -739,7 +811,15 @@ const Home = () => {
                                     </div>
                                   </div>
                                 </Tab>
-                                <Tab eventKey="development" title="Development">
+                                <Tab
+                                  eventKey="development"
+                                  title="Development"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -796,7 +876,15 @@ const Home = () => {
                                   </div>
                                 </Tab>
 
-                                <Tab eventKey="marketing" title="Marketing">
+                                <Tab
+                                  eventKey="marketing"
+                                  title="Marketing"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                >
                                   <div className="row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
                                       <div className="portfolio__item-2 mb-30">
@@ -856,6 +944,11 @@ const Home = () => {
                                 <Tab
                                   eventKey="ui-ux-design"
                                   title="UI/UX Design"
+                                  style={{
+                                    border: "none",
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
                                 >
                                   <div className="row row grid mt-70">
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
@@ -1043,7 +1136,7 @@ const Home = () => {
         </section>
 
         {/* testmoinial */}
-        <section className="testimonials__area-2 fix p-relative pt-120 pb-120">
+        <section className=" testimonials__area-2 fix p-relative pt-120 pb-120">
           <div className="testimonials__shape">
             <img
               decoding="async"

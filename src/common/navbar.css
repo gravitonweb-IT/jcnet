@@ -1,0 +1,28 @@
+.fixed-navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #1d233a;
+  color: white;
+  padding-left: 85px;
+  padding-top: 10px;
+}
+
+
+.fixed-navbar {
+  color: white;
+  padding: 10px;
+}
+
+.navigation-style{
+    color:white;
+    font-weight: 500;
+}
+
+@media (min-width: 300px) {
+  .fixed-navbar-wrapper {
+    padding-left: 10px;
+  }
+}

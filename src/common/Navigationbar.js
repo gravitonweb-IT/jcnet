@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button } from "react-bootstrap";
-
-import logo from "../../src/assests/navabarimages/logo.png"
-
+import {Link} from "react-router-dom";
+import "./navbar.css"
+import logo from "../assests/navabarimages/logo.png"
 
 const Navigationbar = () => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -10,46 +10,53 @@ const Navigationbar = () => {
   const toggleDrawer = () => {
     setShowDrawer(!showDrawer);
   };
+
+  // 
+  const [scrolling, setScrolling] = useState(false);
+
+  // Function to handle scrolling
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Navbar.Brand href="#home">
-        <img src={logo} alt="logo" />
-       
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-  <Nav className="ml-auto" style={{ marginLeft: '200px' }}>
-    <Nav.Link href="/">Home</Nav.Link>
-    <Nav.Link href="/About">About</Nav.Link>
-    <Nav.Link href="/Contact">Contact</Nav.Link>
-    <Nav.Link href="/Services">Services</Nav.Link>
-    <Nav.Link href="/OurServices">OurServices</Nav.Link>
-    <Nav.Link href="/Portfolio">portfolio</Nav.Link>
-    <button type="button" style={{background:"black", color:"white", padding:"15px" , borderRadius:"10px", marginLeft:"20px"}}>Get A Quote</button>
-  </Nav>
-</Navbar.Collapse>
+  <div className={`fixed-navbar-wrapper${scrolling ? ' scrolled' : ''}`}>
+    <Navbar collapseOnSelect expand="lg" className="fixed-navbar ">
+    <Navbar.Brand href="#home" className="navbar-brand">
+  <img
+    src={logo}
+    alt="logo"
+    className="logoimage"
+  />
+</Navbar.Brand>
+ <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleDrawer} />
+      <Navbar.Collapse  className='justify-content-end navigation-style'  >
+        <Nav>
+          <Nav.Link as={Link} to="/" className='narrowbutton text-white'>Home</Nav.Link>
+          <Nav.Link as={Link} to="/About" className='narrowbutton text-white'>About</Nav.Link>
+          <Nav.Link as={Link} to="/Contact" className='narrowbutton text-white'>Contact</Nav.Link>
+          <Nav.Link as={Link} to="/Services" className='narrowbutton text-white'>Services</Nav.Link>
+          <Nav.Link as={Link} to="/OurServices" className='narrowbutton text-white'>Our Services</Nav.Link>
+          <Nav.Link as={Link} to="/Portfolio" className='narrowbutton text-white'>Portfolio</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
 
+ 
+  </div>
+</>
 
-      </Navbar>
-
-      {showDrawer && (
-  <div className="drawer">
-  <Nav className="d-lg-none justify-content-end">
-    <Nav.Link href="Home">Home</Nav.Link>
-    <Nav.Link href="/About">About</Nav.Link>
-    <Nav.Link href="/Contact">Contact</Nav.Link>
-    <Nav.Link href="/Services">Services</Nav.Link>
-    <Nav.Link href="/OurServices">OurServices</Nav.Link>
-    <Nav.Link href="/Portfolio">portfolio</Nav.Link>
-  </Nav>
-</div>
-
-)}
-
-
-      
-    </>
   );
 };
 

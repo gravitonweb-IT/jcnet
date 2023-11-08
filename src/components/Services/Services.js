@@ -90,18 +90,76 @@ const Services = () => {
       setActiveIndex(index);
     }
   };
+
+
+  // / scroll
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show the arrow when the user scrolls down
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll to the top of the page when the arrow is clicked
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Inline styles for the progress circle
+  const progressCircleStyle = {
+    WebkitTransition: "stroke-dashoffset 10ms linear 0s",
+    transition: "stroke-dashoffset 10ms linear 0s",
+    strokeDasharray: "307.919, 307.919",
+    strokeDashoffset: "252.45",
+  };
   return (
     <>
-      <div className="progress-wrap">
+        <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
+      <div className="progress-wrap active-progress" onClick={scrollToTop}>
         <svg
           className="progress-circle svg-content"
           width="100%"
           height="100%"
           viewBox="-1 -1 102 102"
         >
-          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+          <path
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            style={progressCircleStyle}
+          />
         </svg>
+        <div className="custom-icon5 animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            className="iconsuparrow"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
+          </svg>
+        </div>
       </div>
+    </div>
+
 
       <div className="offcanvas-overlay" />
 

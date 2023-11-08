@@ -48,8 +48,9 @@
 }
 
 .iconsuparrow{
-margin-top: -63px;
-    rotate: 180deg;
+  margin-top: -66px;
+  rotate: 180deg;
+  margin-left: 6px;
 }
 
 
@@ -123,3 +124,8 @@ margin-top: -63px;
   font-size: 1.25rem;
   text-align: center;
 }
+
+
+/* 
+ */
+ 
