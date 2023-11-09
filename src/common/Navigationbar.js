@@ -32,7 +32,7 @@ const Navigationbar = () => {
   return (
     <>
   <div className={`fixed-navbar-wrapper${scrolling ? ' scrolled' : ''}`}>
-    <Navbar collapseOnSelect expand="lg" className="fixed-navbar ">
+    <Navbar collapseOnSelect expand="lg" >
     <Navbar.Brand href="#home" className="navbar-brand">
   <img
     src={logo}
@@ -41,15 +41,16 @@ const Navigationbar = () => {
   />
 </Navbar.Brand>
  <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleDrawer} />
-      <Navbar.Collapse  className='justify-content-end navigation-style'  >
+      <Navbar.Collapse  className='justify-content-end '  >
         <Nav>
-          <Nav.Link as={Link} to="/" className='narrowbutton text-white'>Home</Nav.Link>
-          <Nav.Link as={Link} to="/About" className='narrowbutton text-white'>About</Nav.Link>
-          <Nav.Link as={Link} to="/Contact" className='narrowbutton text-white'>Contact</Nav.Link>
-          <Nav.Link as={Link} to="/Services" className='narrowbutton text-white'>Services</Nav.Link>
-          <Nav.Link as={Link} to="/OurServices" className='narrowbutton text-white'>Our Services</Nav.Link>
-          <Nav.Link as={Link} to="/Portfolio" className='narrowbutton text-white'>Portfolio</Nav.Link>
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/About">About</Nav.Link>
+          <Nav.Link as={Link} to="/Services" >Services</Nav.Link>
+          <Nav.Link as={Link} to="/OurServices" >Our Services</Nav.Link>
+          <Nav.Link as={Link} to="/Portfolio">Portfolio</Nav.Link>
+          <Nav.Link as={Link} to="/Contact" >Contact</Nav.Link>
         </Nav>
+        {/* <button className='narrowbutton ' style={{background:"blue" , color:"white", padding:"10px", borderRadius:"10px"}}>Get a Quote</button> */}
       </Navbar.Collapse>
     </Navbar>
 

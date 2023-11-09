@@ -10,7 +10,19 @@ import CountUp from "react-countup";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiSolidTimeFive } from "react-icons/bi";
 import { Tabs, Tab } from "react-bootstrap";
-
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { BsMicrosoft, BsAndroid2, BsFillNodeMinusFill } from "react-icons/bs";
+import { SiCoinmarketcap, SiWebpack } from "react-icons/si";
+import { GiTreeGrowth } from "react-icons/gi";
+import payrol from "../../assests/Homepageimages/payrol.jpeg";
+import ai from "../../assests/Homepageimages/ai.jpg";
+import moniternoc from "../../assests/Homepageimages/moniternoc.jpeg";
+import noc from "../../assests/Homepageimages/noc.jpeg";
+import Homeblogimage1audit from "../../assests/Homepageimages/Homeblogimage1audit.png";
+import fiberoptic from "../../assests/Homepageimages/fiberoptic.png";
+import nontech from "../../assests/Homepageimages/nontech.jpg";
+import tech from "../../assests/Homepageimages/tech.jpeg";
+import route from "../../assests/Homepageimages/route.jpg";
 const Home = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
@@ -33,7 +45,6 @@ const Home = () => {
   const [slidesToShow, setSlidesToShow] = useState(3);
 
   useEffect(() => {
-   
     function handleResize() {
       if (window.innerWidth <= 768) {
         setSlidesToShow(1);
@@ -42,12 +53,10 @@ const Home = () => {
       }
     }
 
- 
     handleResize();
 
     window.addEventListener("resize", handleResize);
 
-   
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -56,7 +65,7 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: slidesToShow, 
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
   };
 
@@ -65,15 +74,13 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
   };
   useEffect(() => {
-   
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
 
     if (lastCount < 500) {
-    
       const interval = setInterval(() => {
         const newCount = end + 1;
         setEnd(newCount);
@@ -160,7 +167,7 @@ const Home = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={progressCircleStyle}
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
@@ -184,7 +191,7 @@ const Home = () => {
       </div>
 
       <div className="offcanvas-overlay" />
-
+      {/* banner start */}
       <div
         data-elementor-type="wp-page"
         data-elementor-id={74}
@@ -268,10 +275,10 @@ const Home = () => {
                                   style={{ textAlign: "left" }}
                                 >
                                   <span className="first_title">
-                                    Digital product
+                                    Unlock Your Potential with
                                   </span>
                                   <span className="second_title">
-                                    design agency
+                                    Expert Consultancy Services
                                   </span>
                                 </h2>
                                 <p
@@ -342,19 +349,19 @@ const Home = () => {
                                     />
                                   </div>
                                   <div className="single__service-content single__service-content-2">
-                                    <h3>UI/UX Design</h3>
+                                    <h3>Network Audit Services</h3>
                                     <p>
-                                      Beautiful and Influential websites &amp;
-                                      apps that are mobile friendly quick to
-                                      load and help drive sales giving you a
-                                      solid presence online.
+                                      A comprehensive network audit is the
+                                      cornerstone of a robust and efficient
+                                      network infrastructure. we provide
+                                      professional network audit services to
+                                      help you assess, optimize, and secure your
+                                      network, ensuring it meets your business
+                                      objectives and operates at its best.
                                     </p>
                                   </div>
                                   <div className="single__service-link">
-                                    <a
-                                      href="#"
-                                      className="s-btn s-btn-pink"
-                                    >
+                                    <a href="#" className="s-btn s-btn-pink">
                                       Find Out More
                                     </a>
                                   </div>
@@ -372,12 +379,14 @@ const Home = () => {
                                     />
                                   </div>
                                   <div className="single__service-content single__service-content-2">
-                                    <h3>Web Development</h3>
+                                    <h3>Payroll and Salary Services</h3>
                                     <p>
-                                      Beautiful and Influential websites &amp;
-                                      apps that are mobile friendly quick to
-                                      load and help drive sales giving you a
-                                      solid presence online.
+                                      Managing payroll and employee salaries can
+                                      be a complex and time-consuming task for
+                                      any organization. we offer comprehensive
+                                      payroll and salary services to streamline
+                                      this critical aspect of your business
+                                      operations
                                     </p>
                                   </div>
                                   <div className="single__service-link">
@@ -402,12 +411,18 @@ const Home = () => {
                                     />
                                   </div>
                                   <div className="single__service-content single__service-content-2">
-                                    <h3>App Development</h3>
+                                    <h3>
+                                      Hire Resources: Technical and
+                                      Non-Technical
+                                    </h3>
                                     <p>
-                                      Beautiful and Influential websites &amp;
-                                      apps that are mobile friendly quick to
-                                      load and help drive sales giving you a
-                                      solid presence online.
+                                      we offer a comprehensive solution for
+                                      sourcing and recruiting both technical and
+                                      non-technical professionals. Whether
+                                      you're seeking IT experts, engineers,
+                                      marketing specialists, administrative
+                                      staff, or any other talent, we have you
+                                      covered.
                                     </p>
                                   </div>
                                   <div className="single__service-link">
@@ -431,6 +446,85 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* new section */}
+        <div className="NewSection">
+          <div className="service_sectionwise  text-center ">
+            <p className="section_paragraph">We Make Connections</p>
+            <h1>
+              We Provide Best{" "}
+              <span className="service_spancite">
+                <cite>Services</cite>
+              </span>{" "}
+            </h1>
+            <p>
+              Web designing in a powerful way of just not a profession, however,
+              in a passion for our <br />
+              Company. We have a tendency to believe the idea that smart
+              looking.
+            </p>
+          </div>
+          <Container className="d-flex justify-content-center align-items-center">
+            <Row xs={1} md={2} lg={4} className="g-0">
+              <Col>
+                <Card className="home-services-slide">
+                  <Card.Body>
+                    <h5 className="card-title home-services-heading ">
+                      Experience Design
+                    </h5>
+                    <p className="card-text home-services-paragraph mt-2">
+                      Our firm is an expert at creating an efficient user
+                      interface that makes user interaction seamless.
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Col>
+
+              <Col>
+                <Card className="home-services-slide">
+                  <Card.Body>
+                    <h5 className="card-title home-services-heading">
+                      IT Consultancy
+                    </h5>
+                    <p className="card-text home-services-paragraph mt-2 ">
+                      We provide IT management services tailored to an
+                      organization’s needs.
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Col>
+
+              <Col>
+                <Card className="home-services-slide">
+                  <Card.Body>
+                    <h5 className="card-title home-services-heading">
+                      Cyber Security
+                    </h5>
+                    <p className="card-text home-services-paragraph mt-2">
+                      Expertise in an IT consultancy for many companies,
+                      covering different working areas.
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Col>
+
+              <Col>
+                <Card className="home-services-slide">
+                  <Card.Body>
+                    <h5 className="card-title home-services-heading">
+                      Digital Services
+                    </h5>
+                    <p className="card-text home-services-paragraph mt-2">
+                      We develop, migrate & work on applications to ensure that
+                      run capably on cloud.
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        {/* new section */}
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-3719bdf elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="3719bdf"
@@ -478,14 +572,14 @@ const Home = () => {
                         />
                       </div>
                       <div className="container">
-                        <div className="row mb-110">
+                        <div className="row mb-4">
                           <div className="col-xl-12">
                             <div className="maxdi__title text-center">
                               <h4
                                 className="section__sub-title wow fadeInUp"
                                 data-wow-delay=".2s"
                               >
-                                We Are Maxdi
+                                We Are Jcnet
                               </h4>
                               <h2
                                 className="section__title wow fadeInUp"
@@ -501,8 +595,8 @@ const Home = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="row">
-                          <div className="col-xl-12">
+                        <div className="row d-flex">
+                          <div className="col-xl-12 mb-4">
                             <div className="maxdi__counter">
                               <div className="maxdi__counter-content text-center">
                                 <h2>
@@ -511,6 +605,8 @@ const Home = () => {
                                 <p>Happy Clients</p>
                               </div>
                             </div>
+                          </div>
+                          <div className="col-xl-12 mb-4">
                             <div className="maxdi__counter maxdi__counter-2">
                               <div className="maxdi__counter-content maxdi__counter-content-2 text-center">
                                 <h2>
@@ -524,6 +620,8 @@ const Home = () => {
                                 <p>Project Delivered</p>
                               </div>
                             </div>
+                          </div>
+                          <div className="col-xl-12 mb-4">
                             <div className="maxdi__content d-flex">
                               <div className="maxdi__thumb-1">
                                 <img
@@ -557,7 +655,225 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* tabs */}
+
+        {/*  image cards*/}
+
+        <div className="container  ">
+          <div className="row">
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px", borderRadius: "8px" }}>
+                <Card.Img
+                  variant="top"
+                  src={route}
+                  style={{ height: "230px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3> Router and Switch Firewall SDN</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our expertise ensures optimal performance, security, and
+                      adaptability. Routers are finely tuned for seamless data
+                      flow, switches for efficient traffic management, and
+                      firewalls for robust security.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={tech}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Hire Resource for Technical </h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      In the fast-paced world of technology, securing top-notch
+                      technical talent is essential for staying ahead. we
+                      streamline the hiring process, ensuring you have the right
+                      technical talent to drive your projects forward.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 ">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={nontech}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Hire Resource for Non-Techinical</h3>{" "}
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our non-technical recruitment solutions focus on
+                      identifying and hiring individuals with the right mix of
+                      soft skills leadership qualities, and cultural fit for
+                      your organization
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+
+          <div className="row " style={{ marginTop: "20px" }}>
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={fiberoptic}
+                  style={{ height: "220px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Fiber Optic</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Fiber optics stands as the pinnacle of high-speed data
+                      transmission. From internet connectivity to
+                      telecommunication systems, fiber optics not only
+                      accelerates data transfer but also enhances the stability
+                      and efficiency of information exchange.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={Homeblogimage1audit}
+                  style={{ height: "220px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Network Audit</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      Our audit provides a roadmap for upgrades, cost savings,
+                      and scalability, aligning your network with industry best
+                      practices. To enhancing overall functionality, our network
+                      audit is the key to a robust, secure, and future-ready
+                      network architecture.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4">
+              <Card style={{ height: "500px" }}>
+                <Card.Img variant="top" src={noc} style={{ height: "250px" }} />
+                <Card.Body>
+                  <Card.Title>
+                    <h4>Performance implement for NOC</h4>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our solutions include real-time monitoring tools,
+                      predictive analytics, and automation to streamline
+                      workflows and proactively address issues. With a focus on
+                      scalability and resilience we ensure your NOC is equipped
+                      to handle evolving demands.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+
+          <div className="row" style={{ marginTop: "20px" }}>
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={moniternoc}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Monitoring resources for NOC</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      We've got a set of tools that act like super-smart
+                      detectives, constantly watching over everything. If
+                      there's anything fishy or if something's not working as
+                      smoothly as it should, these tools send us a heads-up so
+                      we can fix it before it causes any trouble.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img variant="top" src={ai} style={{ height: "250px" }} />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Artificial Intelligence</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      AI enables us to sift through complexities swiftly,
+                      providing data-driven recommendations that inform
+                      strategic decisions. From automating repetitive processes
+                      to predicting our consultancy harnesses the power of AI
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={payrol}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Payrollment</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      Payroll is a critical aspect of any organization,
+                      encompassing the financial disbursement of salaries,
+                      wages, and bonuses to its employees. This multifaceted
+                      process involves meticulous
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+        {/* image cards */}
+
+        {/*  thirdtabs */}
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-8f5e084 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="8f5e084"
@@ -611,7 +927,7 @@ const Home = () => {
                           alt="img"
                         />
                       </div>
-                      <div className="container">
+                      <div className="container ">
                         <div className="row">
                           <div className="col-xl-12">
                             <div className="portfolio__title-2 text-center">
@@ -623,6 +939,7 @@ const Home = () => {
                                   animationDelay: "0.2s",
                                   animationName:
                                     "animated animatedFadeInUp fadeInUp",
+                                  marginTop: "52px",
                                 }}
                               >
                                 Portfolio{" "}
@@ -750,22 +1067,22 @@ const Home = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://img.freepik.com/premium-photo/devices-connected-storage-data-center-tablet-phone-home-devices-with-online-cloud-technology-computing-generative-ai_771426-1180.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
                                           <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
-                                            </a>
+                                            <a href="">Network Audit</a>
                                           </h3>
                                           <p />
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            A network audit is a critical
+                                            process that helps you understand
+                                            the health and performance of your
+                                            network. Whether you're a small
+                                            business or a large enterprise, a
+                                            network audit
                                           </p>
                                           <p />
                                         </div>
@@ -774,8 +1091,8 @@ const Home = () => {
                                   </div>
                                 </Tab>
                                 <Tab
-                                  eventKey="branding"
-                                  title="Branding"
+                                  eventKey="Network "
+                                  title="Network "
                                   style={{
                                     border: "none",
                                     backgroundColor: "transparent",
@@ -788,22 +1105,48 @@ const Home = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://img.freepik.com/premium-photo/devices-connected-storage-data-center-tablet-phone-home-devices-with-online-cloud-technology-computing-generative-ai_771426-1180.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
                                           <h3>
                                             <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
+                                              Network Audit
                                             </a>
                                           </h3>
                                           <p />
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            A network audit is a critical
+                                            process that helps you understand
+                                            the health and performance of your
+                                            network. Whether you're a small
+                                            business or a large enterprise, a
+                                            network audit
+                                          </p>
+                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thumbs.dreamstime.com/b/consulting-expert-advice-support-service-business-concept-97202115.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>
+                                            <a href="">Consultancy</a>
+                                          </h3>
+                                          <p />
+                                          <p>
+                                            We understand that success depends
+                                            on making the right decisions and
+                                            having access to the right
+                                            expertise.
                                           </p>
                                           <p />
                                         </div>
@@ -1018,7 +1361,10 @@ const Home = () => {
             </div>
           </div>
         </section>
-        {/* tabs */}
+        {/*  thirdtabs */}
+
+        {/*  */}
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-ffcefef elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="ffcefef"
@@ -1093,12 +1439,12 @@ const Home = () => {
                             >
                               <div className="project__content">
                                 <div className="project__title">
-                                  <h4
+                                  {/* <h4
                                     className="section__sub-title wow fadeInUp"
                                     data-wow-delay=".2s"
                                   >
-                                    25 Years Of Experience{" "}
-                                  </h4>
+                                    3 Years Of Experience{" "}
+                                  </h4> */}
                                   <h2
                                     className="section__title wow fadeInUp"
                                     data-wow-delay=".3s"
@@ -1464,6 +1810,8 @@ const Home = () => {
           </div>
         </section>
         {/* testmoinal */}
+
+        {/*  Pricing Plan*/}
         <Slider {...settings}>
           <section
             className="elementor-section elementor-top-section elementor-element elementor-element-36bd487 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -1879,6 +2227,7 @@ const Home = () => {
             </div>
           </section>
         </Slider>
+        {/*  Pricing Plan*/}
 
         {/* tabs */}
         <section

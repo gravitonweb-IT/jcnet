@@ -1,9 +1,8 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import "./about.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiSolidTimeFive } from "react-icons/bi";
-// For react-icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -16,8 +15,6 @@ import { BsArrowUp } from "react-icons/bs";
 import { MdArrowForward } from "react-icons/md";
 import CountUp from "react-countup";
 import { AiFillPlayCircle } from "react-icons/ai";
-// For react-fontawesome
-// import { FaTelegramPlane } from 'react-fontawesome/fa';
 
 const About = () => {
   // scroll
@@ -34,17 +31,15 @@ const About = () => {
 
   // Scroll to the top of the page when the arrow is clicked
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // Inline styles for the progress circle
   const progressCircleStyle = {
     WebkitTransition: "stroke-dashoffset 10ms linear 0s",
     transition: "stroke-dashoffset 10ms linear 0s",
@@ -53,41 +48,39 @@ const About = () => {
   };
   return (
     <div>
-      <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
-      <div className="progress-wrap active-progress" onClick={scrollToTop}>
-        <svg
-          className="progress-circle svg-content"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
-        >
-          <path
-            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            style={progressCircleStyle}
-          />
-        </svg>
-        <div className="custom-icon5 animate-bounce">
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+        <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="iconsuparrow"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            className="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
           >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
+            <path
+              d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style={progressCircleStyle}
+            />
           </svg>
+          <div className="custom-icon5 animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="iconsuparrow"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-
       <div className="offcanvas-overlay" />
-
       <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
         <div className="page__title-shape">
           <img
@@ -146,7 +139,6 @@ const About = () => {
                       <a href="/#" rel="home" itemProp="item">
                         <span itemProp="name">Home</span>
                       </a>
-                      {/* <meta itemProp="position" content={1} /> */}
                       <MdKeyboardDoubleArrowRight className="icons-content1" />
                     </li>
                     <li className="trail-item trail-end">
@@ -159,7 +151,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
       <div
         data-elementor-type="wp-page"
         data-elementor-id={80}
@@ -673,7 +664,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
         {/* cards */}
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-463d3b5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -779,13 +769,13 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                {/* <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"> */}
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
-                                  alt="blog"
-                                />
-                                {/* </a> */}
+                                <a href="#">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
+                                    alt="blog"
+                                  />
+                                </a>
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
@@ -816,13 +806,13 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                {/* <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"> */}
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
-                                  alt="blog"
-                                />
-                                {/* </a> */}
+                                <a href="#">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
+                                    alt="blog"
+                                  />
+                                </a>
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
@@ -853,13 +843,13 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                {/* <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"> */}
-                                <img
-                                  decoding="async"
-                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
-                                  alt="blog"
-                                />
-                                {/* </a> */}
+                                <a href="#">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
+                                    alt="blog"
+                                  />
+                                </a>
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
@@ -898,7 +888,6 @@ const About = () => {
         </section>
         {/* cards */}
       </div>
-
       {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">

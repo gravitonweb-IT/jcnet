@@ -5,8 +5,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { BsArrowUp } from "react-icons/bs";
 import CountUp from "react-countup";
 import "./services.css";
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
@@ -19,11 +17,8 @@ const Services = () => {
   };
 
   useEffect(() => {
-    // Get the last counted value from localStorage
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
-
     if (lastCount < 500) {
-      // Increment the count and store it in localStorage
       const interval = setInterval(() => {
         const newCount = end + 1;
         setEnd(newCount);
@@ -39,11 +34,8 @@ const Services = () => {
     }
   }, [end]);
   useEffect(() => {
-    // Get the last counted value from localStorage
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
-
     if (lastCount < 280) {
-      // Increment the count and store it in localStorage
       const interval = setInterval(() => {
         const newCount = count + 1;
         setCount(newCount);
@@ -91,12 +83,9 @@ const Services = () => {
     }
   };
 
-
   // / scroll
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isVisible, setIsVisible] = useState(false);
-
-  // Show the arrow when the user scrolls down
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsVisible(true);
@@ -107,18 +96,16 @@ const Services = () => {
 
   // Scroll to the top of the page when the arrow is clicked
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  // Inline styles for the progress circle
   const progressCircleStyle = {
     WebkitTransition: "stroke-dashoffset 10ms linear 0s",
     transition: "stroke-dashoffset 10ms linear 0s",
@@ -127,42 +114,39 @@ const Services = () => {
   };
   return (
     <>
-        <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
-      <div className="progress-wrap active-progress" onClick={scrollToTop}>
-        <svg
-          className="progress-circle svg-content"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
-        >
-          <path
-            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            style={progressCircleStyle}
-          />
-        </svg>
-        <div className="custom-icon5 animate-bounce">
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+        <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="iconsuparrow"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            className="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
           >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
+            <path
+              d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style={progressCircleStyle}
+            />
           </svg>
+          <div className="custom-icon5 animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="iconsuparrow"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-
-
       <div className="offcanvas-overlay" />
-
       <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
         <div className="page__title-shape">
           <img
@@ -218,11 +202,7 @@ const Services = () => {
                       itemType="http://schema.org/ListItem"
                       className="trail-item trail-begin"
                     >
-                      <a
-                        href="/#"
-                        rel="home"
-                        itemProp="item"
-                      >
+                      <a href="/#" rel="home" itemProp="item">
                         <span itemProp="name">Home</span>
                       </a>
                       <MdKeyboardDoubleArrowRight className="icons-content1" />
@@ -237,7 +217,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
       <div
         data-elementor-type="wp-page"
         data-elementor-id={86}
@@ -324,10 +303,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                    href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -354,10 +330,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -384,10 +357,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                  href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -414,10 +384,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                  href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -444,10 +411,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                 href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -474,10 +438,7 @@ const Services = () => {
                                   </p>
                                 </div>
                                 <div className="single__service-link">
-                                  <a
-                                     href="#"
-                                    className="s-btn"
-                                  >
+                                  <a href="#" className="s-btn">
                                     Find Out More
                                   </a>
                                 </div>
@@ -706,7 +667,7 @@ const Services = () => {
                                           <button
                                             className={`accordion-button ${
                                               index === activeIndex
-                                                ? ""
+                                                ?  ""
                                                 : "collapsed"
                                             }`}
                                             type="button"
@@ -714,7 +675,7 @@ const Services = () => {
                                               toggleAccordion(index)
                                             }
                                           >
-                                            {faq.question}{" "}
+                                        < span className="faq-question-text">{faq.question}</span>
                                             <FontAwesomeIcon
                                               icon={faPlus}
                                               className="plus-icon "
@@ -1160,8 +1121,7 @@ const Services = () => {
           </div>
         </section>
       </div>
-
-      {/* lets-work area start */}
+     {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">
           <img

@@ -1,16 +1,15 @@
-import React , {useEffect , useState}from 'react';
-import {MdKeyboardDoubleArrowRight} from "react-icons/md";
+import React, { useEffect, useState } from "react";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Tabs, Tab } from "react-bootstrap";
-const portfolio = () => {
 
+const portfolio = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [key, setKey] = useState("all");
 
-// scroll
+  // scroll
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show the arrow when the user scrolls down
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsVisible(true);
@@ -21,18 +20,17 @@ const portfolio = () => {
 
   // Scroll to the top of the page when the arrow is clicked
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Inline styles for the progress circle
   const progressCircleStyle = {
     WebkitTransition: "stroke-dashoffset 10ms linear 0s",
     transition: "stroke-dashoffset 10ms linear 0s",
@@ -42,76 +40,121 @@ const portfolio = () => {
 
   return (
     <div>
-  {/* back to top start */}
-  <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
-      <div className="progress-wrap active-progress" onClick={scrollToTop}>
-        <svg
-          className="progress-circle svg-content"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
-        >
-          <path
-            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            style={progressCircleStyle}
-          />
-        </svg>
-        <div className="custom-icon5 animate-bounce">
+      {/* back to top start */}
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+        <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="iconsuparrow"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            className="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
           >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
+            <path
+              d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style={progressCircleStyle}
+            />
           </svg>
+          <div className="custom-icon5 animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="iconsuparrow"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-  {/* back to top end */}
- 
-  {/* side info end */}
-  <div className="offcanvas-overlay" />
- 
-  <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
-    <div className="page__title-shape">
-      <img className="page-title-s-1 d-none d-md-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-1.png" alt="image" />
-      <img className="page-title-s-3" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-3.png" alt="image" />
-      <img className="page-title-s-4" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-4.png" alt="image" />
-      <img className="page-title-s-5 wow fadeInDown" data-wow-delay="1s" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-5.png" alt="image" />
-      <img className="page-title-s-6 wow fadeInUp" data-wow-delay=".6s" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-6.png" alt="image" />
-      <img className="page-title-s-7 d-none d-md-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-7.png" alt="image" />
-    </div>
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-xxl-12">
-          <div className="page__title-wrapper">
-            <h2 className="page__title-heading">
-              Portfolio                          </h2>
-            <nav aria-label="Breadcrumbs" className="breadcrumb-trail breadcrumbs">
-              <ul className="trail-items" itemScope itemType="http://schema.org/BreadcrumbList">
-                <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem" className="trail-item trail-begin">
-                  <a href="https://thememaster.net/wp/maxdi/" rel="home" itemProp="item">
-                  <span itemProp="name">Home</span></a>
-                  <MdKeyboardDoubleArrowRight className="icons-content1" />
-                  </li>
-                  <li className="trail-item trail-end"><span>Portfolio</span></li></ul></nav>                      </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* page-title area end */}
+      {/* back to top end */}
 
-  <div data-elementor-type="wp-page" data-elementor-id={84} className="elementor elementor-84">
- {/* tabs */}
- <section
+      {/* side info end */}
+      <div className="offcanvas-overlay" />
+      <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
+        <div className="page__title-shape">
+          <img
+            className="page-title-s-1 d-none d-md-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-1.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-3"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-3.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-4"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-4.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-5 wow fadeInDown"
+            data-wow-delay="1s"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-5.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-6 wow fadeInUp"
+            data-wow-delay=".6s"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-6.png"
+            alt="image"
+          />
+          <img
+            className="page-title-s-7 d-none d-md-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/page-title/page-title-s-7.png"
+            alt="image"
+          />
+        </div>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xxl-12">
+              <div className="page__title-wrapper">
+                <h2 className="page__title-heading">Portfolio </h2>
+                <nav
+                  aria-label="Breadcrumbs"
+                  className="breadcrumb-trail breadcrumbs"
+                >
+                  <ul
+                    className="trail-items"
+                    itemScope
+                    itemType="http://schema.org/BreadcrumbList"
+                  >
+                    <li
+                      itemProp="itemListElement"
+                      itemScope
+                      itemType="http://schema.org/ListItem"
+                      className="trail-item trail-begin"
+                    >
+                      <a href="/#" rel="home" itemProp="item">
+                        <span itemProp="name">Home</span>
+                      </a>
+                      <MdKeyboardDoubleArrowRight className="icons-content1" />
+                    </li>
+                    <li className="trail-item trail-end">
+                      <span>Portfolio</span>
+                    </li>
+                  </ul>
+                </nav>{" "}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* page-title area end */}
+      <div
+        data-elementor-type="wp-page"
+        data-elementor-id={84}
+        className="elementor elementor-84"
+      >
+        {/* tabs */}
+        <section
           className="elementor-section elementor-top-section elementor-element elementor-element-8f5e084 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="8f5e084"
           data-element_type="section"
@@ -176,6 +219,7 @@ const portfolio = () => {
                                   animationDelay: "0.2s",
                                   animationName:
                                     "animated animatedFadeInUp fadeInUp",
+                                  marginTop: "80px",
                                 }}
                               >
                                 Portfolio{" "}
@@ -206,7 +250,7 @@ const portfolio = () => {
                                   border: "none",
                                   backgroundColor: "transparent",
                                   color: "#000",
-                                  textAlign:"center",
+                                  textAlign: "center",
                                   justifyContent: "center",
                                 }}
                               >
@@ -428,7 +472,6 @@ const portfolio = () => {
                                     </div>
                                   </div>
                                 </Tab>
-
                                 <Tab
                                   eventKey="marketing"
                                   title="Marketing"
@@ -465,7 +508,6 @@ const portfolio = () => {
                                         </div>
                                       </div>
                                     </div>
-
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
                                       <div className="portfolio__item-2 mb-30">
                                         <div className="portfolio__image-2">
@@ -530,7 +572,6 @@ const portfolio = () => {
                                         </div>
                                       </div>
                                     </div>
-
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
                                       <div className="portfolio__item-2 mb-30">
                                         <div className="portfolio__image-2">
@@ -572,39 +613,64 @@ const portfolio = () => {
           </div>
         </section>
         {/* tabs */}
-  </div>
+      </div>
 
-  {/* lets-work area start */}
-  <section className="lets-work__area p-relative pt-165 pb-160">
-    <div className="lets-work__shape">
-      <img className="lets-work-shape-1 d-none d-lg-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-1.png" alt="image" />
-      <img className="lets-work-shape-2 d-none d-lg-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-2.png" alt="image" />
-      <img className="lets-work-shape-3 d-none d-sm-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-3.png" alt="image" />
-      <img className="lets-work-shape-4 d-none d-sm-block" src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-4.png" alt="image" />
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-xl-12">
-          <div className="lets-work__title text-center">
-            <h4 className="section__sub-title wow fadeInUp" data-wow-delay=".2s">
-              Let’s Work Together                          </h4>
-            <h2 className="section__title wow fadeInUp" data-wow-delay=".3s">
-              <span>Need a successful</span>
-              project?                          </h2>
-            <a className="m-btn mt-35 wow fadeInUp" data-wow-delay=".6s" href="https://thememaster.net/wp/maxdi/contact">Estimate Project</a>
+      {/* lets-work area start */}
+      <section className="lets-work__area p-relative pt-165 pb-160">
+        <div className="lets-work__shape">
+          <img
+            className="lets-work-shape-1 d-none d-lg-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-1.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-2 d-none d-lg-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-2.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-3 d-none d-sm-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-3.png"
+            alt="image"
+          />
+          <img
+            className="lets-work-shape-4 d-none d-sm-block"
+            src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/lets-work/lets-work-s-4.png"
+            alt="image"
+          />
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="lets-work__title text-center">
+                <h4
+                  className="section__sub-title wow fadeInUp"
+                  data-wow-delay=".2s"
+                >
+                  Let’s Work Together{" "}
+                </h4>
+                <h2
+                  className="section__title wow fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <span>Need a successful</span>
+                  project?{" "}
+                </h2>
+                <a
+                  className="m-btn mt-35 wow fadeInUp"
+                  data-wow-delay=".6s"
+                  href="https://thememaster.net/wp/maxdi/contact"
+                >
+                  Estimate Project
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      {/* lets-work area end */}
     </div>
-  </section>
-  {/* lets-work area end */}
-  
- 
-</div>
-  
-  
-  
-  )
-}
+  );
+};
 
-export default portfolio
+export default portfolio;

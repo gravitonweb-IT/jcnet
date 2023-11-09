@@ -4,22 +4,14 @@
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: #1d233a;
-  color: white;
-  padding-left: 85px;
-  padding-top: 10px;
-}
-
-
-.fixed-navbar {
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navigation-style{
-    color:white;
-    font-weight: 500;
-}
+
 
 @media (min-width: 300px) {
   .fixed-navbar-wrapper {

@@ -1,60 +1,70 @@
 .pricing__item .custom-icon {
-    font-size: 15px;
-    font-weight: 900;
-    color: #7432ff;
-    position: absolute;
-    top: 1px;
-    left: 0;
-  }
+  font-size: 15px;
+  font-weight: 900;
+  color: #7432ff;
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
 
-  .pricing__item:hover .custom-icon{
-    color:black;
-  }
-  .pricing__item ul li::after {
-   
-    content: none !important
-  }
-  .pricing__item li {
-    margin-bottom: 5px; /* Adjust the value as needed */
-  }
+.pricing__item:hover .custom-icon {
+  color: black;
+}
+.pricing__item ul li::after {
+  content: none !important;
+}
+.pricing__item li {
+  margin-bottom: 5px;
+}
 
-  .pricing__item .custom-icon1{
-    font-size: 15px;
-    font-weight: 900;
-    /* color: #7432ff; */
-    color: black;
-    position: absolute;
-    top: 1px;
-    left: 0;
-  }
-  .progress-arrow-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .arrow-icon {
-    font-size: 24px; /* Adjust the arrow size as needed */
-    color: #7432ff; /* Arrow color */
-  }
-  .main-menu ul li:hover > a, .header__area.sticky .main-menu-3 ul li:hover > a, .main-menu ul li .submenu li:hover > a, .lets-work__title .section__sub-title, .footer__newsletter .section__sub-title, .footer__widget-title h5, .footer__widget ul li a:hover, .footer__widget-email i, .progress-wrap::after, .mean-container .mean-nav ul li a:hover, .mean-container .mean-nav ul li a.mean-expand:hover, .mean-container .mean-nav ul li a.mean-expand.mean-clicked, .sidebar__contact ul li i, .sidebar__widget-title h3, .sidebar__widget ul li a:hover, .sidebar__rc-content h5 a:hover, .comment-reply-link, .key__factors-icon::before {
-    color: #7432ff;
+.pricing__item .custom-icon1 {
+  font-size: 15px;
+  font-weight: 900;
+  color: black;
+  position: absolute;
+  top: 1px;
+  left: 0;
+}
+.progress-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.arrow-icon {
+  font-size: 24px; 
+  color: #7432ff;
+}
+.main-menu ul li:hover > a,
+.header__area.sticky .main-menu-3 ul li:hover > a,
+.main-menu ul li .submenu li:hover > a,
+.lets-work__title .section__sub-title,
+.footer__newsletter .section__sub-title,
+.footer__widget-title h5,
+.footer__widget ul li a:hover,
+.footer__widget-email i,
+.progress-wrap::after,
+.mean-container .mean-nav ul li a:hover,
+.mean-container .mean-nav ul li a.mean-expand:hover,
+.mean-container .mean-nav ul li a.mean-expand.mean-clicked,
+.sidebar__contact ul li i,
+.sidebar__widget-title h3,
+.sidebar__widget ul li a:hover,
+.sidebar__rc-content h5 a:hover,
+.comment-reply-link,
+.key__factors-icon::before {
+  color: #7432ff;
 }
 .progress-wrap::after {
-    /* position: absolute; */
-    content: none !important;
-    /* color:#7432ff */
+  content: none !important;
 }
 
-.iconsuparrow{
+.iconsuparrow {
   margin-top: -66px;
   rotate: 180deg;
   margin-left: 6px;
 }
-
-
-
 
 /* Tab Container */
 .Tabs {
@@ -97,7 +107,7 @@
 }
 
 .react-tabs__tab--disabled {
-  color: GrayText;
+  color: gray;
   cursor: default;
 }
 
@@ -125,7 +135,48 @@
   text-align: center;
 }
 
+/*service new  */
+.service_sectionwise .section_paragraph {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #2d4a8a;
+}
 
-/* 
- */
- 
+.service_sectionwise .service_spancite {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  display: inline-block;
+  color: #2d4a8a;
+}
+
+.card-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-services-slide {
+  background-color: #fbfcff;
+  color: rgb(226, 216, 216);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.home-services-slide:hover {
+  background-color: #2d4a8a;
+  color: white;
+  cursor: pointer;
+}
+
+/* Additional styling for other elements if required */
+.home-services-heading,
+.home-services-paragraph,
+.home-services-icon {
+  transition: color 0.3s ease-in-out;
+}
+
+.card:hover .home-services-heading,
+.card:hover .home-services-paragraph,
+.card:hover .home-services-icon {
+  color: rgb(255, 252, 252); /* Set the text color on hover */
+}
