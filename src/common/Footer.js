@@ -1,15 +1,19 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'; // For Font Awesome icons
-import { BiLogoFacebook } from 'react-icons/bi'; // For Boxicons icons
-import { BsTelephoneFill, BsInstagram, BsYoutube } from 'react-icons/bs'; // For Bootstrap icons
-import { FaTelegramPlane } from 'react-icons/fa'; // For Font Awesome icons
-import { GrTwitter } from 'react-icons/gr'; 
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa"; // For Font Awesome icons
+import { BiLogoFacebook } from "react-icons/bi"; // For Boxicons icons
+import { BsTelephoneFill, BsInstagram, BsYoutube } from "react-icons/bs"; // For Bootstrap icons
+import { FaTelegramPlane } from "react-icons/fa"; // For Font Awesome icons
+import { GrTwitter } from "react-icons/gr";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import {Link} from "react-router-dom";
+
+
 function Footer() {
   return (
-   <>
-   
-   <footer>
+    <>
+      <footer>
+     
         <div
           className="footer__area fix p-relative "
           style={{ textAlign: "left" }}
@@ -28,9 +32,9 @@ function Footer() {
               alt="image"
             />
           </div>
-          <div className="footer__top pt-200 pb-40">
+          <div className="footer__top pt-200 pb-20">
             <div className="container">
-              <div className="row mb-145">
+              <div className="row mb-80">
                 <div className="col-xxl-6 col-xl-7 col-lg-8 col-md-10">
                   <div className="footer__newsletter">
                     <h4
@@ -80,8 +84,9 @@ function Footer() {
                         alt="logo"
                       />
                       <p>
-                        Core object made kolor adipisci elit sed diam nonummy
-                        nibh euismod tincidunt laoreet dolore magna grinjon.
+                        Empower your journey with expert consultancy. Unlock
+                        strategic insights, optimize operations, and achieve
+                        excellence with our tailored solutions. Connect today!
                       </p>
                     </div>
                     <div className="footer__widget-social">
@@ -115,31 +120,32 @@ function Footer() {
                             id="menu-item-101"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-101"
                           >
-                            <a href="#">Development</a>
+
+                            <Nav.Link as={Link} to="/" className="p-0">Development</Nav.Link>
                           </li>
                           <li
                             id="menu-item-102"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"
                           >
-                            <a href="#">Marketing</a>
+                           <Nav.Link as={Link} to="/" className="p-0">NOC</Nav.Link>
                           </li>
                           <li
                             id="menu-item-103"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-103"
                           >
-                            <a href="#">UI/UX Design</a>
+                             <Nav.Link as={Link} to="/" className="p-0">Network Audit</Nav.Link>
                           </li>
                           <li
                             id="menu-item-104"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-104"
                           >
-                            <a href="#">E-Commerce</a>
+                             <Nav.Link as={Link} to="/" className="p-0">Fiber Optic</Nav.Link>
                           </li>
                           <li
                             id="menu-item-105"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-105"
                           >
-                            <a href="#">Content Writing</a>
+                             <Nav.Link as={Link} to="/" className="p-0">Firewall SDN</Nav.Link>
                           </li>
                         </ul>
                       </div>
@@ -153,7 +159,7 @@ function Footer() {
                   >
                     <div className="footer__widget-link">
                       <div className="footer__widget-title">
-                        <h5>Company</h5>
+                        <h5>Quick Links</h5>
                       </div>
                       <div className="menu-footer-menu-2-container">
                         <ul id="menu-footer-menu-2" className="menu">
@@ -161,31 +167,31 @@ function Footer() {
                             id="menu-item-106"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-106"
                           >
-                            <a href="#">About us</a>
+                            <Nav.Link as={Link} to="/" className="p-0">Home</Nav.Link>
                           </li>
                           <li
                             id="menu-item-107"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-107"
                           >
-                            <a href="#">Portfolio</a>
+                             <Nav.Link as={Link} to="/About" className="p-0">About</Nav.Link>
                           </li>
                           <li
                             id="menu-item-108"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"
                           >
-                            <a href="#">Our Team</a>
+                            <Nav.Link as={Link} to="/Services" className="p-0">Services</Nav.Link>
                           </li>
                           <li
                             id="menu-item-109"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-109"
                           >
-                            <a href="#">Contact</a>
+                          <Nav.Link as={Link} to="/OurServices" className="p-0">OurServices</Nav.Link>
                           </li>
                           <li
                             id="menu-item-110"
                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"
                           >
-                            <a href="#">Faqs</a>
+                            <Nav.Link as={Link} to="/Contact" className="p-0">Contact</Nav.Link>
                           </li>
                         </ul>
                       </div>
@@ -205,8 +211,7 @@ function Footer() {
                         <div className="footer__widget-info">
                           <div className="footer__widget-address">
                             <p>
-                              66 Broklyn Street, New York United States of
-                              America
+                            Jabalpur, commercial networking and consultancy private limited
                             </p>
                           </div>
                           <div className="footer__widget-phone d-flex align-items-center">
@@ -215,7 +220,7 @@ function Footer() {
                             />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <p>
-                              <a href="tel:+1166442200">+11 66 44 22 00</a>
+                              <a href="tel:+1166442200"> 95138 99127</a>
                             </p>
                           </div>
                           <div className="footer__widget-email d-flex align-items-center">
@@ -224,8 +229,8 @@ function Footer() {
                             />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <p>
-                              <a href="mailto:info@example.com">
-                                info@example.com
+                              <a href="mailto:admin@jcnet.co.in">
+                              admin@jcnet.co.in
                               </a>
                             </p>
                           </div>
@@ -250,7 +255,7 @@ function Footer() {
           </div>
         </div>
       </footer>
-   </>
+    </>
   );
 }
 

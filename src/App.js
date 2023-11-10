@@ -9,6 +9,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Navigationbar from "./common/Navigationbar";
 import Footer from "./common/Footer";
 
+
 function App() {
   return (
     <>
@@ -24,8 +25,9 @@ function App() {
             <Route path="/Portfolio" element={<Portfolio />} />
           </Routes>
         
-   
+        
       <Footer/>
+    
     </>
   );
 }

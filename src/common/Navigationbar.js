@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Button } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
+import {Link, useLocation} from "react-router-dom";
 import "./navbar.css"
 import logo from "../assests/navabarimages/logo.png"
 
@@ -29,6 +29,16 @@ const Navigationbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [])
+
+ 
+ 
+const location = useLocation();
+
+ useEffect(() => {
+      // Scroll to the top when the route changes
+ 
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
   return (
     <>
   <div className={`fixed-navbar-wrapper${scrolling ? ' scrolled' : ''}`}>
@@ -50,7 +60,6 @@ const Navigationbar = () => {
           <Nav.Link as={Link} to="/Portfolio">Portfolio</Nav.Link>
           <Nav.Link as={Link} to="/Contact" >Contact</Nav.Link>
         </Nav>
-        {/* <button className='narrowbutton ' style={{background:"blue" , color:"white", padding:"10px", borderRadius:"10px"}}>Get a Quote</button> */}
       </Navbar.Collapse>
     </Navbar>
 

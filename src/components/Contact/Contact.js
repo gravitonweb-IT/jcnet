@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -30,13 +30,13 @@ const Contact = () => {
 
   // Scroll to the top of the page when the arrow is clicked
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -49,38 +49,39 @@ const Contact = () => {
   };
   return (
     <div>
-    <div className={`progress-arrow-container ${isVisible ? 'visible' : ''}`}>
-      <div className="progress-wrap active-progress" onClick={scrollToTop}>
-        <svg
-          className="progress-circle svg-content"
-          width="100%"
-          height="100%"
-          viewBox="-1 -1 102 102"
-        >
-          <path
-            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            style={progressCircleStyle}
-          />
-        </svg>
-        <div className="custom-icon5 animate-bounce">
+     
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+        <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="iconsuparrow"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            className="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
           >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
+            <path
+              d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
+            />
           </svg>
+          <div className="custom-icon5 animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="iconsuparrow"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
 
       <div className="offcanvas-overlay" />
 
@@ -156,9 +157,8 @@ const Contact = () => {
                             itemType="http://schema.org/ListItem"
                             className="trail-item trail-begin"
                           >
-                            <a href="#" rel="home" itemProp="item">
-                              <span itemProp="name">Home</span>
-                            </a>
+                            <span itemProp="name">Home</span>
+
                             {/* <meta itemProp="position" content={1} /> */}
                             <MdKeyboardDoubleArrowRight className="icons-content1" />
                           </li>
@@ -212,8 +212,8 @@ const Contact = () => {
                                 <div className="contact__info-title">
                                   <h5>Office Address</h5>
                                   <p>
-                                    66 Broklyn Street, New York United States of
-                                    America
+                                    Jabalpur, commercial networking and
+                                    consultancy private limited
                                   </p>
                                 </div>
                               </div>
@@ -226,16 +226,8 @@ const Contact = () => {
                                 <div className="contact__info-title">
                                   <h5>Phone</h5>
                                   <p>
-                                    <a href="tel:+0066442211">
-                                      +00 66 44 22 11
-                                    </a>
+                                    <a href="tel:+9513899127">9513899127</a>
                                   </p>
-                                  <p>
-                                    <a href="tel:+0066442211">
-                                      +00 66 44 22 11
-                                    </a>
-                                  </p>
-                                  <p />
                                 </div>
                               </div>
                               <div className="contact__info-content d-flex mb-30">
@@ -248,14 +240,10 @@ const Contact = () => {
                                   <h5>Email us</h5>
                                   <p>
                                     <a href="mailto:info@example.com">
-                                      info@example.com
+                                      admin@jcnet.co.in
                                     </a>
                                   </p>
-                                  <p>
-                                    <a href="mailto:info@example.com">
-                                      info@example.com
-                                    </a>
-                                  </p>
+
                                   <p />
                                 </div>
                               </div>

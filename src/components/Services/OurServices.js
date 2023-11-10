@@ -55,7 +55,7 @@ const OurServices = () => {
             >
               <path
                 d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style={progressCircleStyle}
+                style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
               />
             </svg>
             <div className="custom-icon5 animate-bounce">
@@ -138,7 +138,7 @@ const OurServices = () => {
             <div className="row align-items-center">
               <div className="col-xxl-12">
                 <div className="page__title-wrapper">
-                  <h2 className="page__title-heading">Web Development </h2>
+                  <h2 className="page__title-heading">Our Services </h2>
                   <nav
                     aria-label="Breadcrumbs"
                     className="breadcrumb-trail breadcrumbs"
@@ -154,13 +154,7 @@ const OurServices = () => {
                         itemType="http://schema.org/ListItem"
                         className="trail-item trail-begin"
                       >
-                        <a
-                          href="/#"
-                          rel="home"
-                          itemProp="item"
-                        >
-                          <span itemProp="name">Home</span>
-                        </a>
+                        <span itemProp="name">Home</span>
                         <MdKeyboardDoubleArrowRight className="icons-content1" />{" "}
                       </li>
                       <li
@@ -169,16 +163,7 @@ const OurServices = () => {
                         itemType="http://schema.org/ListItem"
                         className="trail-item"
                       >
-                        <a
-                          href="/Services"
-                          itemProp="item"
-                        >
-                          <span itemProp="name">Services</span>
-                        </a>
-                        <MdKeyboardDoubleArrowRight className="icons-content1" />
-                      </li>
-                      <li className="trail-item trail-end">
-                        <span>Web Development</span>
+                        <span itemProp="name">Services</span>
                       </li>
                     </ul>
                   </nav>{" "}
@@ -220,40 +205,52 @@ const OurServices = () => {
                     <ul>
                       <li>
                         <a href="#">
-                          <span>Digital Marketing </span>{" "}
+                          <span>Networking Trifecta</span>{" "}
                           <IoIosArrowForward style={{ marginLeft: "52px" }} />{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span>Content Strategy </span>
+                          <span>RecruitTech </span>
                           <IoIosArrowForward
-                            style={{ marginLeft: "52px" }}
+                            style={{ marginLeft: "107px" }}
                           />{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span>E-commerce </span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "84px" }} />{" "}
+                          <span>Recruit Non-Tech </span>{" "}
+                          <IoIosArrowForward style={{ marginLeft: "67px" }} />{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span> UI/UX Design</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "80px" }} />{" "}
+                          <span>Fiber Optic</span>{" "}
+                          <IoIosArrowForward style={{ marginLeft: "112px" }} />{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span> App Development </span>{" "}
+                          <span>Network Audit</span>{" "}
+                          <IoIosArrowForward style={{ marginLeft: "90px" }} />{" "}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>NOC Excellence</span>{" "}
+                          <IoIosArrowForward style={{ marginLeft: "74px" }} />{" "}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>Artificial Intelligence</span>{" "}
                           <IoIosArrowForward style={{ marginLeft: "44px" }} />{" "}
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span> Web Development </span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "44px" }} />{" "}
+                          <span>Payrollment</span>{" "}
+                          <IoIosArrowForward style={{ marginLeft: "106px" }} />{" "}
                         </a>
                       </li>
                     </ul>
@@ -275,32 +272,23 @@ const OurServices = () => {
                   />{" "}
                 </div>
                 <div className="services__details-content">
-                  <h2>Web Development</h2>
+                  <h2>Consultancy</h2>
                   <p>
-                    Kindling the energy hidden in matter the only home we’ve
-                    ever known radio telescope decipherment descended from
-                    astronomers rogue. Prime number network of wormholes take
-                    root. Kindling the energy hidden in matter the only home
-                    we’ve ever known radio telescope decipherment descended from
-                    astronomers rogue. Prime number network of wormholes take
-                    root. We’ve ever known radio telescope decipherment
-                    descended from astronomers rogue. Prime number network of
-                    wormholes take root.
+                    We understand that navigating the complexities of today's
+                    business landscape requires a blend of proven expertise and
+                    a forward-thinking approach.Our consultancy services are
+                    designed to empower your organization, drive growth, and
+                    overcome challenges with confidence.
                   </p>
+
                   <p>
-                    Kindling the energy hidden in matter the only home we’ve
-                    ever known radio telescope decipherment descended from
-                    astronomers rogue. Prime number network of wormholes take
-                    root. Matter the only home we’ve ever known radio telescope
-                    decipherment descended from astronomers rogue. Prime number
-                    network of wormholes take root. Kindling the energy hidden
-                    in matter the only home we’ve ever known radio telescope
-                    decipherment descended from astronomers rogue. Prime number
-                    network of wormholes take root. Matter the only home we’ve
-                    ever known radio telescope decipherment descended from
-                    astronomers rogue. Prime number network of wormholes take
-                    root.
+                    Chart a course for success as we collaborate to develop a
+                    strategic roadmap aligned with your business goals. Stay
+                    ahead in evolving markets by fostering creativity,
+                    implementing cutting-edge technologies, and identifying
+                    groundbreaking solutions.
                   </p>
+
                   <div className="key__factors">
                     <div className="key__factors-title">
                       <h3>Key Factors</h3>
@@ -319,10 +307,10 @@ const OurServices = () => {
                           }}
                         />
                         <div className="key__factors-text">
-                          <h5>Business Automation</h5>
+                          <h5>Strategic Guidance</h5>
                           <p>
-                            Energy only home we’ve ever known deciphe scended
-                            from rogue.
+                            Consultants provide valuable insights and strategic
+                            direction, helping businesses align their goals.
                           </p>
                         </div>
                       </div>
@@ -339,10 +327,10 @@ const OurServices = () => {
                           }}
                         />
                         <div className="key__factors-text">
-                          <h5>Critical Analysis</h5>
+                          <h5>Innovation Boost</h5>
                           <p>
-                            Energy only home we’ve ever known deciphe scended
-                            from rogue.
+                            Consultants bring fresh perspectives, fostering a
+                            culture of innovation and introducing new ideas .
                           </p>
                         </div>
                       </div>
@@ -355,16 +343,16 @@ const OurServices = () => {
                         />
                         <HiLockOpen
                           style={{
-                            width: "50px",
-                            height: "50px",
+                            width: "60px",
+                            height: "60px",
                             color: "#7432ff",
                           }}
                         />
                         <div className="key__factors-text">
-                          <h5>Risk Protection</h5>
+                          <h5>Expertise Access</h5>
                           <p>
-                            Energy only home we’ve ever known deciphe scended
-                            from rogue.
+                            Businesses gain access to specialized knowledge and
+                            skills that may not be present in-house.
                           </p>
                         </div>
                       </div>
@@ -375,16 +363,17 @@ const OurServices = () => {
                         />
                         <HiDocumentReport
                           style={{
-                            width: "50px",
-                            height: "50px",
+                            width: "60px",
+                            height: "60px",
                             color: "#7432ff",
                           }}
                         />
                         <div className="key__factors-text">
-                          <h5>Annual Report</h5>
+                          <h5>Cost-Efficiency</h5>
                           <p>
-                            Energy only home we’ve ever known deciphe scended
-                            from rogue.
+                            Engaging consultants for specific projects or advice
+                            can be more cost-effective than hiring full-time
+                            staff.
                           </p>
                         </div>
                       </div>
@@ -400,31 +389,34 @@ const OurServices = () => {
                           <div className="icon-circle">
                             <MdArrowForward />
                           </div>
-                          Sea of Tranquility dispassionate observer dream.
+                          Drive innovation, gain strategic insights.
                         </li>
                         <li>
                           <div className="icon-circle">
                             <MdArrowForward />
                           </div>
-                          Muse about as a patch of light brain is the seed of
-                          intelligence.
+                          Optimize operations, and achieve sustainable growth.
                         </li>
                         <li>
                           <div className="icon-circle">
                             <MdArrowForward />
                           </div>
-                          The only home we've ever known dream of the mind's
-                          eye.
+                          Unlocking a competitive edge in today's dynamic
+                          business landscape.
                         </li>
                       </ul>
                     </div>
                   </div>
                   <p>
-                    Kindling the energy hidden in matter the only home we’ve
-                    ever known radio telescope decipherment descended from
-                    astronomers rogue. Prime number network of wormholes take
-                    root. Kindling the energy hidden in matter the only home
-                    we’ve ever known radio telescope decipherment descended.
+                    Consultancy services offer a myriad of key benefits for
+                    businesses. Firstly, consultants provide invaluable
+                    strategic insights, offering a fresh perspective on
+                    challenges and opportunities. Their expertise helps optimize
+                    operations, identifying inefficiencies and recommending
+                    improvements to enhance overall efficiency. Access to
+                    specialized knowledge and skills not present in-house is a
+                    significant advantage, allowing businesses to address
+                    specific issues effectively.
                   </p>
                 </div>
               </div>

@@ -3,15 +3,7 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import "./about.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiSolidTimeFive } from "react-icons/bi";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { BiLogoFacebook } from "react-icons/bi";
-import { GrTwitter } from "react-icons/gr";
-import { BsInstagram } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
-import { BsTelephoneFill } from "react-icons/bs";
-import { FaTelegramPlane } from "react-icons/fa";
-import { BsArrowUp } from "react-icons/bs";
+
 import { MdArrowForward } from "react-icons/md";
 import CountUp from "react-countup";
 import { AiFillPlayCircle } from "react-icons/ai";
@@ -58,7 +50,7 @@ const About = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={progressCircleStyle}
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
@@ -136,9 +128,8 @@ const About = () => {
                       itemType="http://schema.org/ListItem"
                       className="trail-item trail-begin"
                     >
-                      <a href="/#" rel="home" itemProp="item">
-                        <span itemProp="name">Home</span>
-                      </a>
+                      <span itemProp="name">Home</span>
+
                       <MdKeyboardDoubleArrowRight className="icons-content1" />
                     </li>
                     <li className="trail-item trail-end">
@@ -151,6 +142,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
       <div
         data-elementor-type="wp-page"
         data-elementor-id={80}
@@ -191,11 +183,12 @@ const About = () => {
                                 data-wow-delay=".3s"
                               >
                                 <span className="first_title">
-                                  We are here to make your
+                                  Elevate Your Brand with Our Consultancy
+                                  Expertise
                                 </span>
-                                <span className="second_title">
+                                {/* <span className="second_title">
                                   product look more elegant and stylish
-                                </span>
+                                </span> */}
                               </h2>
                             </div>
                           </div>
@@ -233,10 +226,10 @@ const About = () => {
                               data-wow-delay=".2s"
                             >
                               <p>
-                                Kindling the energy hidden in matter the only
-                                home we've ever known radio telescope
-                                decipherment descended from astronomers rogue.
-                                Prime number network of wormholes take root.
+                                we redefine elegance in consultancy. Our team is
+                                dedicated to enhancing the sophistication and
+                                style of your brand, providing expert guidance
+                                that transcends the ordinary.
                               </p>
                               <ul className="icon-list">
                                 <li>
@@ -294,6 +287,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-1ebcf95 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="1ebcf95"
@@ -344,27 +338,23 @@ const About = () => {
                         <div className="row align-items-center">
                           <div className="col-xl-5 col-lg-6 col-md-9 col-sm-10">
                             <div className="experience__content">
-                              <h4
-                                className="section__sub-title wow fadeInUp"
-                                data-wow-delay=".2s"
-                              >
-                                25 Years Of Experience{" "}
-                              </h4>
                               <h2
                                 className="section__title wow fadeInUp"
                                 data-wow-delay=".3s"
                               >
                                 <span className="first_title">
-                                  Ready to get our
+                                  Explore Our Expert
                                 </span>
                                 <span className="second_title">
-                                  digital services?
+                                  Consultancy Services
                                 </span>
                               </h2>
                               <p className="wow fadeInUp" data-wow-delay=".4s">
-                                That's not on the roadmap losing these latest
-                                prospects is like putting socks on an octopus to
-                                give you a heads-up.
+                                Unlock the full potential of your business with
+                                our expert consultancy services , we're here to
+                                guide you towards success. Explore the future of
+                                your business with confidence, innovation, and a
+                                trusted partner by your side.
                               </p>
                               <a
                                 href="/Contact"
@@ -401,6 +391,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-f63fc53 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="f63fc53"
@@ -549,6 +540,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-28d22ad elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="28d22ad"
@@ -623,34 +615,27 @@ const About = () => {
                             >
                               <div className="project__content">
                                 <div className="project__title">
-                                  <h4
-                                    className="section__sub-title wow fadeInUp"
-                                    data-wow-delay=".2s"
-                                  >
-                                    25 Years Of Experience{" "}
-                                  </h4>
                                   <h2
                                     className="section__title wow fadeInUp"
                                     data-wow-delay=".3s"
                                   >
                                     <span className="first_title">
-                                      Like what you see with
+                                      Transform with Our Online Consultancy
                                     </span>
                                     <span className="second_title">
-                                      our online products?
+                                      Solutions
                                     </span>
                                   </h2>
                                   <p
                                     className="wow fadeInUp"
                                     data-wow-delay=".4s"
                                   >
-                                    That's not on the roadmap losing these
-                                    latest prospects is like putting socks on an
-                                    octopus to give you a heads-up.
+                                    Explore a world of transformative
+                                    possibilities with our cutting-edge online
+                                    consultancy services. Unlock unparalleled
+                                    insights and solutions to propel your
+                                    business forward.
                                   </p>
-                                  <a href="/Contact" className="m-btn mt-35">
-                                    Start a Project
-                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -664,6 +649,7 @@ const About = () => {
             </div>
           </div>
         </section>
+
         {/* cards */}
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-463d3b5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -718,7 +704,7 @@ const About = () => {
                         />
                       </div>
                       <div className="container">
-                        <div className="row mb-65">
+                        <div className="row mb-65 mt-50">
                           <div className="col-xl-12">
                             <div className="blog__title text-center">
                               <h4
@@ -888,6 +874,7 @@ const About = () => {
         </section>
         {/* cards */}
       </div>
+
       {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">

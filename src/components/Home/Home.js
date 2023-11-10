@@ -23,6 +23,9 @@ import fiberoptic from "../../assests/Homepageimages/fiberoptic.png";
 import nontech from "../../assests/Homepageimages/nontech.jpg";
 import tech from "../../assests/Homepageimages/tech.jpeg";
 import route from "../../assests/Homepageimages/route.jpg";
+import synoptics from "../../assests/Homepageimages/synoptics.jpg";
+import landtlogo from "../../assests/Homepageimages/landtlogo.png";
+import orchestra from "../../assests/Homepageimages/orchestra.png";
 const Home = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
@@ -61,6 +64,28 @@ const Home = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // google image SLICK SLIDER SETTINGS
+  const settings2 = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
+
+  if (window.innerWidth < 768) {
+    settings2.slidesToShow = 2;
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 768) {
+      settings2.slidesToShow = 2;
+    } else {
+      settings2.slidesToShow = 4;
+    }
+  });
+
   const settings1 = {
     dots: true,
     infinite: true,
@@ -69,14 +94,25 @@ const Home = () => {
     slidesToScroll: 1,
   };
 
-  // SLICK SLIDER END
-  const settings2 = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    // Initial check on mount
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
 
@@ -116,13 +152,13 @@ const Home = () => {
     }
   }, [count]);
   // image
-  const images = [
-    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-1.png",
-    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png",
-    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png",
-    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png",
-    "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png",
-  ];
+  // const images = [
+  //   "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-1.png",
+  //   "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-2.png",
+  //   "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-3.png",
+  //   "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-4.png",
+  //   "https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/logo-5.png",
+  // ];
 
   // scroll
   const [isVisible, setIsVisible] = useState(false);
@@ -379,14 +415,15 @@ const Home = () => {
                                     />
                                   </div>
                                   <div className="single__service-content single__service-content-2">
-                                    <h3>Payroll and Salary Services</h3>
+                                    <h3>Artificial Intelligence</h3>
                                     <p>
-                                      Managing payroll and employee salaries can
-                                      be a complex and time-consuming task for
-                                      any organization. we offer comprehensive
-                                      payroll and salary services to streamline
-                                      this critical aspect of your business
-                                      operations
+                                      it's about empowering your consultancy
+                                      with a transformative force that propels
+                                      you into a future of unparalleled
+                                      innovation and success. Partner with us to
+                                      explore the limitless possibilities that
+                                      AI brings to consultancy, where each
+                                      challenge becomes an opportunity fo
                                     </p>
                                   </div>
                                   <div className="single__service-link">
@@ -448,83 +485,237 @@ const Home = () => {
         </section>
 
         {/* new section */}
-        <div className="NewSection">
-          <div className="service_sectionwise  text-center ">
-            <p className="section_paragraph">We Make Connections</p>
-            <h1>
-              We Provide Best{" "}
-              <span className="service_spancite">
-                <cite>Services</cite>
-              </span>{" "}
-            </h1>
-            <p>
-              Web designing in a powerful way of just not a profession, however,
-              in a passion for our <br />
-              Company. We have a tendency to believe the idea that smart
-              looking.
-            </p>
-          </div>
-          <Container className="d-flex justify-content-center align-items-center">
-            <Row xs={1} md={2} lg={4} className="g-0">
-              <Col>
-                <Card className="home-services-slide">
-                  <Card.Body>
-                    <h5 className="card-title home-services-heading ">
-                      Experience Design
-                    </h5>
-                    <p className="card-text home-services-paragraph mt-2">
-                      Our firm is an expert at creating an efficient user
-                      interface that makes user interaction seamless.
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
 
-              <Col>
-                <Card className="home-services-slide">
-                  <Card.Body>
-                    <h5 className="card-title home-services-heading">
-                      IT Consultancy
-                    </h5>
-                    <p className="card-text home-services-paragraph mt-2 ">
-                      We provide IT management services tailored to an
-                      organization’s needs.
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              <Col>
-                <Card className="home-services-slide">
-                  <Card.Body>
-                    <h5 className="card-title home-services-heading">
-                      Cyber Security
-                    </h5>
-                    <p className="card-text home-services-paragraph mt-2">
-                      Expertise in an IT consultancy for many companies,
-                      covering different working areas.
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              <Col>
-                <Card className="home-services-slide">
-                  <Card.Body>
-                    <h5 className="card-title home-services-heading">
-                      Digital Services
-                    </h5>
-                    <p className="card-text home-services-paragraph mt-2">
-                      We develop, migrate & work on applications to ensure that
-                      run capably on cloud.
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
+        <div className="service_sectionwise  text-center ">
+          <p className="section_paragraph">We Make Connections</p>
+          <h1>
+            We Provide Best{" "}
+            <span className="service_spancite">
+              <cite>Services</cite>
+            </span>{" "}
+          </h1>
+          <p>
+            Web designing in a powerful way of just not a profession, however,
+            in a passion for our <br />
+            Company. We have a tendency to believe the idea that smart looking.
+          </p>
         </div>
-        {/* new section */}
+        {/*  image cards*/}
+        <div className="container  ">
+          <div className="row">
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px", borderRadius: "8px" }}>
+                <Card.Img
+                  variant="top"
+                  src={route}
+                  style={{ height: "230px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3> Router and Switch Firewall SDN</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our expertise ensures optimal performance, security, and
+                      adaptability. Routers are finely tuned for seamless data
+                      flow, switches for efficient traffic management, and
+                      firewalls for robust security.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={tech}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Hire Resource for Technical </h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      In the fast-paced world of technology, securing top-notch
+                      technical talent is essential for staying ahead. we
+                      streamline the hiring process, ensuring you have the right
+                      technical talent to drive your projects forward.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 ">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={nontech}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Hire Resource for Non-Techinical</h3>{" "}
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our non-technical recruitment solutions focus on
+                      identifying and hiring individuals with the right mix of
+                      soft skills leadership qualities, and cultural fit for
+                      your organization.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+
+          <div className="row " style={{ marginTop: "20px" }}>
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={fiberoptic}
+                  style={{ height: "220px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Fiber Optic</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Fiber optics stands as the pinnacle of high-speed data
+                      transmission. From internet connectivity to
+                      telecommunication systems, fiber optics not only
+                      accelerates data transfer but also enhances the stability
+                      and efficiency of information exchange.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={Homeblogimage1audit}
+                  style={{ height: "220px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Network Audit</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      Our audit provides a roadmap for upgrades, cost savings,
+                      and scalability, aligning your network with industry best
+                      practices. To enhancing overall functionality, our network
+                      audit is the key to a robust, secure, and future-ready
+                      network architecture.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4">
+              <Card style={{ height: "500px" }}>
+                <Card.Img variant="top" src={noc} style={{ height: "250px" }} />
+                <Card.Body>
+                  <Card.Title>
+                    <h4>Performance implement for NOC</h4>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Our solutions include real-time monitoring tools,
+                      predictive analytics, and automation to streamline
+                      workflows and proactively address issues. With a focus on
+                      scalability and resilience we ensure your NOC is equipped
+                      to handle evolving demands.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+
+          <div className="row" style={{ marginTop: "20px" }}>
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={moniternoc}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Monitoring resources for NOC</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      We've got a set of tools that act like super-smart
+                      detectives, constantly watching over everything. If
+                      there's anything fishy or if something's not working as
+                      smoothly as it should, these tools send us a heads-up so
+                      we can fix it before it causes any trouble.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4 mb-3">
+              <Card style={{ height: "500px" }}>
+                <Card.Img variant="top" src={ai} style={{ height: "250px" }} />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Artificial Intelligence</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      AI enables us to sift through complexities swiftly,
+                      providing data-driven recommendations that inform
+                      strategic decisions. From automating repetitive processes
+                      to predicting our consultancy harnesses the power of AI.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+
+            <div className="col-md-4">
+              <Card style={{ height: "500px" }}>
+                <Card.Img
+                  variant="top"
+                  src={payrol}
+                  style={{ height: "250px" }}
+                />
+                <Card.Body>
+                  <Card.Title>
+                    <h3>Payrollment</h3>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      {" "}
+                      Payroll is a critical aspect of any organization,
+                      encompassing the financial disbursement of salaries,
+                      wages, and bonuses to its employees. This multifaceted
+                      process involves meticulous.
+                    </p>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </div>
+        {/* image cards */}
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-3719bdf elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="3719bdf"
@@ -656,223 +847,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/*  image cards*/}
-
-        <div className="container  ">
-          <div className="row">
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px", borderRadius: "8px" }}>
-                <Card.Img
-                  variant="top"
-                  src={route}
-                  style={{ height: "230px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3> Router and Switch Firewall SDN</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      Our expertise ensures optimal performance, security, and
-                      adaptability. Routers are finely tuned for seamless data
-                      flow, switches for efficient traffic management, and
-                      firewalls for robust security.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={tech}
-                  style={{ height: "250px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Hire Resource for Technical </h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      In the fast-paced world of technology, securing top-notch
-                      technical talent is essential for staying ahead. we
-                      streamline the hiring process, ensuring you have the right
-                      technical talent to drive your projects forward.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4 ">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={nontech}
-                  style={{ height: "250px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Hire Resource for Non-Techinical</h3>{" "}
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      Our non-technical recruitment solutions focus on
-                      identifying and hiring individuals with the right mix of
-                      soft skills leadership qualities, and cultural fit for
-                      your organization
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-
-          <div className="row " style={{ marginTop: "20px" }}>
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={fiberoptic}
-                  style={{ height: "220px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Fiber Optic</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      Fiber optics stands as the pinnacle of high-speed data
-                      transmission. From internet connectivity to
-                      telecommunication systems, fiber optics not only
-                      accelerates data transfer but also enhances the stability
-                      and efficiency of information exchange.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={Homeblogimage1audit}
-                  style={{ height: "220px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Network Audit</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      {" "}
-                      Our audit provides a roadmap for upgrades, cost savings,
-                      and scalability, aligning your network with industry best
-                      practices. To enhancing overall functionality, our network
-                      audit is the key to a robust, secure, and future-ready
-                      network architecture.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4">
-              <Card style={{ height: "500px" }}>
-                <Card.Img variant="top" src={noc} style={{ height: "250px" }} />
-                <Card.Body>
-                  <Card.Title>
-                    <h4>Performance implement for NOC</h4>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      Our solutions include real-time monitoring tools,
-                      predictive analytics, and automation to streamline
-                      workflows and proactively address issues. With a focus on
-                      scalability and resilience we ensure your NOC is equipped
-                      to handle evolving demands.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-
-          <div className="row" style={{ marginTop: "20px" }}>
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={moniternoc}
-                  style={{ height: "250px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Monitoring resources for NOC</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      We've got a set of tools that act like super-smart
-                      detectives, constantly watching over everything. If
-                      there's anything fishy or if something's not working as
-                      smoothly as it should, these tools send us a heads-up so
-                      we can fix it before it causes any trouble.
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4 mb-3">
-              <Card style={{ height: "500px" }}>
-                <Card.Img variant="top" src={ai} style={{ height: "250px" }} />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Artificial Intelligence</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      {" "}
-                      AI enables us to sift through complexities swiftly,
-                      providing data-driven recommendations that inform
-                      strategic decisions. From automating repetitive processes
-                      to predicting our consultancy harnesses the power of AI
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-
-            <div className="col-md-4">
-              <Card style={{ height: "500px" }}>
-                <Card.Img
-                  variant="top"
-                  src={payrol}
-                  style={{ height: "250px" }}
-                />
-                <Card.Body>
-                  <Card.Title>
-                    <h3>Payrollment</h3>
-                  </Card.Title>
-                  <Card.Text>
-                    <p>
-                      {" "}
-                      Payroll is a critical aspect of any organization,
-                      encompassing the financial disbursement of salaries,
-                      wages, and bonuses to its employees. This multifaceted
-                      process involves meticulous
-                    </p>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-        </div>
-        {/* image cards */}
-
         {/*  thirdtabs */}
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-8f5e084 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -984,29 +958,25 @@ const Home = () => {
                                   }}
                                 >
                                   <div className="row grid mt-70">
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
+                                            src="https://cdn.pixabay.com/photo/2016/04/21/13/27/computer-1343393_640.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Web Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting digital experiences, our
+                                            web development expertise ensures
+                                            dynamic, user-friendly, and scalable
+                                            websites that captivate audiences
+                                            and drive success.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1015,24 +985,21 @@ const Home = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            src="https://staticlearn.shine.com/l/m/images/blog/business.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
-                                              Creative Home
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Business Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Strategic growth catalysts, our
+                                            business development initiatives
+                                            foster innovation, cultivate
+                                            partnerships, and propel
+                                            organizations toward sustained
+                                            success and expansion.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1046,19 +1013,15 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Marketing</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting compelling narratives, our
+                                            marketing strategies drive
+                                            engagement, build brand resonance,
+                                            and propel businesses to new heights
+                                            in today's digital landscape
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1072,10 +1035,8 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="">Network Audit</a>
-                                          </h3>
-                                          <p />
+                                          <h3>Network Audit</h3>
+
                                           <p>
                                             A network audit is a critical
                                             process that helps you understand
@@ -1084,12 +1045,12 @@ const Home = () => {
                                             business or a large enterprise, a
                                             network audit
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </Tab>
+
                                 <Tab
                                   eventKey="Network "
                                   title="Network "
@@ -1110,12 +1071,8 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Network Audit
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Network Audit</h3>
+
                                           <p>
                                             A network audit is a critical
                                             process that helps you understand
@@ -1124,7 +1081,6 @@ const Home = () => {
                                             business or a large enterprise, a
                                             network audit
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1138,22 +1094,20 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="">Consultancy</a>
-                                          </h3>
-                                          <p />
+                                          <h3>Consultancy</h3>
+
                                           <p>
                                             We understand that success depends
                                             on making the right decisions and
                                             having access to the right
                                             expertise.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </Tab>
+
                                 <Tab
                                   eventKey="development"
                                   title="Development"
@@ -1169,24 +1123,20 @@ const Home = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://cdn.pixabay.com/photo/2016/04/21/13/27/computer-1343393_640.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Web Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting digital experiences, our
+                                            web development expertise ensures
+                                            dynamic, user-friendly, and scalable
+                                            websites that captivate audiences
+                                            and drive success.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1195,24 +1145,21 @@ const Home = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            src="https://staticlearn.shine.com/l/m/images/blog/business.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
-                                              Creative Home
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Business Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Strategic growth catalysts, our
+                                            business development initiatives
+                                            foster innovation, cultivate
+                                            partnerships, and propel
+                                            organizations toward sustained
+                                            success and expansion.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1239,19 +1186,15 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Digital Agency</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Digital architects shaping online
+                                            success. Our agency specializes in
+                                            creative strategies, digital
+                                            marketing, and technology to elevate
+                                            brands in cyberspace.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1266,84 +1209,15 @@ const Home = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
-                                          <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
-                                          </p>
-                                          <p />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Tab>
-                                <Tab
-                                  eventKey="ui-ux-design"
-                                  title="UI/UX Design"
-                                  style={{
-                                    border: "none",
-                                    backgroundColor: "transparent",
-                                    color: "#000",
-                                  }}
-                                >
-                                  <div className="row row grid mt-70">
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
-                                      <div className="portfolio__item-2 mb-30">
-                                        <div className="portfolio__image-2">
-                                          <img
-                                            decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
-                                            alt="portfolio"
-                                          />
-                                        </div>
-                                        <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
-                                          <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
-                                          </p>
-                                          <p />
-                                        </div>
-                                      </div>
-                                    </div>
+                                          <h3>Marketing</h3>
 
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
-                                      <div className="portfolio__item-2 mb-30">
-                                        <div className="portfolio__image-2">
-                                          <img
-                                            decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
-                                            alt="portfolio"
-                                          />
-                                        </div>
-                                        <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting compelling narratives, our
+                                            marketing strategies drive
+                                            engagement, build brand resonance,
+                                            and propel businesses to new heights
+                                            in today's digital landscape.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -1464,9 +1338,6 @@ const Home = () => {
                                     latest prospects is like putting socks on an
                                     octopus to give you a heads-up.
                                   </p>
-                                  <a href="/Contact" className="m-btn mt-35">
-                                    Start a Project
-                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -1482,7 +1353,7 @@ const Home = () => {
         </section>
 
         {/* testmoinial */}
-        <section className=" testimonials__area-2 fix p-relative pt-120 pb-120">
+        <section className=" testimonials__area-2 fix p-relative pt-120 pb-120 ">
           <div className="testimonials__shape">
             <img
               decoding="async"
@@ -1515,7 +1386,7 @@ const Home = () => {
               alt="image"
             />
           </div>
-          <div className="container">
+          <div className="container mt-60">
             <div className="row mb-65">
               <div className="col-xl-12">
                 <div className="testimonials__title text-center">
@@ -1564,255 +1435,226 @@ const Home = () => {
             </div>
 
             {/*  */}
-            <Slider {...settings1}>
-              <div>
+            <div class="testimonials__container">
+              <Slider {...settings1}>
                 <div
-                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                  data-swiper-slide-index={0}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="1 / 3"
+                  className={`testimonials__item ${
+                    isSmallScreen ? "small-screen" : ""
+                  }`}
                 >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                    data-swiper-slide-index={0}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="1 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
                         <img
                           decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
+                          src={synoptics}
                           alt="image"
+                          // style={{ width: "350px",height:"400px"}}
                         />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>Alima Alisha</h4>
-                        <span>CEO</span>
+                      <div className="testimonials__text">
+                        <p>
+                          Synophic system company I'm worked him big experience
+                          in company so nice company in word fully maintenance
+                          work already done so I'm happy to experience in
+                          synophic system company and thanks for synophic.
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+                        <div className="testimonials__client-text">
+                          <h4>Alima Alisha</h4>
+                          <span>CEO</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div
-                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                  data-swiper-slide-index={1}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="2 / 3"
-                >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
+                <div>
+                  {/* 1st */}
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                    data-swiper-slide-index={1}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="2 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
                         <img
                           decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
+                          src={landtlogo}
                           alt="image"
+                          style={{ width: "300px" }}
                         />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>David Clark</h4>
-                        <span>Marketing Manager</span>
+                      <div className="testimonials__text">
+                        <p>
+                          A professional notary, a pleasant and punctual person,
+                          always in a good mood, he will always tell and explain
+                          everything intelligently. Pretty good prices. It's
+                          always a pleasure to work. It doesn’t require any
+                          extra documents.
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+                        <div className="testimonials__client-text">
+                          <h4>David Clark</h4>
+                          <span>Marketing Manager</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div
-                  className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
-                  data-swiper-slide-index={2}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="3 / 3"
-                >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
-                        <img
-                          decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
-                          alt="image"
-                        />
+                {/* 2nd */}
+                <div>
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                    data-swiper-slide-index={2}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="3 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
+                        <img decoding="async" src={orchestra} alt="image" />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>Moran Sham</h4>
-                        <span>Team Leader</span>
+                      <div className="testimonials__text">
+                        <p>
+                          Very friendly attitude towards the client and his
+                          problems - you can always ask for advice and help even
+                          on related issues, and on top of that, high-quality
+                          advice on inheritance issues. Never expected to get
+                          such a powerful theme
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+                        <div className="testimonials__client-text">
+                          <h4>Moran Sham</h4>
+                          <span>Team Leader</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div
-                  className="testimonials__item swiper-slide swiper-slide-prev"
-                  data-swiper-slide-index={0}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="1 / 3"
-                >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/google.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
+                {/* 3rd */}
+                <div>
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-prev"
+                    data-swiper-slide-index={0}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="1 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
                         <img
                           decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-1.png"
+                          src={synoptics}
                           alt="image"
+                          // style={{ width: "350px",height:"400px"}}
                         />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>Alima Alisha</h4>
-                        <span>CEO</span>
+                      <div className="testimonials__text">
+                        <p>
+                          Synophic system company I'm worked him big experience
+                          in company so nice company in word fully maintenance
+                          work already done so I'm happy to experience in
+                          synophic system company and thanks for synophic.
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+
+                        <div className="testimonials__client-text">
+                          <h4>Alima Alisha</h4>
+                          <span>CEO</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div
-                  className="testimonials__item swiper-slide swiper-slide-active"
-                  data-swiper-slide-index={1}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="2 / 3"
-                >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/payoneer.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
-                        <img
-                          decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-2.png"
-                          alt="image"
-                        />
+                {/* 4th */}
+                <div>
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-active"
+                    data-swiper-slide-index={1}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="2 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
+                        <img decoding="async" src={landtlogo} alt="image" />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>David Clark</h4>
-                        <span>Marketing Manager</span>
+                      <div className="testimonials__text">
+                        <p>
+                          A professional notary, a pleasant and punctual person,
+                          always in a good mood, he will always tell and explain
+                          everything intelligently. Pretty good prices. It's
+                          always a pleasure to work. It doesn’t require any
+                          extra documents.
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+                        <div className="testimonials__client-text">
+                          <h4>David Clark</h4>
+                          <span>Marketing Manager</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div
-                  className="testimonials__item swiper-slide swiper-slide-next"
-                  data-swiper-slide-index={2}
-                  style={{ width: "350px", "margin-right": "30px" }}
-                  role="group"
-                  aria-label="3 / 3"
-                >
-                  <div className="testimonials__item-content">
-                    <div className="testimonials__logo">
-                      <img
-                        decoding="async"
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/instagram.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div className="testimonials__text">
-                      <p>
-                        Big data run it up the flag pole core competencies bench
-                        mark. Three martini lunch we need to dialog around your
-                        choice of work attire data-point. Show pony after I ran
-                        into realized two projects crank this out.
-                      </p>
-                    </div>
-                    <div className="testimonials__client d-flex align-items-center">
-                      <div className="testimonials__client-thumb">
-                        <img
-                          decoding="async"
-                          src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/t-client-3.png"
-                          alt="image"
-                        />
+                {/* 5th */}
+                <div>
+                  <div
+                    className="testimonials__item swiper-slide swiper-slide-next"
+                    data-swiper-slide-index={2}
+                    style={{ width: "350px", "margin-right": "30px" }}
+                    role="group"
+                    aria-label="3 / 3"
+                  >
+                    <div className="testimonials__item-content">
+                      <div className="testimonials__logo">
+                        <img decoding="async" src={orchestra} alt="image" />
                       </div>
-                      <div className="testimonials__client-text">
-                        <h4>Moran Sham</h4>
-                        <span>Team Leader</span>
+                      <div className="testimonials__text">
+                        <p>
+                          Very friendly attitude towards the client and his
+                          problems - you can always ask for advice and help even
+                          on related issues, and on top of that, high-quality
+                          advice on inheritance issues. Never expected to get
+                          such a powerful theme
+                        </p>
+                      </div>
+                      <div className="testimonials__client d-flex align-items-center">
+                        <div className="testimonials__client-thumb"></div>
+                        <div className="testimonials__client-text">
+                          <h4>Moran Sham</h4>
+                          <span>Team Leader</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Slider>
+              </Slider>
+            </div>
             {/*  */}
           </div>
         </section>
         {/* testmoinal */}
 
         {/*  Pricing Plan*/}
-        <Slider {...settings}>
+        {/* <Slider {...settings}>
           <section
             className="elementor-section elementor-top-section elementor-element elementor-element-36bd487 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
             data-id="36bd487"
@@ -2226,11 +2068,11 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </Slider>
+        </Slider> */}
         {/*  Pricing Plan*/}
 
         {/* tabs */}
-        <section
+        {/* <section
           className="elementor-section elementor-top-section elementor-element elementor-element-9a05075 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="9a05075"
           data-element_type="section"
@@ -2323,7 +2165,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* cards */}
@@ -2432,111 +2274,57 @@ const Home = () => {
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              {/* <a href="https://thememaster.net/wp/maxdi/everything-you-need-to-know-and-branding-web-design/"> */}
                               <img
                                 decoding="async"
                                 src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
                                 alt="blog"
                               />
-                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />
                                 &nbsp;&nbsp;&nbsp;
                                 <p>19 Jul, 2022</p>
-                                <a href="#" className="m-btn blog-btn">
-                                  Development{" "}
-                                </a>
                               </div>
-                              <h3>
-                                <a href="#">
-                                  Everything you need to know and branding web
-                                  design{" "}
-                                </a>
-                              </h3>
-                              <div className="blog__link">
-                                <a href="#" className="arrow-btn">
-                                  Continue Reading&nbsp;&nbsp;&nbsp;
-                                  <AiOutlineArrowRight
-                                    style={{ color: "black" }}
-                                  />
-                                </a>
-                              </div>
+                              <h3>AI's Impact on the Hotel Experience</h3>
                             </div>
                           </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              {/* <a href="https://thememaster.net/wp/maxdi/delivering-the-best-digital-marketing-solution-creative-team/"> */}
                               <img
                                 decoding="async"
                                 src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
                                 alt="blog"
                               />
-                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />{" "}
                                 &nbsp;&nbsp;
                                 <p>01 Jul, 2022</p>
-                                <a href="#" className="m-btn blog-btn">
-                                  Development{" "}
-                                </a>
                               </div>
-                              <h3>
-                                <a href="#">
-                                  Delivering the best digital marketing solution
-                                  creative team{" "}
-                                </a>
-                              </h3>
-                              <div className="blog__link">
-                                <a href="#" className="arrow-btn">
-                                  Continue Reading&nbsp;&nbsp;
-                                  <AiOutlineArrowRight
-                                    style={{ color: "black" }}
-                                  />
-                                </a>
-                              </div>
+                              <h3>Essential Equipment and Machinery</h3>
                             </div>
                           </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-6">
                           <div className="blog__item mb-40">
                             <div className="blog__thumb">
-                              {/* <a href="https://thememaster.net/wp/maxdi/post-launch-creative-shower-initiative-take-root-over-mart/"> */}
                               <img
                                 decoding="async"
                                 src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
                                 alt="blog"
                               />
-                              {/* </a> */}
                             </div>
                             <div className="blog__content">
                               <div className="blog__date d-flex align-items-center justify content-between">
                                 <BiSolidTimeFive style={{ color: "black" }} />
                                 &nbsp;&nbsp;
                                 <p>01 Jul, 2022</p>
-                                <a href="#" className="m-btn blog-btn">
-                                  Branding{" "}
-                                </a>
                               </div>
-                              <h3>
-                                <a href="#">
-                                  Post launch creative shower initiative take
-                                  root over mart{" "}
-                                </a>
-                              </h3>
-                              <div className="blog__link">
-                                <a href="#" className="arrow-btn">
-                                  Continue Reading&nbsp;&nbsp;
-                                  <AiOutlineArrowRight
-                                    style={{ color: "black" }}
-                                  />
-                                </a>
-                              </div>
+                              <h3>Dynamic Power of NOC in Consultancy</h3>
                             </div>
                           </div>
                         </div>

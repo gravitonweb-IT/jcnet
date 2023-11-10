@@ -135,6 +135,8 @@
   text-align: center;
 }
 
+
+
 /*service new  */
 .service_sectionwise .section_paragraph {
   margin-top: 40px;
@@ -168,7 +170,6 @@
   cursor: pointer;
 }
 
-/* Additional styling for other elements if required */
 .home-services-heading,
 .home-services-paragraph,
 .home-services-icon {
@@ -178,5 +179,7 @@
 .card:hover .home-services-heading,
 .card:hover .home-services-paragraph,
 .card:hover .home-services-icon {
-  color: rgb(255, 252, 252); /* Set the text color on hover */
+  color: rgb(255, 252, 252); 
 }
+
+/* slick */

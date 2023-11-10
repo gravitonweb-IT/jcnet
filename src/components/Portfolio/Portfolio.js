@@ -51,7 +51,7 @@ const portfolio = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={progressCircleStyle}
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
@@ -132,9 +132,8 @@ const portfolio = () => {
                       itemType="http://schema.org/ListItem"
                       className="trail-item trail-begin"
                     >
-                      <a href="/#" rel="home" itemProp="item">
-                        <span itemProp="name">Home</span>
-                      </a>
+                      <span itemProp="name">Home</span>
+
                       <MdKeyboardDoubleArrowRight className="icons-content1" />
                     </li>
                     <li className="trail-item trail-end">
@@ -207,7 +206,7 @@ const portfolio = () => {
                           alt="img"
                         />
                       </div>
-                      <div className="container">
+                      <div className="container ">
                         <div className="row">
                           <div className="col-xl-12">
                             <div className="portfolio__title-2 text-center">
@@ -219,7 +218,7 @@ const portfolio = () => {
                                   animationDelay: "0.2s",
                                   animationName:
                                     "animated animatedFadeInUp fadeInUp",
-                                  marginTop: "80px",
+                                  marginTop: "52px",
                                 }}
                               >
                                 Portfolio{" "}
@@ -264,29 +263,25 @@ const portfolio = () => {
                                   }}
                                 >
                                   <div className="row grid mt-70">
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
                                       <div className="portfolio__item-2 mb-30">
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
+                                            src="https://cdn.pixabay.com/photo/2016/04/21/13/27/computer-1343393_640.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Web Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting digital experiences, our
+                                            web development expertise ensures
+                                            dynamic, user-friendly, and scalable
+                                            websites that captivate audiences
+                                            and drive success.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -295,24 +290,21 @@ const portfolio = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            src="https://staticlearn.shine.com/l/m/images/blog/business.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
-                                              Creative Home
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Business Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Strategic growth catalysts, our
+                                            business development initiatives
+                                            foster innovation, cultivate
+                                            partnerships, and propel
+                                            organizations toward sustained
+                                            success and expansion.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -326,19 +318,15 @@ const portfolio = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Marketing</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Digital architects shaping online
+                                            success. Our agency specializes in
+                                            creative strategies, digital
+                                            marketing, and technology to elevate
+                                            brands in cyberspace.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -347,32 +335,30 @@ const portfolio = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://img.freepik.com/premium-photo/devices-connected-storage-data-center-tablet-phone-home-devices-with-online-cloud-technology-computing-generative-ai_771426-1180.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Network Audit</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            A network audit is a critical
+                                            process that helps you understand
+                                            the health and performance of your
+                                            network. Whether you're a small
+                                            business or a large enterprise, a
+                                            network audit
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </Tab>
+
                                 <Tab
-                                  eventKey="branding"
-                                  title="Branding"
+                                  eventKey="Network "
+                                  title="Network "
                                   style={{
                                     border: "none",
                                     backgroundColor: "transparent",
@@ -385,29 +371,48 @@ const portfolio = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://img.freepik.com/premium-photo/devices-connected-storage-data-center-tablet-phone-home-devices-with-online-cloud-technology-computing-generative-ai_771426-1180.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Network Audit</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            A network audit is a critical
+                                            process that helps you understand
+                                            the health and performance of your
+                                            network. Whether you're a small
+                                            business or a large enterprise, a
+                                            network audit
                                           </p>
-                                          <p />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-xl-6 col-lg-6 grid-item branding development mt-10">
+                                      <div className="portfolio__item-2 mb-30">
+                                        <div className="portfolio__image-2">
+                                          <img
+                                            decoding="async"
+                                            src="https://thumbs.dreamstime.com/b/consulting-expert-advice-support-service-business-concept-97202115.jpg"
+                                            alt="portfolio"
+                                          />
+                                        </div>
+                                        <div className="portfolio__text-2">
+                                          <h3>Consultancy</h3>
+
+                                          <p>
+                                            We understand that success depends
+                                            on making the right decisions and
+                                            having access to the right
+                                            expertise.
+                                          </p>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </Tab>
+
                                 <Tab
                                   eventKey="development"
                                   title="Development"
@@ -423,24 +428,20 @@ const portfolio = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-1.jpg"
+                                            src="https://cdn.pixabay.com/photo/2016/04/21/13/27/computer-1343393_640.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/alisha-finance/">
-                                              Alisha Finance
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Web Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting digital experiences, our
+                                            web development expertise ensures
+                                            dynamic, user-friendly, and scalable
+                                            websites that captivate audiences
+                                            and drive success.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
@@ -449,29 +450,27 @@ const portfolio = () => {
                                         <div className="portfolio__image-2">
                                           <img
                                             decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-6-800x800.jpg"
+                                            src="https://staticlearn.shine.com/l/m/images/blog/business.jpg"
                                             alt="portfolio"
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/creative-home/">
-                                              Creative Home
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Business Development</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Strategic growth catalysts, our
+                                            business development initiatives
+                                            foster innovation, cultivate
+                                            partnerships, and propel
+                                            organizations toward sustained
+                                            success and expansion.
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </Tab>
+
                                 <Tab
                                   eventKey="marketing"
                                   title="Marketing"
@@ -492,22 +491,19 @@ const portfolio = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Digital Agency</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Digital architects shaping online
+                                            success. Our agency specializes in
+                                            creative strategies, digital
+                                            marketing, and technology to elevate
+                                            brands in cyberspace
                                           </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>
+
                                     <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
                                       <div className="portfolio__item-2 mb-30">
                                         <div className="portfolio__image-2">
@@ -518,83 +514,15 @@ const portfolio = () => {
                                           />
                                         </div>
                                         <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
+                                          <h3>Marketing</h3>
+
                                           <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
+                                            Crafting compelling narratives, our
+                                            marketing strategies drive
+                                            engagement, build brand resonance,
+                                            and propel businesses to new heights
+                                            in today's digital landscape.
                                           </p>
-                                          <p />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Tab>
-                                <Tab
-                                  eventKey="ui-ux-design"
-                                  title="UI/UX Design"
-                                  style={{
-                                    border: "none",
-                                    backgroundColor: "transparent",
-                                    color: "#000",
-                                  }}
-                                >
-                                  <div className="row row grid mt-70">
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design mt-10">
-                                      <div className="portfolio__item-2 mb-30">
-                                        <div className="portfolio__image-2">
-                                          <img
-                                            decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/portfolio-1.jpg"
-                                            alt="portfolio"
-                                          />
-                                        </div>
-                                        <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/digital-agency/">
-                                              Digital Agency
-                                            </a>
-                                          </h3>
-                                          <p />
-                                          <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
-                                          </p>
-                                          <p />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="col-xl-6 col-lg-6 grid-item marketing ui-ux-design">
-                                      <div className="portfolio__item-2 mb-30">
-                                        <div className="portfolio__image-2">
-                                          <img
-                                            decoding="async"
-                                            src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/p-3.jpg"
-                                            alt="portfolio"
-                                          />
-                                        </div>
-                                        <div className="portfolio__text-2">
-                                          <h3>
-                                            <a href="https://thememaster.net/wp/maxdi/ourportfolio/marketing/">
-                                              Marketing
-                                            </a>
-                                          </h3>
-                                          <p />
-                                          <p>
-                                            Draw a line in the sand quick win.
-                                            My capacity is full. Keep it lean
-                                            gain alignment we need to
-                                            future-proof this plan.
-                                          </p>
-                                          <p />
                                         </div>
                                       </div>
                                     </div>

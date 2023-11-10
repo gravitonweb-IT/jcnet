@@ -114,7 +114,7 @@ const Services = () => {
   };
   return (
     <>
-      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+     <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
         <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
             className="progress-circle svg-content"
@@ -124,7 +124,7 @@ const Services = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={progressCircleStyle}
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
@@ -294,19 +294,12 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>UI/UX Design</h3>
+                                  <h3>Router and Switch Firewall SDN</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  Our expertise ensures optimal performance, security, and adaptability. Routers are finely tuned for seamless data flow, switches for efficient traffic management, and firewalls for robust security.
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
-                                </div>
+                               
                               </div>
                             </div>
                           </div>
@@ -321,19 +314,12 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>Web Development</h3>
+                                  <h3>Hire Resource for Technical</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  In the fast-paced world of technology, securing top-notch technical talent is essential for staying ahead. we streamline the hiring process, ensuring you have the right technical talent to drive your projects forward.
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
-                                </div>
+                              
                               </div>
                             </div>
                           </div>
@@ -348,19 +334,12 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>App Development</h3>
+                                  <h3>Hire Resource for Non-Techinical</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  Our non-technical recruitment solutions focus on identifying and hiring individuals with the right mix of soft skills leadership qualities, and cultural fit for your organization
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
-                                </div>
+                               
                               </div>
                             </div>
                           </div>
@@ -375,19 +354,12 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>Digital Marketing</h3>
+                                  <h3>Fiber Optic</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  Fiber optics stands as the pinnacle of high-speed data transmission. From internet connectivity to telecommunication systems, fiber optics not only accelerates data transfer but also enhances the stability and efficiency of information exchange.
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
-                                </div>
+                              
                               </div>
                             </div>
                           </div>
@@ -402,19 +374,12 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>Content Writing</h3>
+                                  <h3>Network Audit</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  Our audit provides a roadmap for upgrades, cost savings, and scalability, aligning your network with industry best practices. To enhancing overall functionality, our network audit is the key to a robust, secure, and future-ready network architecture.
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
-                                </div>
+                               
                               </div>
                             </div>
                           </div>
@@ -429,19 +394,73 @@ const Services = () => {
                                   />
                                 </div>
                                 <div className="single__service-content">
-                                  <h3>E-commerce</h3>
+                                  <h3>Performance implement for NOC</h3>
                                   <p>
-                                    Beautiful and Influential websites &amp;
-                                    apps that are mobile friendly quick to load
-                                    and help drive sales giving you a solid
-                                    presence online.
+                                  Our solutions include real-time monitoring tools, predictive analytics, and automation to streamline workflows and proactively address issues. With a focus on scalability and resilience to handle demands.
                                   </p>
                                 </div>
-                                <div className="single__service-link">
-                                  <a href="#" className="s-btn">
-                                    Find Out More
-                                  </a>
+                                
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-4.png"
+                                    alt="icon"
+                                  />
                                 </div>
+                                <div className="single__service-content">
+                                  <h3>Monitoring resources for NOC</h3>
+                                  <p>
+                                  We've got a set of tools that act like super-smart detectives, constantly watching over everything. If there's anything fishy or if something's not working as smoothly as it should, these tools send us a heads-up so trouble.
+                                  </p>
+                                </div>
+                              
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-5.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>Artificial Intelligence</h3>
+                                  <p>
+                                  AI enables us to sift through complexities swiftly, providing data-driven recommendations that inform strategic decisions. From automating repetitive processes to predicting our consultancy harnesses the power of AI.
+                                  </p>
+                                </div>
+                               
+                              </div>
+                            </div>
+                          </div>
+                          <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="single__bg">
+                              <div className="single__service">
+                                <div className="single__service-icon">
+                                  <img
+                                    decoding="async"
+                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/s-icon-6.png"
+                                    alt="icon"
+                                  />
+                                </div>
+                                <div className="single__service-content">
+                                  <h3>Payrollment</h3>
+                                  <p>
+                                  Payroll is a critical aspect of any organization, encompassing the financial disbursement of salaries, wages, and bonuses to its employees. This multifaceted process involves meticulous. Experience seamless payroll management.
+                                  </p>
+                                </div>
+                                
                               </div>
                             </div>
                           </div>
@@ -454,6 +473,7 @@ const Services = () => {
             </div>
           </div>
         </section>
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-3719bdf elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="3719bdf"
@@ -713,6 +733,7 @@ const Services = () => {
             </div>
           </div>
         </section>
+
         <section
           className="elementor-section elementor-top-section elementor-element elementor-element-d1bad7a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="d1bad7a"
@@ -1121,6 +1142,7 @@ const Services = () => {
           </div>
         </section>
       </div>
+
      {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">
