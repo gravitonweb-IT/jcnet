@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { Tabs, Tab } from "react-bootstrap";
-
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const portfolio = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [key, setKey] = useState("all");
@@ -584,13 +585,15 @@ const portfolio = () => {
                   <span>Need a successful</span>
                   project?{" "}
                 </h2>
-                <a
-                  className="m-btn mt-35 wow fadeInUp"
-                  data-wow-delay=".6s"
-                  href="https://thememaster.net/wp/maxdi/contact"
-                >
-                  Estimate Project
-                </a>
+                <Nav.Link
+                    as={Link}
+                    to="/Contact"
+                    className="p-10 m-btn mt-35 wow fadeInUp"
+                    data-wow-delay=".6s"
+                  >
+                    {" "}
+                    Estimate Project
+                  </Nav.Link>
               </div>
             </div>
           </div>

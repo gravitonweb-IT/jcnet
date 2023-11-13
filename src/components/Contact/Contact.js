@@ -15,7 +15,8 @@ import { MdArrowForward } from "react-icons/md";
 import CountUp from "react-countup";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
-
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -158,8 +159,6 @@ const Contact = () => {
                             className="trail-item trail-begin"
                           >
                             <span itemProp="name">Home</span>
-
-                            {/* <meta itemProp="position" content={1} /> */}
                             <MdKeyboardDoubleArrowRight className="icons-content1" />
                           </li>
                           <li className="trail-item trail-end">
@@ -226,7 +225,8 @@ const Contact = () => {
                                 <div className="contact__info-title">
                                   <h5>Phone</h5>
                                   <p>
-                                    <a href="tel:+9513899127">9513899127</a>
+                                    {/* <a href="tel:+9513899127">9513899127</a> */}
+                                    <Nav.Link as={Link}  to="/tel:+9513899127" >9513899127</Nav.Link>
                                   </p>
                                 </div>
                               </div>
@@ -239,9 +239,10 @@ const Contact = () => {
                                 <div className="contact__info-title">
                                   <h5>Email us</h5>
                                   <p>
-                                    <a href="mailto:info@example.com">
+                                    {/* <a href="mailto:info@example.com">
                                       admin@jcnet.co.in
-                                    </a>
+                                    </a> */}
+                                    <Nav.Link as={Link}  to="mailto:info@example.com" >  admin@jcnet.co.in</Nav.Link>
                                   </p>
 
                                   <p />
@@ -260,9 +261,10 @@ const Contact = () => {
                                 </span>
                               </h2>
                               <div className="contact__title-icon">
-                                <a href="#contact">
+                                {/* <a href="#contact">
                                   <AiOutlineArrowDown />
-                                </a>
+                                </a> */}
+                                <Nav.Link as={Link}  to="#contact" >  <AiOutlineArrowDown /></Nav.Link>
                               </div>
                             </div>
                           </div>
@@ -545,13 +547,15 @@ const Contact = () => {
                   <span>Need a successful</span>
                   project?{" "}
                 </h2>
-                <a
-                  className="m-btn mt-35 wow fadeInUp"
-                  data-wow-delay=".6s"
-                  href="https://thememaster.net/wp/maxdi/contact"
-                >
-                  Estimate Project
-                </a>
+                <Nav.Link
+                    as={Link}
+                    to="/Contact"
+                    className="p-10 m-btn mt-35 wow fadeInUp"
+                    data-wow-delay=".6s"
+                  >
+                    {" "}
+                    Estimate Project
+                  </Nav.Link>
               </div>
             </div>
           </div>

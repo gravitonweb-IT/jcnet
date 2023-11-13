@@ -8,7 +8,7 @@ import { GrTwitter } from "react-icons/gr";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
 import WhatsAppButton from "../components/WhatsAppButton"
-
+import logo from "../assests/navabarimages/logo.png"
 function Footer() {
   return (
     <>
@@ -80,7 +80,7 @@ function Footer() {
                   >
                     <div className="footer__widget-logo">
                       <img
-                        src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/Logo-footer.svg"
+                        src={logo}
                         alt="logo"
                       />
                       <p>
@@ -90,18 +90,11 @@ function Footer() {
                       </p>
                     </div>
                     <div className="footer__widget-social">
-                      <a href="#">
-                        <BiLogoFacebook />
-                      </a>
-                      <a href="#">
-                        <GrTwitter />
-                      </a>
-                      <a href="#">
-                        <BsInstagram />
-                      </a>
-                      <a href="#">
-                        <BsYoutube />
-                      </a>
+                
+                      <Nav.Link as={Link} to="/" className="p-0"> <BiLogoFacebook /></Nav.Link>
+                      <Nav.Link as={Link} to="/" className="p-0"> <GrTwitter /></Nav.Link>
+                      <Nav.Link as={Link} to="/" className="p-0"><BsInstagram /></Nav.Link>
+                      <Nav.Link as={Link} to="/" className="p-0"><BsYoutube /></Nav.Link>
                     </div>
                   </div>
                 </div>
@@ -229,9 +222,8 @@ function Footer() {
                             />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <p>
-                              <a href="mailto:admin@jcnet.co.in">
-                              admin@jcnet.co.in
-                              </a>
+                              
+                              <Nav.Link as={Link} to="mailto:admin@jcnet.co.in" className="p-0 text-white"> admin@jcnet.co.in</Nav.Link>
                             </p>
                           </div>
                         </div>
@@ -247,7 +239,7 @@ function Footer() {
               <div className="row">
                 <div className="col-xl-12">
                   <div className="footer__copyright">
-                    <p>Copyright © 2023 ThemeMaster</p>
+                    <p>Copyright@2020 All Rights Reserved By : <span style={{color:"#c3f808"}}>JCNET CONSULTANCY</span></p>
                   </div>
                 </div>
               </div>

@@ -6,6 +6,8 @@ import { BsArrowUp } from "react-icons/bs";
 import CountUp from "react-countup";
 import "./services.css";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [end, setEnd] = useState(0);
@@ -55,19 +57,23 @@ const Services = () => {
   const faqData = [
     {
       question: " What is the typical consultancy process?",
-      answer:" Initial consultation, proposal, analysis, recommendations, and implementation collaboration."
+      answer:
+        " Initial consultation, proposal, analysis, recommendations, and implementation collaboration.",
     },
     {
       question: "How do I know if my business needs consultancy?",
-      answer: " Look for signs like stagnant growth, inefficiencies, or lacking in-house expertise.",
+      answer:
+        " Look for signs like stagnant growth, inefficiencies, or lacking in-house expertise.",
     },
     {
       question: "What types of consultancy services are common?",
-      answer: "Management, financial, technology, and human resources consulting, among others.",
+      answer:
+        "Management, financial, technology, and human resources consulting, among others.",
     },
     {
       question: "How can I measure the success of consultancy?",
-      answer: " Metrics include improved efficiency, increased revenue, cost savings, and customer satisfaction",
+      answer:
+        " Metrics include improved efficiency, increased revenue, cost savings, and customer satisfaction",
     },
   ];
 
@@ -110,7 +116,7 @@ const Services = () => {
   };
   return (
     <>
-     <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
+      <div className={`progress-arrow-container ${isVisible ? "visible" : ""}`}>
         <div className="progress-wrap active-progress" onClick={scrollToTop}>
           <svg
             className="progress-circle svg-content"
@@ -198,9 +204,8 @@ const Services = () => {
                       itemType="http://schema.org/ListItem"
                       className="trail-item trail-begin"
                     >
-                      <a href="/#" rel="home" itemProp="item">
-                        <span itemProp="name">Home</span>
-                      </a>
+                      <span itemProp="name">Home</span>
+
                       <MdKeyboardDoubleArrowRight className="icons-content1" />
                     </li>
                     <li className="trail-item trail-end">
@@ -292,10 +297,13 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Router and Switch Firewall SDN</h3>
                                   <p>
-                                  Our expertise ensures optimal performance, security, and adaptability. Routers are finely tuned for seamless data flow, switches for efficient traffic management, and firewalls for robust security.
+                                    Our expertise ensures optimal performance,
+                                    security, and adaptability. Routers are
+                                    finely tuned for seamless data flow,
+                                    switches for efficient traffic management,
+                                    and firewalls for robust security.
                                   </p>
                                 </div>
-                               
                               </div>
                             </div>
                           </div>
@@ -312,10 +320,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Hire Resource for Technical</h3>
                                   <p>
-                                  In the fast-paced world of technology, securing top-notch technical talent is essential for staying ahead. we streamline the hiring process, ensuring you have the right technical talent to drive your projects forward.
+                                    In the fast-paced world of technology,
+                                    securing top-notch technical talent is
+                                    essential for staying ahead. we streamline
+                                    the hiring process, ensuring you have the
+                                    right technical talent to drive your
+                                    projects forward.
                                   </p>
                                 </div>
-                              
                               </div>
                             </div>
                           </div>
@@ -332,10 +344,13 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Hire Resource for Non-Techinical</h3>
                                   <p>
-                                  Our non-technical recruitment solutions focus on identifying and hiring individuals with the right mix of soft skills leadership qualities, and cultural fit for your organization
+                                    Our non-technical recruitment solutions
+                                    focus on identifying and hiring individuals
+                                    with the right mix of soft skills leadership
+                                    qualities, and cultural fit for your
+                                    organization
                                   </p>
                                 </div>
-                               
                               </div>
                             </div>
                           </div>
@@ -352,10 +367,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Fiber Optic</h3>
                                   <p>
-                                  Fiber optics stands as the pinnacle of high-speed data transmission. From internet connectivity to telecommunication systems, fiber optics not only accelerates data transfer but also enhances the stability and efficiency of information exchange.
+                                    Fiber optics stands as the pinnacle of
+                                    high-speed data transmission. From internet
+                                    connectivity to telecommunication systems,
+                                    fiber optics not only accelerates data
+                                    transfer but also enhances the stability and
+                                    efficiency of information exchange.
                                   </p>
                                 </div>
-                              
                               </div>
                             </div>
                           </div>
@@ -372,10 +391,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Network Audit</h3>
                                   <p>
-                                  Our audit provides a roadmap for upgrades, cost savings, and scalability, aligning your network with industry best practices. To enhancing overall functionality, our network audit is the key to a robust, secure, and future-ready network architecture.
+                                    Our audit provides a roadmap for upgrades,
+                                    cost savings, and scalability, aligning your
+                                    network with industry best practices. To
+                                    enhancing overall functionality, our network
+                                    audit is the key to a robust, secure, and
+                                    future-ready network architecture.
                                   </p>
                                 </div>
-                               
                               </div>
                             </div>
                           </div>
@@ -392,10 +415,13 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Performance implement for NOC</h3>
                                   <p>
-                                  Our solutions include real-time monitoring tools, predictive analytics, and automation to streamline workflows and proactively address issues. With a focus on scalability and resilience to handle demands.
+                                    Our solutions include real-time monitoring
+                                    tools, predictive analytics, and automation
+                                    to streamline workflows and proactively
+                                    address issues. With a focus on scalability
+                                    and resilience to handle demands.
                                   </p>
                                 </div>
-                                
                               </div>
                             </div>
                           </div>
@@ -413,10 +439,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Monitoring resources for NOC</h3>
                                   <p>
-                                  We've got a set of tools that act like super-smart detectives, constantly watching over everything. If there's anything fishy or if something's not working as smoothly as it should, these tools send us a heads-up so trouble.
+                                    We've got a set of tools that act like
+                                    super-smart detectives, constantly watching
+                                    over everything. If there's anything fishy
+                                    or if something's not working as smoothly as
+                                    it should, these tools send us a heads-up so
+                                    trouble.
                                   </p>
                                 </div>
-                              
                               </div>
                             </div>
                           </div>
@@ -433,10 +463,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Artificial Intelligence</h3>
                                   <p>
-                                  AI enables us to sift through complexities swiftly, providing data-driven recommendations that inform strategic decisions. From automating repetitive processes to predicting our consultancy harnesses the power of AI.
+                                    AI enables us to sift through complexities
+                                    swiftly, providing data-driven
+                                    recommendations that inform strategic
+                                    decisions. From automating repetitive
+                                    processes to predicting our consultancy
+                                    harnesses the power of AI.
                                   </p>
                                 </div>
-                               
                               </div>
                             </div>
                           </div>
@@ -453,10 +487,14 @@ const Services = () => {
                                 <div className="single__service-content">
                                   <h3>Payrollment</h3>
                                   <p>
-                                  Payroll is a critical aspect of any organization, encompassing the financial disbursement of salaries, wages, and bonuses to its employees. This multifaceted process involves meticulous. Experience seamless payroll management.
+                                    Payroll is a critical aspect of any
+                                    organization, encompassing the financial
+                                    disbursement of salaries, wages, and bonuses
+                                    to its employees. This multifaceted process
+                                    involves meticulous. Experience seamless
+                                    payroll management.
                                   </p>
                                 </div>
-                                
                               </div>
                             </div>
                           </div>
@@ -507,12 +545,6 @@ const Services = () => {
                           decoding="async"
                           className="m-shape-3"
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-3.png"
-                          alt="image"
-                        />
-                        <img
-                          decoding="async"
-                          className="m-shape-4"
-                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-4.png"
                           alt="image"
                         />
                       </div>
@@ -683,7 +715,7 @@ const Services = () => {
                                           <button
                                             className={`accordion-button ${
                                               index === activeIndex
-                                                ?  ""
+                                                ? ""
                                                 : "collapsed"
                                             }`}
                                             type="button"
@@ -691,13 +723,14 @@ const Services = () => {
                                               toggleAccordion(index)
                                             }
                                           >
-                                        < span className="faq-question-text">{faq.question}</span>
+                                            <span className="faq-question-text">
+                                              {faq.question}
+                                            </span>
                                             <FontAwesomeIcon
                                               icon={faPlus}
                                               className="plus-icon "
                                               style={{
                                                 marginLeft: "127px",
-                                                // verticalAlign: "left",
                                               }}
                                             />
                                           </button>
@@ -1139,7 +1172,7 @@ const Services = () => {
         </section> */}
       </div>
 
-     {/* lets-work area start */}
+      {/* lets-work area start */}
       <section className="lets-work__area p-relative pt-165 pb-160">
         <div className="lets-work__shape">
           <img
@@ -1180,13 +1213,15 @@ const Services = () => {
                   <span>Need a successful</span>
                   project?{" "}
                 </h2>
-                <a
-                  className="m-btn mt-35 wow fadeInUp"
+                <Nav.Link
+                  as={Link}
+                  to="/Contact"
+                  className="p-10 m-btn mt-35 wow fadeInUp"
                   data-wow-delay=".6s"
-                  href="/Contact"
                 >
+                  {" "}
                   Estimate Project
-                </a>
+                </Nav.Link>
               </div>
             </div>
           </div>

@@ -7,7 +7,8 @@ import { BiSolidTimeFive } from "react-icons/bi";
 import { MdArrowForward } from "react-icons/md";
 import CountUp from "react-countup";
 import { AiFillPlayCircle } from "react-icons/ai";
-
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const About = () => {
   // scroll
   const [isVisible, setIsVisible] = useState(false);
@@ -186,9 +187,6 @@ const About = () => {
                                   Elevate Your Brand with Our Consultancy
                                   Expertise
                                 </span>
-                                {/* <span className="second_title">
-                                  product look more elegant and stylish
-                                </span> */}
                               </h2>
                             </div>
                           </div>
@@ -356,23 +354,26 @@ const About = () => {
                                 your business with confidence, innovation, and a
                                 trusted partner by your side.
                               </p>
-                              <a
-                                href="/Contact"
+
+                              <Nav.Link
+                                as={Link}
+                                to="/Contact"
                                 className="m-btn mt-35 wow fadeInUp"
                                 data-wow-delay=".6s"
                               >
                                 Start a Project
-                              </a>
+                              </Nav.Link>
                             </div>
                           </div>
                           <div className="col-xl-7 col-lg-6 col-md-9">
                             <div className="experience__video-btn">
-                              <a
-                                href="https://www.youtube.com/watch?v=yJg-Y5byMMw"
+                              <Nav.Link
+                                as={Link}
+                                to="/"
                                 className="popup-video"
                               >
                                 <AiFillPlayCircle />
-                              </a>
+                              </Nav.Link>
                             </div>
                             <div className="experience__thumb text-end">
                               <img
@@ -429,12 +430,6 @@ const About = () => {
                           decoding="async"
                           className="t-shape-3"
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-3.png"
-                          alt="image"
-                        />
-                        <img
-                          decoding="async"
-                          className="t-shape-4"
-                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-4.png"
                           alt="image"
                         />
                       </div>
@@ -696,12 +691,12 @@ const About = () => {
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/blog/blog-s-4.png"
                           alt="image"
                         />
-                        <img
+                        {/* <img
                           decoding="async"
                           className="blog-shape-5 d-none d-sm-block"
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/blog/blog-s-5.png"
                           alt="image"
-                        />
+                        /> */}
                       </div>
                       <div className="container">
                         <div className="row mb-65 mt-50">
@@ -755,111 +750,57 @@ const About = () => {
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="#">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-4.jpg"
+                                  alt="blog"
+                                />
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />
                                   &nbsp;&nbsp;&nbsp;
                                   <p>19 Jul, 2022</p>
-                                  <a href="#" className="m-btn blog-btn">
-                                    Development{" "}
-                                  </a>
                                 </div>
-                                <h3>
-                                  <a href="#">
-                                    Everything you need to know and branding web
-                                    design{" "}
-                                  </a>
-                                </h3>
-                                <div className="blog__link">
-                                  <a href="#" className="arrow-btn">
-                                    Continue Reading&nbsp;&nbsp;&nbsp;
-                                    <AiOutlineArrowRight
-                                      style={{ color: "black" }}
-                                    />
-                                  </a>
-                                </div>
+                                <h3>AI's Impact on the Hotel Experience</h3>
                               </div>
                             </div>
                           </div>
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="#">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-2.jpg"
+                                  alt="blog"
+                                />
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />{" "}
                                   &nbsp;&nbsp;
                                   <p>01 Jul, 2022</p>
-                                  <a href="#" className="m-btn blog-btn">
-                                    Development{" "}
-                                  </a>
                                 </div>
-                                <h3>
-                                  <a href="#">
-                                    Delivering the best digital marketing
-                                    solution creative team{" "}
-                                  </a>
-                                </h3>
-                                <div className="blog__link">
-                                  <a href="#" className="arrow-btn">
-                                    Continue Reading&nbsp;&nbsp;
-                                    <AiOutlineArrowRight
-                                      style={{ color: "black" }}
-                                    />
-                                  </a>
-                                </div>
+                                <h3>Essential Equipment and Machinery</h3>
                               </div>
                             </div>
                           </div>
                           <div className="col-xl-4 col-lg-4 col-md-6">
                             <div className="blog__item mb-40">
                               <div className="blog__thumb">
-                                <a href="#">
-                                  <img
-                                    decoding="async"
-                                    src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
-                                    alt="blog"
-                                  />
-                                </a>
+                                <img
+                                  decoding="async"
+                                  src="https://thememaster.net/wp/maxdi/wp-content/uploads/2022/07/blog-img-1.jpg"
+                                  alt="blog"
+                                />
                               </div>
                               <div className="blog__content">
                                 <div className="blog__date d-flex align-items-center justify content-between">
                                   <BiSolidTimeFive style={{ color: "black" }} />
                                   &nbsp;&nbsp;
                                   <p>01 Jul, 2022</p>
-                                  <a href="#" className="m-btn blog-btn">
-                                    Branding{" "}
-                                  </a>
                                 </div>
-                                <h3>
-                                  <a href="#">
-                                    Post launch creative shower initiative take
-                                    root over mart{" "}
-                                  </a>
-                                </h3>
-                                <div className="blog__link">
-                                  <a href="#" className="arrow-btn">
-                                    Continue Reading&nbsp;&nbsp;
-                                    <AiOutlineArrowRight
-                                      style={{ color: "black" }}
-                                    />
-                                  </a>
-                                </div>
+                                <h3>Dynamic Power of NOC in Consultancy</h3>
                               </div>
                             </div>
                           </div>
@@ -916,13 +857,15 @@ const About = () => {
                   <span>Need a successful</span>
                   project?{" "}
                 </h2>
-                <a
-                  className="m-btn mt-35 wow fadeInUp"
+                <Nav.Link
+                  as={Link}
+                  to="/Contact"
+                  className="p-10 m-btn mt-35 wow fadeInUp"
                   data-wow-delay=".6s"
-                  href="/Contact"
                 >
+                  {" "}
                   Estimate Project
-                </a>
+                </Nav.Link>
               </div>
             </div>
           </div>

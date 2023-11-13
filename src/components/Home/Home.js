@@ -26,6 +26,9 @@ import route from "../../assests/Homepageimages/route.jpg";
 import synoptics from "../../assests/Homepageimages/synoptics.jpg";
 import landtlogo from "../../assests/Homepageimages/landtlogo.png";
 import orchestra from "../../assests/Homepageimages/orchestra.png";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
@@ -101,13 +104,10 @@ const Home = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
 
-    // Initial check on mount
     handleResize();
 
-    // Event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -132,11 +132,9 @@ const Home = () => {
     }
   }, [end]);
   useEffect(() => {
-    // Get the last counted value from localStorage
     const lastCount = parseInt(localStorage.getItem("lastCount"), 10) || 0;
 
     if (lastCount < 280) {
-      // Increment the count and store it in localStorage
       const interval = setInterval(() => {
         const newCount = count + 1;
         setCount(newCount);
@@ -203,7 +201,7 @@ const Home = () => {
           >
             <path
               d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-              style={{ strokeDashoffset: isVisible ? 0 : 308 }} // Adjust the value based on your circle's circumference
+              style={{ strokeDashoffset: isVisible ? 0 : 308 }}
             />
           </svg>
           <div className="custom-icon5 animate-bounce">
@@ -326,14 +324,24 @@ const Home = () => {
                                   claims require extra evidence permanence of
                                   the stars energy.
                                 </p>
-                                <a
+                                {/* <a
                                   href="/Contact"
                                   className="m-btn mt-35 wow fadeInUp "
                                   style={{ textAlign: "left", float: "left" }}
                                   data-wow-delay=".6s"
                                 >
                                   Get Started
-                                </a>
+                                </a> */}
+                                <Nav.Link
+                                  as={Link}
+                                  to="/Contact"
+                                  className="m-btn mt-35 wow fadeInUp "
+                                  data-wow-delay=".6s"
+                                  style={{ textAlign: "left", float: "left" }}
+                                >
+                                  {" "}
+                                  Get Started
+                                </Nav.Link>
                               </div>
                             </div>
                             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-10">
@@ -397,9 +405,13 @@ const Home = () => {
                                     </p>
                                   </div>
                                   <div className="single__service-link">
-                                    <a href="#" className="s-btn s-btn-pink">
+                                    <Nav.Link
+                                      as={Link}
+                                      to="/"
+                                      className="s-btn s-btn-pink"
+                                    >
                                       Find Out More
-                                    </a>
+                                    </Nav.Link>
                                   </div>
                                 </div>
                               </div>
@@ -427,12 +439,13 @@ const Home = () => {
                                     </p>
                                   </div>
                                   <div className="single__service-link">
-                                    <a
-                                      href=""
+                                    <Nav.Link
+                                      as={Link}
+                                      to="/"
                                       className="s-btn s-btn-yellow"
                                     >
                                       Find Out More
-                                    </a>
+                                    </Nav.Link>
                                   </div>
                                 </div>
                               </div>
@@ -463,12 +476,13 @@ const Home = () => {
                                     </p>
                                   </div>
                                   <div className="single__service-link">
-                                    <a
-                                      href=""
+                                    <Nav.Link
+                                      as={Link}
+                                      to="/"
                                       className="s-btn s-btn-green"
                                     >
                                       Find Out More
-                                    </a>
+                                    </Nav.Link>
                                   </div>
                                 </div>
                               </div>
@@ -753,12 +767,6 @@ const Home = () => {
                           decoding="async"
                           className="m-shape-3"
                           src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-3.png"
-                          alt="image"
-                        />
-                        <img
-                          decoding="async"
-                          className="m-shape-4"
-                          src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-4.png"
                           alt="image"
                         />
                       </div>
@@ -1313,12 +1321,6 @@ const Home = () => {
                             >
                               <div className="project__content">
                                 <div className="project__title">
-                                  {/* <h4
-                                    className="section__sub-title wow fadeInUp"
-                                    data-wow-delay=".2s"
-                                  >
-                                    3 Years Of Experience{" "}
-                                  </h4> */}
                                   <h2
                                     className="section__title wow fadeInUp"
                                     data-wow-delay=".3s"
@@ -1373,12 +1375,7 @@ const Home = () => {
               src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-3.png"
               alt="image"
             />
-            <img
-              decoding="async"
-              className="t-shape-4"
-              src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/testimonials/t-shape-4.png"
-              alt="image"
-            />
+
             <img
               decoding="async"
               className="t-shape-5 d-none d-lg-block"
@@ -1451,12 +1448,7 @@ const Home = () => {
                   >
                     <div className="testimonials__item-content">
                       <div className="testimonials__logo">
-                        <img
-                          decoding="async"
-                          src={synoptics}
-                          alt="image"
-                          // style={{ width: "350px",height:"400px"}}
-                        />
+                        <img decoding="async" src={synoptics} alt="image" />
                       </div>
                       <div className="testimonials__text">
                         <p>
@@ -1556,12 +1548,7 @@ const Home = () => {
                   >
                     <div className="testimonials__item-content">
                       <div className="testimonials__logo">
-                        <img
-                          decoding="async"
-                          src={synoptics}
-                          alt="image"
-                          // style={{ width: "350px",height:"400px"}}
-                        />
+                        <img decoding="async" src={synoptics} alt="image" />
                       </div>
                       <div className="testimonials__text">
                         <p>
@@ -2211,16 +2198,16 @@ const Home = () => {
                       />
                       <img
                         decoding="async"
-                        className="blog-shape-4"
+                        className="blog-shape-4 d-none d-sm-block"
                         src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/blog/blog-s-4.png"
                         alt="image"
                       />
-                      <img
+                      {/* <img
                         decoding="async"
                         className="blog-shape-5 d-none d-sm-block"
                         src="https://thememaster.net/wp/maxdi/wp-content/themes/maxdi/assets/images/shape/blog/blog-s-5.png"
                         alt="image"
-                      />
+                      /> */}
                     </div>
                     <div className="container">
                       <div className="row mb-65">
@@ -2380,13 +2367,15 @@ const Home = () => {
                   <span>Need a successful</span>
                   project?{" "}
                 </h2>
-                <a
-                  className="m-btn mt-35 wow fadeInUp"
+                <Nav.Link
+                  as={Link}
+                  to="/Contact"
+                  className="p-10 m-btn mt-35 wow fadeInUp"
                   data-wow-delay=".6s"
-                  href="https://thememaster.net/wp/maxdi/contact"
                 >
+                  {" "}
                   Estimate Project
-                </a>
+                </Nav.Link>
               </div>
             </div>
           </div>

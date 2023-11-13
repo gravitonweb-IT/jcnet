@@ -8,6 +8,9 @@ import { HiLockOpen } from "react-icons/hi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LuBarChartHorizontal } from "react-icons/lu";
 import { HiDocumentReport } from "react-icons/hi";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 const OurServices = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -82,9 +85,6 @@ const OurServices = () => {
 
         {/* side info end */}
         <div className="offcanvas-overlay" />
-        {/* mobile menu sidebar end */}
-
-        {/* page-title area start */}
         <section className="page__title-area page__title-height fix d-flex align-items-center p-relative  ">
           <div className="page__title-shape">
             <img
@@ -204,54 +204,38 @@ const OurServices = () => {
                   <div className="sidebar__widget-link">
                     <ul>
                       <li>
-                        <a href="#">
-                          <span>Networking Trifecta</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "52px" }} />{" "}
-                        </a>
+                        <span>Networking Trifecta</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "52px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>RecruitTech </span>
-                          <IoIosArrowForward
-                            style={{ marginLeft: "107px" }}
-                          />{" "}
-                        </a>
+                        <span>RecruitTech </span>
+                        <IoIosArrowForward
+                          style={{ marginLeft: "107px" }}
+                        />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>Recruit Non-Tech </span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "67px" }} />{" "}
-                        </a>
+                        <span>Recruit Non-Tech </span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "67px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>Fiber Optic</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "112px" }} />{" "}
-                        </a>
+                        <span>Fiber Optic</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "112px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>Network Audit</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "90px" }} />{" "}
-                        </a>
+                        <span>Network Audit</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "90px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>NOC Excellence</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "74px" }} />{" "}
-                        </a>
+                        <span>NOC Excellence</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "74px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>Artificial Intelligence</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "44px" }} />{" "}
-                        </a>
+                        <span>Artificial Intelligence</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "45px" }} />{" "}
                       </li>
                       <li>
-                        <a href="#">
-                          <span>Payrollment</span>{" "}
-                          <IoIosArrowForward style={{ marginLeft: "106px" }} />{" "}
-                        </a>
+                        <span>Payrollment</span>{" "}
+                        <IoIosArrowForward style={{ marginLeft: "106px" }} />{" "}
                       </li>
                     </ul>
                   </div>
@@ -464,13 +448,15 @@ const OurServices = () => {
                     <span>Need a successful</span>
                     project?{" "}
                   </h2>
-                  <a
-                    className="m-btn mt-35 wow fadeInUp"
+                  <Nav.Link
+                    as={Link}
+                    to="/Contact"
+                    className="p-10 m-btn mt-35 wow fadeInUp"
                     data-wow-delay=".6s"
-                    href="https://thememaster.net/wp/maxdi/contact"
                   >
+                    {" "}
                     Estimate Project
-                  </a>
+                  </Nav.Link>
                 </div>
               </div>
             </div>
