@@ -7,7 +7,7 @@ import { FaTelegramPlane } from "react-icons/fa"; // For Font Awesome icons
 import { GrTwitter } from "react-icons/gr";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import {Link} from "react-router-dom";
-
+import WhatsAppButton from "../components/WhatsAppButton"
 
 function Footer() {
   return (
@@ -254,7 +254,9 @@ function Footer() {
             </div>
           </div>
         </div>
+      
       </footer>
+      
     </>
   );
 }

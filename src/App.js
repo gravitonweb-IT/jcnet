@@ -8,7 +8,7 @@ import OurServices from "../src/components/Services/OurServices";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Navigationbar from "./common/Navigationbar";
 import Footer from "./common/Footer";
-
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -24,10 +24,10 @@ function App() {
             <Route path="/OurServices" element={<OurServices />} />
             <Route path="/Portfolio" element={<Portfolio />} />
           </Routes>
+         
         
-        
-      <Footer/>
-    
+      <Footer/>   
+      <WhatsAppButton/> 
     </>
   );
 }

@@ -48,6 +48,7 @@ const location = useLocation();
     src={logo}
     alt="logo"
     className="logoimage"
+    style={{width: "156px"}}
   />
 </Navbar.Brand>
  <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={toggleDrawer} />

@@ -2,3 +2,7 @@
     content: none!important;
     
 }
+
+.faq__wrapper .accordion-content .accordion-header .accordion-button::after {
+    content: none!important;
+}

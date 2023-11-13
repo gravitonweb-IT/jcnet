@@ -54,24 +54,20 @@ const Services = () => {
 
   const faqData = [
     {
-      question: "How To Gain Knowledge About SEO?",
-      answer:
-        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+      question: " What is the typical consultancy process?",
+      answer:" Initial consultation, proposal, analysis, recommendations, and implementation collaboration."
     },
     {
-      question: "Benefit Of Digital Marketing?",
-      answer:
-        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+      question: "How do I know if my business needs consultancy?",
+      answer: " Look for signs like stagnant growth, inefficiencies, or lacking in-house expertise.",
     },
     {
-      question: "Business Development Most Reasons?",
-      answer:
-        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+      question: "What types of consultancy services are common?",
+      answer: "Management, financial, technology, and human resources consulting, among others.",
     },
     {
-      question: "Improve Performance and Efficiency?",
-      answer:
-        "Code market-facing out of scope, yet power but inside yet performance review up the flagpole bazooka that run it past thright in and they its all greek.",
+      question: "How can I measure the success of consultancy?",
+      answer: " Metrics include improved efficiency, increased revenue, cost savings, and customer satisfaction",
     },
   ];
 
@@ -700,8 +696,8 @@ const Services = () => {
                                               icon={faPlus}
                                               className="plus-icon "
                                               style={{
-                                                marginLeft: "99px",
-                                                verticalAlign: "left",
+                                                marginLeft: "127px",
+                                                // verticalAlign: "left",
                                               }}
                                             />
                                           </button>
@@ -734,7 +730,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section
+        {/* <section
           className="elementor-section elementor-top-section elementor-element elementor-element-d1bad7a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
           data-id="d1bad7a"
           data-element_type="section"
@@ -1140,7 +1136,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
 
      {/* lets-work area start */}

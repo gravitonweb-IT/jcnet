@@ -428,7 +428,7 @@ const Home = () => {
                                   </div>
                                   <div className="single__service-link">
                                     <a
-                                      href="https://thememaster.net/wp/maxdi/ourservices/web-development"
+                                      href=""
                                       className="s-btn s-btn-yellow"
                                     >
                                       Find Out More
@@ -464,7 +464,7 @@ const Home = () => {
                                   </div>
                                   <div className="single__service-link">
                                     <a
-                                      href="https://thememaster.net/wp/maxdi/ourservices/web-development"
+                                      href=""
                                       className="s-btn s-btn-green"
                                     >
                                       Find Out More
