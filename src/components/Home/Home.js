@@ -1479,27 +1479,21 @@ const Home = () => {
                   >
                     <div className="testimonials__item-content">
                       <div className="testimonials__logo">
-                        <img
-                          decoding="async"
-                          src={landtlogo}
-                          alt="image"
-                          style={{ width: "300px" }}
-                        />
+                      <img decoding="async" src={orchestra} alt="image" />
                       </div>
                       <div className="testimonials__text">
                         <p>
-                          A professional notary, a pleasant and punctual person,
-                          always in a good mood, he will always tell and explain
-                          everything intelligently. Pretty good prices. It's
-                          always a pleasure to work. It doesn’t require any
-                          extra documents.
+                          Synophic system company I'm worked him big experience
+                          in company so nice company in word fully maintenance
+                          work already done so I'm happy to experience in
+                          synophic system company and thanks for synophic.
                         </p>
                       </div>
                       <div className="testimonials__client d-flex align-items-center">
                         <div className="testimonials__client-thumb"></div>
                         <div className="testimonials__client-text">
-                          <h4>David Clark</h4>
-                          <span>Marketing Manager</span>
+                          <h4>Alima Alisha</h4>
+                          <span>CEO</span>
                         </div>
                       </div>
                     </div>
@@ -1516,7 +1510,7 @@ const Home = () => {
                   >
                     <div className="testimonials__item-content">
                       <div className="testimonials__logo">
-                        <img decoding="async" src={orchestra} alt="image" />
+                      <img decoding="async" src={synoptics} alt="image" />
                       </div>
                       <div className="testimonials__text">
                         <p>
@@ -1538,7 +1532,7 @@ const Home = () => {
                   </div>
                 </div>
                 {/* 3rd */}
-                <div>
+                {/* <div>
                   <div
                     className="testimonials__item swiper-slide swiper-slide-prev"
                     data-swiper-slide-index={0}
@@ -1568,9 +1562,9 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* 4th */}
-                <div>
+                {/* <div>
                   <div
                     className="testimonials__item swiper-slide swiper-slide-active"
                     data-swiper-slide-index={1}
@@ -1580,15 +1574,15 @@ const Home = () => {
                   >
                     <div className="testimonials__item-content">
                       <div className="testimonials__logo">
-                        <img decoding="async" src={landtlogo} alt="image" />
+                      <img decoding="async" src={synoptics} alt="image" />
                       </div>
                       <div className="testimonials__text">
                         <p>
-                          A professional notary, a pleasant and punctual person,
-                          always in a good mood, he will always tell and explain
-                          everything intelligently. Pretty good prices. It's
-                          always a pleasure to work. It doesn’t require any
-                          extra documents.
+                          Very friendly attitude towards the client and his
+                          problems - you can always ask for advice and help even
+                          on related issues, and on top of that, high-quality
+                          advice on inheritance issues. Never expected to get
+                          such a powerful theme
                         </p>
                       </div>
                       <div className="testimonials__client d-flex align-items-center">
@@ -1600,9 +1594,9 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* 5th */}
-                <div>
+                {/* <div>
                   <div
                     className="testimonials__item swiper-slide swiper-slide-next"
                     data-swiper-slide-index={2}
@@ -1632,7 +1626,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Slider>
             </div>
             {/*  */}
